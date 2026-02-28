@@ -38,25 +38,20 @@ export type SiteContent = {
 
 export const siteContent: SiteContent = {
   businessName: "Lehsun",
-  headline: "Authentic Indian Catering in London & Kent",
+  headline: "Flavours Like You Remember.\nBut Brighter.",
   subheadline:
-    "Order your daily lunch or dinner via our WhatsApp Catalogue — fresh, homestyle Indian food delivered to your door. We also cater private parties, festivals & corporate events across Ebbsfleet Valley and nearby areas.",
+    "Authentic Indian regional dishes made for celebrations, gatherings and serious cravings.\n\nBold. Vibrant. Properly spiced.",
   whatsappNumber: "+44 7768 892652",
   locationLine: "Based in Ebbsfleet Valley, DA10 1GG. Catering to nearby areas.",
   ctas: [
     {
-      label: "WhatsApp Enquiry",
-      href: "https://wa.me/447768892652",
+      label: "View Menu",
+      href: "https://wa.me/c/447768892652",
       variant: "primary",
     },
     {
-      label: "View WhatsApp Catalogue",
-      href: "https://wa.me/c/447768892652",
-      variant: "secondary",
-    },
-    {
-      label: "Join WhatsApp Group",
-      href: "https://chat.whatsapp.com/LwTQNtkxb0oBD8Cj5uJ97T",
+      label: "Book Catering",
+      href: "https://wa.me/447768892652",
       variant: "secondary",
     },
     {
@@ -78,34 +73,48 @@ export const siteContent: SiteContent = {
     },
   ],
   caterFor: [
-    "Daily WhatsApp Orders",
-    "Private Events",
-    "Festivals",
-    "Corporate Catering",
-    "Community Gatherings",
+    "Birthday Parties",
+    "Holi Events",
+    "Family Gatherings",
+    "Corporate Lunches",
   ],
   regionalRoots: ["Delhi", "Uttar Pradesh", "Punjab", "Rajasthan"],
   promisePoints: [
-    "India-rooted depth with event-grade consistency",
-    "Vegetarian & non-vegetarian menus with rich regional range",
-    "From Punjab to Rajasthan — something for every palate",
-    "Designed for both intimate and large-format service",
+    "Customisable menu",
+    "Freshly prepared",
+    "Pickup-based",
+    "Limited batch cooking",
   ],
   dishHighlights: [
     {
-      title: "Butter Chicken",
-      note: "Slow-cooked in a rich, velvety tomato and cream sauce",
-      image: "/assets/food/butter-chicken-1400.png",
+      title: "Nalli Nihari",
+      note: "Slow-cooked overnight. Rich. Deep. Unforgettable.",
+      image: "/assets/generated/nalli-nihari.png",
     },
     {
-      title: "Dal Makhani",
-      note: "Silky black lentils cooked overnight with spiced butter",
-      image: "/assets/food/dal-makhani-1400.png",
+      title: "Dal Bukhara",
+      note: "Creamy black lentils simmered for hours.",
+      image: "/assets/generated/dal-bukhara.png",
     },
     {
-      title: "Pav Bhaji",
-      note: "Street classic elevated for event service",
-      image: "/assets/food/pav-bhaji-1400.png",
+      title: "Khasta Kachori",
+      note: "Golden, crisp, filled with bold spice.",
+      image: "/assets/generated/khasta-kachori.png",
+    },
+    {
+      title: "Shahi Tukda",
+      note: "Saffron, rabri and pure indulgence.",
+      image: "/assets/generated/shahi-tukda.png",
+    },
+    {
+      title: "Pahadi Rajma",
+      note: "Hearty, warming, mountain-style comfort.",
+      image: "/assets/generated/pahadi-rajma.png",
+    },
+    {
+      title: "Litti with Chokha",
+      note: "Smoky, rustic and unapologetically authentic.",
+      image: "/assets/generated/litti-chokha.png",
     },
   ],
   reviews: [

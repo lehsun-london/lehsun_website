@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Outfit } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import { ScrollObserver } from "@/components/ScrollObserver";
 
-const headingFont = Cormorant_Garamond({
+const headingFont = Playfair_Display({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
-const bodyFont = Outfit({
+const bodyFont = Poppins({
   variable: "--font-body",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
