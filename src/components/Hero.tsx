@@ -39,7 +39,7 @@ export function Hero({ businessName, headline, subheadline, ctas, highlights }: 
       </div>
 
       <div className="heroVisual" aria-label={`${businessName} signature dishes`}>
-        <div className="heroVisualMain">
+        <div className="heroVisualMain cardFloatA">
           <Image
             src={highlights[0].image}
             alt={highlights[0].title}
@@ -53,11 +53,11 @@ export function Hero({ businessName, headline, subheadline, ctas, highlights }: 
           </div>
         </div>
 
-        <div className="heroVisualSub">
+        <div className="heroVisualSub cardFloatB">
           <Image src={highlights[1].image} alt={highlights[1].title} fill sizes="(max-width: 960px) 52vw, 18vw" style={{ objectFit: "cover" }} />
         </div>
 
-        <div className="heroVisualSub">
+        <div className="heroVisualSub cardFloatC">
           <Image src={highlights[2].image} alt={highlights[2].title} fill sizes="(max-width: 960px) 52vw, 18vw" style={{ objectFit: "cover" }} />
         </div>
       </div>

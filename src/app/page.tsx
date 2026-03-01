@@ -18,6 +18,7 @@ export default function Home() {
 
       {/* 2. ABOUT (Mustard) */}
       <section className="aboutSection blockSection" aria-label="About Lehsun">
+        <div className="patternOverlay" aria-hidden="true"></div>
         <div className="blockContainer">
           <h2>Why Lehsun?</h2>
           <div className="aboutCopy">
@@ -82,6 +83,7 @@ export default function Home() {
 
       {/* 4. CATERING (Magenta Arch) */}
       <section className="cateringSection blockSection" aria-label="Catering Options">
+        <div className="patternOverlay" aria-hidden="true"></div>
         <div className="blockContainer cateringInner">
           <div>
             <h2>Planning Something Special?</h2>
@@ -114,6 +116,7 @@ export default function Home() {
 
       {/* 5. EMOTIONAL STRIP (Red) */}
       <section className="emotionStrip" aria-hidden="true">
+        <div className="patternOverlay" aria-hidden="true"></div>
         <h2>Cause sudden cravings for home.</h2>
       </section>
 
