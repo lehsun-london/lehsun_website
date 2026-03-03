@@ -25,12 +25,12 @@ export function HeroSection() {
           Flavours like you remember.
         </p>
         <p className="text-white text-base font-medium max-w-[52ch] mx-auto opacity-95 leading-relaxed">
-          Party catering for 25+ guests across Ebbsfleet Valley, Dartford,
+          Party catering for 15+ guests across Ebbsfleet Valley, Dartford,
           Gravesend and surrounding Kent areas.
           <br />
-          <p className="text-white text-sm opacity-80 mt-2">
+          <span className="text-white text-sm opacity-80 mt-2">
             Private events • Birthdays • Corporate catering
-          </p>
+          </span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
           <TrackedLink
@@ -54,9 +54,6 @@ export function HeroSection() {
             View Today&apos;s Menu
           </TrackedLink>
         </div>
-        <p className="text-sm md:text-base text-white/90 font-medium">
-          Minimum 15+ guests
-        </p>
       </div>
       <TrackedLink
         className="absolute bottom-10 left-1/2 -translate-x-1/2 motion-safe:animate-bounce focus-ring rounded-sm"

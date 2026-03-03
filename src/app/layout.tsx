@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   keywords: [
-    "North Indian catering Ebbsfleet",
+    "North Indian catering Ebbsfleet Valley",
     "catering Dartford",
     "Indian catering Gravesend",
     "catering Orpington",
@@ -55,7 +55,7 @@ const localBusinessSchema = {
     addressCountry: "GB",
   },
   areaServed: [
-    "Ebbsfleet",
+    "Ebbsfleet Valley",
     "Dartford",
     "Gravesend",
     "Orpington",

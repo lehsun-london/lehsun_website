@@ -13,7 +13,7 @@ export function LocalSeoSection() {
             across:
           </p>
           <ul className="space-y-2 pl-4">
-            <li>• Ebbsfleet</li>
+            <li>• Ebbsfleet Valley</li>
             <li>• Dartford</li>
             <li>• Gravesend</li>
             <li>• Orpington</li>
