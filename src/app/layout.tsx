@@ -134,6 +134,10 @@ export default function RootLayout({
             `,
           }}
         />
+        <meta
+          content="9dqrbpv17sgdpcfsu64476lzrmnsbx"
+          name="facebook-domain-verification"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
