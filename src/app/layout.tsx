@@ -16,10 +16,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lehsun.co.uk"),
-  title:
-    "Lehsun | North Indian Catering in Ebbsfleet, Dartford & Kent (15+ Guests)",
+  title: "Lehsun | North Indian Catering in Ebbsfleet Valley, Dartford & Kent",
   description:
-    "Authentic North Indian catering in Ebbsfleet, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
+    "Authentic North Indian catering in Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
   alternates: {
     canonical: "/",
   },
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lehsun – North Indian Catering in Kent",
     description:
-      "Catering in Ebbsfleet, Dartford, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
+      "Catering in Ebbsfleet Valley, Dartford, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
     url: "https://www.lehsun.co.uk",
     type: "website",
   },
@@ -82,7 +81,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Are you based in Ebbsfleet, Kent?",
+      name: "Are you based in Ebbsfleet Valley, Kent?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, Lehsun – Nostalgic North Indian Catering is based in Ebbsfleet Valley (DA10 1GG) and regularly caters events locally.",
@@ -93,7 +92,7 @@ const faqSchema = {
       name: "What areas do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We provide catering across Ebbsfleet, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+        text: "We provide catering across Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
       },
     },
   ],

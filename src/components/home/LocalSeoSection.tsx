@@ -3,7 +3,7 @@ export function LocalSeoSection() {
     <section className="bg-cream py-20 px-6 lg:px-20 border-t border-[#eec8a0]">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-balance text-4xl md:text-5xl font-black text-slate-900 mb-8">
-          Catering in Ebbsfleet, Dartford &amp; Surrounding Areas
+          Catering in Ebbsfleet Valley, Dartford &amp; Surrounding Areas
         </h2>
 
         <div className="text-slate-800 text-lg leading-relaxed space-y-5">

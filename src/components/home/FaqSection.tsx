@@ -5,14 +5,14 @@ const faqs = [
       "Yes, we provide North Indian catering across Dartford and surrounding areas for private parties and corporate events (15+ guests).",
   },
   {
-    question: "Are you based in Ebbsfleet, Kent?",
+    question: "Are you based in Ebbsfleet Valley, Kent?",
     answer:
       "Yes, Lehsun – Nostalgic North Indian Catering is based in Ebbsfleet Valley (DA10 1GG) and regularly caters events locally.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "We provide catering across Ebbsfleet, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+      "We provide catering across Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
   },
 ];
 

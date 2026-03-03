@@ -136,8 +136,8 @@ export function FooterSection() {
             Phone: +44 7768 892652
             <br />
             <br />
-            Serving: Ebbsfleet, Dartford, Gravesend, Orpington, Swanley &amp;
-            Bexley
+            Serving: Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley
+            &amp; Bexley
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-widest opacity-90">
