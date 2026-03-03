@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f28c26", // Saffron
+                        "mustard": "#E6A21A",
+                        "vermillion": "#D9381E",
+                        "cream": "#F7E6D2",
+                        "off-white": "#FFF8F0",
+                        "background-light": "#FFF8F0",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Lehsun | Authentic Flavors, Modern Soul</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 z-50 w-full bg-background-light/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">restaurant_menu</span>
+</div>
+<h2 class="text-xl font-black uppercase tracking-tighter text-slate-900">Lehsun</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#home">Home</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#menu">Menu</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors" href="#catering">Catering</a>
+</nav>
+<button class="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20">
+                Order Now
+            </button>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden" id="home">
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="High quality overhead shot of diverse Indian spices and dishes" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwJdc4qZbVXroZT9-5ItYVnPkcLYKOpHaATsGwKsyM8UyzvpTCgT0w1ztTJwgrfpl1zMEfz_MhyHyDS9DBoaePQlO9Sprx8c30OSw3ir7XDRKi0-kXemkOWdHbjxAGsg50SmUYpD-xN4R38yoGKbZscppkj4cLfMlsQ4yeYqV7Gfp9O4kSC3_CwsaSilwxyYzoE6dB_UR1ZLIRNfp2tklyF_prJ-ybIjtrWFZTdxsX-K01ASjxxqM6maNEAEElnWAmeaCeBxzknto");'></div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="text-primary text-5xl md:text-8xl font-black leading-tight tracking-tight mb-6">
+                    Authentic Flavors,<br/><span class="text-white italic font-serif">Modern Soul</span>
+</h1>
+<p class="text-white text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto opacity-90">
+                    Experience the essence of Indian heritage through the curated lens of Lehsun.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+                        Explore Menu
+                    </button>
+<button class="border-2 border-white text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all">
+                        Our Story
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-3xl">expand_more</span>
+</div>
+</section>
+<!-- About Section (Split) -->
+<section class="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden text-center" id="about">
+<div class="max-w-4xl mx-auto">
+<span class="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">The Heritage</span>
+<h2 class="text-4xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight">Why Lehsun?</h2>
+<p class="text-slate-700 text-xl md:text-2xl font-medium leading-relaxed mb-10">
+        Because some flavours should never fade... We bring the soul of regional India to your table with uncompromising authenticity. We believe in the magic of slow-cooking and the honesty of fresh ingredients.
+    </p>
+<div class="flex justify-center gap-12"><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
+<div class="p-6 bg-white/50 backdrop-blur rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-mustard text-4xl mb-3">auto_awesome</span>
+<h3 class="font-bold text-lg">Authentic Roots</h3>
+<p class="text-sm text-slate-600 mt-2">Recipes passed down through generations of home cooks.</p>
+</div>
+<div class="p-6 bg-white/50 backdrop-blur rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-mustard text-4xl mb-3">skillet</span>
+<h3 class="font-bold text-lg">Regional Mastery</h3>
+<p class="text-sm text-slate-600 mt-2">Specific spice blends sourced from native terrains.</p>
+</div>
+<div class="p-6 bg-white/50 backdrop-blur rounded-xl border border-primary/10">
+<span class="material-symbols-outlined text-mustard text-4xl mb-3">ecg_heart</span>
+<h3 class="font-bold text-lg">Soul Food</h3>
+<p class="text-sm text-slate-600 mt-2">Designed for celebrations that demand the best.</p>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Signature Dishes Grid -->
+<section class="bg-white py-24 px-6 lg:px-20" id="menu">
+<div class="max-w-[1200px] mx-auto text-center mb-16">
+<h2 class="text-4xl font-black text-slate-900 mb-4 italic font-serif">Signature Dishes</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1200px] mx-auto">
+<!-- Dish 1 -->
+<div class="group border border-primary/20 p-4 rounded-xl hover:shadow-2xl transition-all hover:-translate-y-2 bg-white">
+<div class="aspect-square overflow-hidden rounded-lg mb-6 border border-slate-100">
+<img alt="Biryani" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Aromatic saffron infused chicken biryani in a copper pot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpkVc-_XdDzFxguYM2lE9CBLXrFSvyGxWiEjSwJTbmXe_dx_92bwxgpimqDV9UQss_ZeR7odMI8yRcqGio6qYdyWCphf0Kerq2EHazdJkVU9kPJAAfLvkG_ESxiJ5gZbP5-2ok9Dol_7Zi4gWptlrwnB3FXV13vcgEvuPGFzPXQuMMRLITq5QL5F8Jo5ipRVdrtFRYsZ5xx9omfljFxPV2TJx8AncUR2nMF1-XV4VCNuft_HWtA7qlD7f7NO2Gvz2BKPGhqPVbHT8"/>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Saffron Infused Biryani</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-4">Aromatic long-grain basmati steamed with premium Kashmiri saffron and tender cuts.</p>
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-mustard cursor-pointer">add_circle</span>
+</div>
+</div>
+<!-- Dish 2 -->
+<div class="group border border-primary/20 p-4 rounded-xl hover:shadow-2xl transition-all hover:-translate-y-2 bg-white">
+<div class="aspect-square overflow-hidden rounded-lg mb-6 border border-slate-100">
+<img alt="Sea Bass" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Pan-seared fish with a golden mustard seed crust and herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOVUWAdCOdxZPcpRjTQBt92r9_uW3L5aa5RlSHU1SYNdexCiTUJekfp7B5hqYAYw2wv3xRmryOph_O5LOYzGLHnEwjrfGN25887tUnm3FCt05UTcrCnsknbyzgn-KjIuaNJ6JcJwrEXd9T-UAA-feGUFG4jx2lLWkT8qdMKn3CZ2n2HMOMM3qjcpIumyFwm0SLlrrGcKQRS64yoiC_fnsnM_UfuFieCHhonEKM0jnhvBGJdUGB4biPiSfF3DQ3-nfzl6lLCBF925Q"/>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Mustard Gold Sea Bass</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-4">Pan-seared wild-caught sea bass with a stone-ground mustard and turmeric crust.</p>
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-mustard cursor-pointer">add_circle</span>
+</div>
+</div>
+<!-- Dish 3 -->
+<div class="group border border-primary/20 p-4 rounded-xl hover:shadow-2xl transition-all hover:-translate-y-2 bg-white">
+<div class="aspect-square overflow-hidden rounded-lg mb-6 border border-slate-100">
+<img alt="Dal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Creamy yellow lentils topped with fried garlic and chilies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRjWhoSXYCeiSxA_LhU8tj5tWThBXAjdn3Pe6h7VoEsCDggz_SsFgBFBuUH_NmWZSdihNUvDlcuSGiZUTR2TKCCdq40DCk-xq5Q4RjMU-Pzqb9HtT_28oZjwnZiRtXR2ZB8VfCYnEmUN-tcnySn-SZbALCRNGQTKm-DzEpC1X5BBm62s5OYd-tnc-a60u_NZ5XONHDtGWZXuJOPkWWH8--TC4VEq6v9j3M-pezEajJSNDX4vCuc9s5BJJHGXpBreC5si9z56RaIeE"/>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Garlic Tempering Dal</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-4">Black lentils slow-cooked for 18 hours, finished with burnt garlic and ghee.</p>
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-mustard cursor-pointer">add_circle</span>
+</div>
+</div>
+<!-- Dish 4 -->
+<div class="group border border-primary/20 p-4 rounded-xl hover:shadow-2xl transition-all hover:-translate-y-2 bg-white">
+<div class="aspect-square overflow-hidden rounded-lg mb-6 border border-slate-100">
+<img alt="Prawns" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Spicy grilled prawns with a deep red vermillion chili glaze" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS4Ku1ewIl6ToV3wx3l3APSCXoruj1S_Fezp2KW4WPqabzJzBYoltt1IGveiJjjtA5PXU7kEyB2RFFleDd2jHIbCQo_BmTLrlYZzhjZqG2jII7Yu8Fp6J075NVreUSwfSwgT8p2RSakHsDlLoUsBXVdg5C5xFY31mL9l-oq4rtTb6up2lQVtQ02DmIUiQEPXVG9bEBq2wkoJdZLhzVGgiAyqX-7yuwHZUjG_WS7_Nzs-YoRA53cUrLXgnzbBobc2BjyBGsaRFbIMk"/>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Vermillion Spice Prawns</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-4">King prawns tossed in a fiery deep vermillion chili paste and local honey.</p>
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-mustard cursor-pointer">add_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Emotional Strip -->
+<section class="bg-[#E6392E] py-12 overflow-hidden">
+<div class="max-w-full">
+<div class="flex whitespace-nowrap gap-20 animate-marquee">
+<span class="text-white/30 text-6xl md:text-9xl font-black font-serif italic uppercase leading-none">Cumin • Mustard • Garlic • Saffron • Cumin • Mustard • Garlic • Saffron •</span>
+<span class="text-white/30 text-6xl md:text-9xl font-black font-serif italic uppercase leading-none">Cumin • Mustard • Garlic • Saffron • Cumin • Mustard • Garlic • Saffron •</span>
+</div>
+</div>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: fit-content;
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+</section><section class="bg-off-white py-24 px-6 lg:px-20">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-black text-slate-900 italic font-serif">Customer Reviews</h2>
+<div class="w-24 h-1 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
+<div class="flex text-mustard mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 italic mb-6">"The Biryani reminded me of the lanes in Old Delhi. Properly spiced and the saffron aroma is just incredible."</p>
+<p class="font-bold text-slate-900">- Ananya R.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
+<div class="flex text-mustard mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 italic mb-6">"Lehsun handled our corporate event perfectly. The live Tandoor station was the highlight of the evening!"</p>
+<p class="font-bold text-slate-900">- Vikram K.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
+<div class="flex text-mustard mb-4">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-slate-600 italic mb-6">"Best Sea Bass I've had in a long time. The mustard crust is a game changer. Truly authentic regional flavors."</p>
+<p class="font-bold text-slate-900">- Sarah M.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Catering Section (Impactful) -->
+<section class="bg-vermillion text-white py-24 px-6 lg:px-20 relative" id="catering">
+<div class="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<h2 class="text-5xl lg:text-7xl font-black mb-8 leading-tight uppercase tracking-tighter">Elevate Your Events</h2>
+<p class="text-white/80 text-xl mb-12">Lehsun brings the grandeur of Indian royal kitchens to your private gatherings, corporate events, and weddings.</p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-mustard bg-white rounded-full p-1 font-bold">check</span>
+<span class="text-lg font-medium">Bespoke Menu Curation</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-mustard bg-white rounded-full p-1 font-bold">check</span>
+<span class="text-lg font-medium">On-site Live Tandoor Stations</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-mustard bg-white rounded-full p-1 font-bold">check</span>
+<span class="text-lg font-medium">Sommelier-Guided Spice Pairings</span>
+</li>
+</ul>
+<button class="mt-12 bg-white text-vermillion px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-cream transition-colors shadow-xl">
+                        Inquire Now
+                    </button>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 border-8 border-white">
+<img alt="Catering" class="w-full h-full object-cover" data-alt="Elegant table setting with traditional Indian brass serveware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdjQC-uYcxZy4hrC2DQYB2Y2Z4VEIdvzJzbmTZHronCYuXC0pjqhsu3Tu_mHx5W30YsSYv4tAUiDcmOUPOL194ofRrjpdQOTAcBLdwEeoUGewIQLMXixnpHjO3-Nf5h7Z-CrgAJMoXGdpkiJjIeUY3C4ZpA0XIcksFTbyO2OJZJejFdUP5tnNvXAhwCO4-j87PigQCi-a8HYFGhZW2Ng1v0A2QznQXTsM0ACsuH3kfFe9xS3kmDr99UWTCMSUygUAjjK4T72bxVWo"/>
+</div>
+<!-- Graphic Stamp -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-mustard rounded-full flex items-center justify-center border-4 border-dashed border-white text-white p-6 text-center rotate-[-15deg]">
+<p class="text-xs font-black uppercase tracking-widest">Premium Catering • Est 1994</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<section class="bg-white py-24 border-t border-cream">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4 italic font-serif">Ready for a Feast?</h2>
+<p class="text-slate-500 text-lg mb-12">Order now for home delivery or quick pickup at our storefront.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a class="w-full md:w-auto flex items-center justify-center gap-4 bg-[#25D366] text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-xl shadow-green-500/20" href="#">
+<svg class="size-8" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                    Order on WhatsApp
+                </a>
+<div class="flex items-center gap-4 text-slate-400 font-bold uppercase tracking-widest text-sm">
+<span class="h-px w-8 bg-slate-200"></span>
+                    or
+                    <span class="h-px w-8 bg-slate-200"></span>
+</div>
+<button class="w-full md:w-auto bg-primary text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-xl shadow-primary/20">
+                    Call to Pickup
+                </button>
+</div>
+<div class="flex justify-center mb-10">
+<div class="bg-green-600 text-white p-1 rounded flex items-center shadow-md">
+<div class="bg-white text-black font-black px-2 py-1 text-xs uppercase leading-none mr-2 flex flex-col">
+<span>Food</span>
+<span>Hygiene</span>
+</div>
+<div class="flex flex-col items-center pr-2">
+<div class="flex gap-0.5">
+<span class="size-4 bg-white rounded-full flex items-center justify-center text-[10px] text-green-600 font-bold">1</span>
+<span class="size-4 bg-white rounded-full flex items-center justify-center text-[10px] text-green-600 font-bold">2</span>
+<span class="size-4 bg-white rounded-full flex items-center justify-center text-[10px] text-green-600 font-bold">3</span>
+<span class="size-4 bg-white rounded-full flex items-center justify-center text-[10px] text-green-600 font-bold">4</span>
+<span class="size-6 bg-green-400 rounded-full flex items-center justify-center text-sm text-green-900 font-black border-2 border-white -mt-1">5</span>
+</div>
+<span class="text-[8px] font-bold uppercase tracking-tighter mt-0.5">Very Good</span>
+</div>
+</div>
+</div><div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
+<div class="flex gap-4 p-6 bg-cream/30 rounded-2xl border border-cream">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<h4 class="font-bold">Opening Hours</h4>
+<p class="text-sm text-slate-600">Mon - Sun: 11:00 AM - 10:30 PM</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-cream/30 rounded-2xl border border-cream">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<h4 class="font-bold">Location</h4>
+<p class="text-sm text-slate-600">12 Spice Garden Lane, Food City</p>
+</div>
+</div>
+</div>
+</div>
+</section><footer class="bg-slate-900 text-white py-12 px-6 lg:px-20 border-t-8 border-primary">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">restaurant_menu</span>
+</div>
+<h2 class="text-xl font-black uppercase tracking-tighter">Lehsun</h2>
+</div>
+<div class="flex gap-8 text-sm font-medium opacity-60">
+<a class="hover:text-primary transition-colors" href="#">Menu</a>
+<a class="hover:text-primary transition-colors" href="#">About Us</a>
+<a class="hover:text-primary transition-colors" href="#">Catering</a>
+<a class="hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-6">
+<a class="opacity-40 hover:opacity-100 hover:text-primary transition-all" href="#">
+<svg class="size-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="opacity-40 hover:opacity-100 hover:text-primary transition-all" href="#">
+<svg class="size-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-8 mt-8 border-t border-slate-800 text-center">
+<p class="text-xs opacity-40 uppercase tracking-widest">© 2024 Lehsun Culinary Group. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body></html>

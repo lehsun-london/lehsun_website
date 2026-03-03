@@ -1,0 +1,31 @@
+{
+  "screenshot": {
+    "name": "projects/4783697008080341100/files/63251e1e506f45f68186511b1497878f",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/AOfcidVcew2d_0FH-lCgRjhpPHdi5mPS3Z2aUe7hzUbTdqELEghmtjdkO54YpUBh-6NFM2JQRabx5s9AugWMu58P6c4uLi8MILnXNv4K2Cwxn8MBojSW0DOlnJBuiJ7HJg-uHWuI70BJqLD3l8yMLurIAbRvKGiF6CyhvW5QPmusZPrUZeAgodfsT3Sedb_xoPershkbOGxfiveqG9_7wwM0c1eZtwS7UoLr_JIlFC5oofaXGbcwPd8Jl0dCBfo"
+  },
+  "htmlCode": {
+    "name": "projects/4783697008080341100/files/4b3fb2fcb69941048fa3f5e654b114d1",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzVhNWViZjM2MzYzNzRlMDNhNTljODQzYmQ4NGYwNTg5EgsSBxC9ian5-AoYAZIBIwoKcHJvamVjdF9pZBIVQhM0NzgzNjk3MDA4MDgwMzQxMTAw&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "f07f0788edfd411ea990e1556a0ff72d",
+  "generatedBy": "HatterAgent",
+  "width": "2560",
+  "height": "9876",
+  "title": "Lehsun - Branded Final Version",
+  "prompt": "Incorporate the patterns and motifs from {{DATA:IMAGE:IMAGE_3}}, {{DATA:IMAGE:IMAGE_5}}, and {{DATA:IMAGE:IMAGE_7}} into the section backgrounds and as decorative elements throughout the page. Use the final logo {{DATA:IMAGE:IMAGE_4}} in the header and footer. Ensure the 'Why Lehsun?' section has the three pillars (Authentic Roots, Regional Mastery, Soul Food) with accompanying small icons or motifs. Ensure the signature dishes grid has no prices. Include the 5-star hygiene rating badge near the order section. Make the footer minimal and slim like {{DATA:SCREEN:SCREEN_17}}. Use the color palette: Saffron (#F28C28), Vermillion (#D9381E), and Mustard (#E6A21A) on a Cream (#F7E6D2) base.",
+  "name": "projects/4783697008080341100/screens/f07f0788edfd411ea990e1556a0ff72d",
+  "theme": {
+    "colorMode": "LIGHT",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#f28c26",
+    "saturation": 2
+  },
+  "deviceType": "DESKTOP",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "HATTER_AGENT",
+    "status": "COMPLETE"
+  }
+}
