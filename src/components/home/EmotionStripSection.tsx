@@ -4,12 +4,10 @@ export function EmotionStripSection() {
       <div className="max-w-full">
         <div className="flex whitespace-nowrap gap-20 animate-marquee">
           <span className="text-white/20 text-6xl md:text-9xl font-black italic uppercase leading-none">
-            Lehsun • Tradition • Heritage • Saffron • Vermillion • Lehsun • Tradition • Heritage • Saffron •
-            Vermillion •
+            FLAVOURS LIKE YOU REMEMBER • NOSTALGIA IN EVERY BITE • BACK TO INDIA • LEHSUN
           </span>
           <span className="text-white/20 text-6xl md:text-9xl font-black italic uppercase leading-none">
-            Lehsun • Tradition • Heritage • Saffron • Vermillion • Lehsun • Tradition • Heritage • Saffron •
-            Vermillion •
+            FLAVOURS LIKE YOU REMEMBER • NOSTALGIA IN EVERY BITE • BACK TO INDIA • LEHSUN
           </span>
         </div>
       </div>

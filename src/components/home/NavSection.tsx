@@ -33,11 +33,9 @@ export function NavSection() {
       </nav>
       <a
         className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
-        href="https://wa.me/c/447768892652"
-        rel="noopener noreferrer"
-        target="_blank"
+        href="#catering"
       >
-        Order Now
+        Plan Your Event
       </a>
     </header>
   );

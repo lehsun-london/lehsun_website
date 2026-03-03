@@ -13,8 +13,88 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Lehsun | Authentic Flavors, Modern Soul",
-  description: "Authentic regional Indian cuisine by Lehsun.",
+  metadataBase: new URL("https://www.lehsun.co.uk"),
+  title:
+    "Lehsun | North Indian Catering in Ebbsfleet, Dartford & Kent (15+ Guests)",
+  description:
+    "Authentic North Indian catering in Ebbsfleet, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "North Indian catering Ebbsfleet",
+    "catering Dartford",
+    "Indian catering Gravesend",
+    "catering Orpington",
+    "catering Swanley",
+    "catering Bexley",
+    "party catering Kent",
+    "corporate catering Kent",
+  ],
+  openGraph: {
+    title: "Lehsun – North Indian Catering in Kent",
+    description:
+      "Catering in Ebbsfleet, Dartford, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
+    url: "https://www.lehsun.co.uk",
+    type: "website",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "CateringService",
+  name: "Lehsun – Nostalgic North Indian Catering",
+  url: "https://www.lehsun.co.uk",
+  telephone: "+44 7768 892652",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "28 Portbridge Gardens",
+    addressLocality: "Ebbsfleet Valley",
+    postalCode: "DA10 1GG",
+    addressCountry: "GB",
+  },
+  areaServed: [
+    "Ebbsfleet",
+    "Dartford",
+    "Gravesend",
+    "Orpington",
+    "Swanley",
+    "Bexley",
+  ],
+  servesCuisine: "North Indian",
+  priceRange: "££",
+  sameAs: ["https://maps.app.goo.gl/1geULoG9J3w9qzJ89"],
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you provide catering services in Dartford?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide North Indian catering across Dartford and surrounding areas for private parties and corporate events (15+ guests).",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are you based in Ebbsfleet, Kent?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, Lehsun – Nostalgic North Indian Catering is based in Ebbsfleet Valley (DA10 1GG) and regularly caters events locally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We provide catering across Ebbsfleet, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -25,6 +105,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" />
         <script
@@ -54,7 +158,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} bg-[#F7E6D2] text-slate-900 font-display`}>{children}</body>
+      <body
+        className={`${inter.variable} ${playfair.variable} bg-[#F7E6D2] text-slate-900 font-display`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

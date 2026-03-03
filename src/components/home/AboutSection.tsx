@@ -1,24 +1,24 @@
 const features = [
   {
-    icon: '🏺',
+    icon: '🍲',
     iconClass: '',
     borderClass: 'border-[#E6A21A]',
-    title: 'Authentic Roots',
-    body: 'Recipes passed down through generations of home cooks, preserving the essence of regional heritage.',
+    title: 'Authentic Regional Recipes',
+    body: 'Traditional North Indian dishes cooked in small batches.',
   },
   {
     icon: '🌶',
     iconClass: '',
     borderClass: 'border-[#D9381E]',
-    title: 'Regional Mastery',
-    body: 'Specific spice blends sourced from native terrains to ensure every bite is an authentic journey.',
+    title: 'Bold, Proper Spice',
+    body: 'Deep gravies and real tempering — never toned down.',
   },
   {
-    icon: '❤',
+    icon: '👨‍👩‍👧‍👦',
     iconClass: '',
     borderClass: 'border-[#F28C28]',
-    title: 'Soul Food',
-    body: 'Designed for celebrations that demand the best, cooked with patience and pure intention.',
+    title: 'Made for Gatherings',
+    body: 'Private parties & corporate events (15+ guests).',
   },
 ];
 
@@ -29,11 +29,25 @@ export function AboutSection() {
       id="about"
     >
       <div className="max-w-4xl mx-auto">
-        <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">The Heritage</span>
-        <h2 className="text-4xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight">Why Lehsun?</h2>
-        <p className="text-slate-700 text-xl md:text-2xl font-medium leading-relaxed mb-10">
-          Because some flavours should never fade... We bring the soul of regional India to your table with
-          uncompromising authenticity. We believe in the magic of slow-cooking and the honesty of fresh ingredients.
+        <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Why Lehsun</span>
+        <h2 className="text-balance text-4xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight">
+          Why Choose Lehsun for North Indian Catering in the UK?
+        </h2>
+        <p className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 max-w-[62ch] mx-auto">
+          Because proper North Indian food in the UK is hard to find.
+          <br />
+          <br />
+          We cook to take you back — to Delhi winters, loud family dinners,
+          <br />
+          and the comfort of home in India.
+          <br />
+          <br />
+          Based in Ebbsfleet Valley (DA10 1GG), we proudly serve Dartford, Gravesend and nearby areas.
+          <br />
+          <br />
+          No watered-down gravies. No commercial shortcuts.
+          <br />
+          Just proper flavour — the way you remember it.
         </p>
         <div className="flex justify-center gap-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
