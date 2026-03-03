@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -103,32 +104,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaMeasurementId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ??
+    process.env.NEXT_PUBLIC_GA_ID ??
+    "G-8C5C76904J";
 
   return (
     <html lang="en">
       <head>
-        {gaMeasurementId ? (
-          <>
-            <Script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-              strategy="afterInteractive"
-            />
-            <Script
-              id="google-analytics"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}');
-                `,
-              }}
-            />
-          </>
-        ) : null}
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('consent', 'default', { analytics_storage: 'denied' });
+              gtag('js', new Date());
+              gtag('config', '${gaMeasurementId}', {
+                anonymize_ip: true,
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
@@ -186,6 +191,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} bg-[#F7E6D2] text-slate-900 font-display`}
       >
         {children}
+        <CookieConsentBanner />
       </body>
     </html>
   );

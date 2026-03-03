@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TrackedLink } from "../analytics/TrackedLink";
 
 const points = [
   "Customisable vegetarian & non-veg catering menus",
@@ -51,14 +52,18 @@ export function CateringSection() {
               </li>
             ))}
           </ul>
-          <a
+          <TrackedLink
             className="mt-12 bg-white text-vermillion px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-cream transition-colors shadow-xl inline-flex focus-ring"
+            ctaText="Get Catering Quote on WhatsApp"
+            destinationType="whatsapp"
+            eventName="click_whatsapp_quote"
             href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20to%20inquire%20about%20catering."
+            placement="catering_section"
             rel="noopener noreferrer"
             target="_blank"
           >
             Get Catering Quote on WhatsApp
-          </a>
+          </TrackedLink>
         </div>
         <div className="lg:w-1/2 relative">
           <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-3 border-8 border-white">

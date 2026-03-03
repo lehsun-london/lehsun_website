@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TrackedLink } from "../analytics/TrackedLink";
 
 export function HeroSection() {
   return (
@@ -29,31 +30,43 @@ export function HeroSection() {
           Slow-cooked gravies • Bold spice • Nostalgia in every bite.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
-          <a
+          <TrackedLink
             className="bg-[#D9381E] text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-[#F28C28] transition-colors shadow-lg shadow-vermillion/20 flex items-center justify-center focus-ring"
+            ctaText="Plan Your Event"
+            destinationType="anchor"
+            eventName="click_plan_event"
             href="#catering"
+            placement="hero"
           >
             Plan Your Event
-          </a>
-          <a
+          </TrackedLink>
+          <TrackedLink
             className="border-2 border-white text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#D9381E] transition-all flex items-center justify-center focus-ring"
+            ctaText="View Today's Menu"
+            destinationType="anchor"
+            eventName="click_view_menu"
             href="#contact"
+            placement="hero"
           >
             View Today&apos;s Menu
-          </a>
+          </TrackedLink>
         </div>
         <p className="text-sm md:text-base text-white/90 font-medium">
           Minimum 15+ guests
         </p>
       </div>
-      <a
+      <TrackedLink
         className="absolute bottom-10 left-1/2 -translate-x-1/2 motion-safe:animate-bounce focus-ring rounded-sm"
+        ctaText="scroll_down"
+        destinationType="anchor"
+        eventName="click_scroll_section"
         href="#about"
+        placement="hero"
       >
         <span aria-hidden className="text-white text-3xl">
           ↓
         </span>
-      </a>
+      </TrackedLink>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { TrackedLink } from "../analytics/TrackedLink";
 
 const links = [
   { href: '#home', label: 'Home' },
@@ -22,21 +23,29 @@ export function NavSection() {
       </div>
       <nav className="hidden md:flex items-center gap-10">
         {links.map((link) => (
-          <a
+          <TrackedLink
             key={link.href}
             className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors focus-ring rounded-sm"
+            ctaText={link.label}
+            destinationType="anchor"
+            eventName="click_scroll_section"
             href={link.href}
+            placement="nav_header"
           >
             {link.label}
-          </a>
+          </TrackedLink>
         ))}
       </nav>
-      <a
+      <TrackedLink
         className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
+        ctaText="Plan Your Event"
+        destinationType="anchor"
+        eventName="click_plan_event"
         href="#catering"
+        placement="nav_header"
       >
         Plan Your Event
-      </a>
+      </TrackedLink>
     </header>
   );
 }

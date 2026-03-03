@@ -1,3 +1,6 @@
+import { type DestinationType } from "@/lib/analytics";
+import { TrackedLink } from "../analytics/TrackedLink";
+
 function SocialIcon({ type }: { type: 'whatsapp' | 'instagram' | 'facebook' | 'google' }) {
   if (type === 'whatsapp') {
     return (
@@ -41,14 +44,26 @@ const socialLinks = [
     href: 'https://wa.me/c/447768892652',
     icon: 'whatsapp' as const,
     label: 'WhatsApp',
+    destinationType: 'whatsapp' as const,
   },
-  { href: 'https://www.instagram.com/lehsun.london', icon: 'instagram' as const, label: 'Instagram' },
+  {
+    href: 'https://www.instagram.com/lehsun.london',
+    icon: 'instagram' as const,
+    label: 'Instagram',
+    destinationType: 'instagram' as const,
+  },
   {
     href: 'https://www.facebook.com/people/Lehsun-Nostalgic-Indian-Cuisine/61580851580948/',
     icon: 'facebook' as const,
     label: 'Facebook',
+    destinationType: 'facebook' as const,
   },
-  { href: 'https://maps.app.goo.gl/C8JKao4BbBerjfQj8', icon: 'google' as const, label: 'Google' },
+  {
+    href: 'https://maps.app.goo.gl/C8JKao4BbBerjfQj8',
+    icon: 'google' as const,
+    label: 'Google',
+    destinationType: 'maps' as const,
+  },
 ];
 
 export function ContactSection() {
@@ -65,22 +80,30 @@ export function ContactSection() {
             Boldly spiced, freshly prepared, flavours like you remember.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-10">
-            <a
+            <TrackedLink
               className="w-full md:w-auto flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.02] transition-all shadow-xl shadow-green-500/20 focus-ring"
+              ctaText="Order on WhatsApp"
+              destinationType="whatsapp"
+              eventName="click_whatsapp_order"
               href="https://wa.me/c/447768892652"
+              placement="contact_top"
               rel="noopener noreferrer"
               target="_blank"
             >
               Order on WhatsApp
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               className="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] transition-colors shadow-xl shadow-primary/20 text-center focus-ring"
+              ctaText="View Today's Menu"
+              destinationType="whatsapp"
+              eventName="click_whatsapp_order"
               href="https://wa.me/c/447768892652"
+              placement="contact_top"
               rel="noopener noreferrer"
               target="_blank"
             >
               View Today&apos;s Menu
-            </a>
+            </TrackedLink>
           </div>
         </div>
 
@@ -92,35 +115,47 @@ export function ContactSection() {
             Flavours like you remember. Nostalgia in every bite.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a
+            <TrackedLink
               className="w-full md:w-auto bg-[#D9381E] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#B52E18] transition-colors shadow-lg focus-ring"
+              ctaText="Plan Your Event"
+              destinationType="anchor"
+              eventName="click_plan_event"
               href="#catering"
+              placement="contact_event_card"
             >
               Plan Your Event
-            </a>
-            <a
+            </TrackedLink>
+            <TrackedLink
               className="w-full md:w-auto border-2 border-[#D9381E] text-[#D9381E] px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] hover:text-white transition-all focus-ring"
+              ctaText="Message on WhatsApp"
+              destinationType="whatsapp"
+              eventName="click_whatsapp_message"
               href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20to%20plan%20an%20event."
+              placement="contact_event_card"
               rel="noopener noreferrer"
               target="_blank"
             >
               Message on WhatsApp
-            </a>
+            </TrackedLink>
           </div>
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
           {socialLinks.map((link) => (
-            <a
+            <TrackedLink
               key={link.label}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-off-white border border-primary/20 text-sm font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors focus-ring"
+              ctaText={link.label}
+              destinationType={link.destinationType as DestinationType}
+              eventName="click_social"
               href={link.href}
+              placement="contact_social_row"
               rel="noopener noreferrer"
               target="_blank"
             >
               <SocialIcon type={link.icon} />
               {link.label}
-            </a>
+            </TrackedLink>
           ))}
         </div>
       </div>

@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { openCookieBanner } from "@/components/privacy/CookieConsentBanner";
+import { TrackedLink } from "../analytics/TrackedLink";
 
 function SocialIcon({ label }: { label: string }) {
   if (label === "WhatsApp") {
@@ -75,13 +79,26 @@ function SocialIcon({ label }: { label: string }) {
 }
 
 const links = [
-  { href: "https://wa.me/c/447768892652", label: "WhatsApp" },
-  { href: "https://www.instagram.com/lehsun.london", label: "Instagram" },
+  {
+    href: "https://wa.me/c/447768892652",
+    label: "WhatsApp",
+    destinationType: "whatsapp" as const,
+  },
+  {
+    href: "https://www.instagram.com/lehsun.london",
+    label: "Instagram",
+    destinationType: "instagram" as const,
+  },
   {
     href: "https://www.facebook.com/people/Lehsun-Nostalgic-Indian-Cuisine/61580851580948/",
     label: "Facebook",
+    destinationType: "facebook" as const,
   },
-  { href: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8", label: "Google" },
+  {
+    href: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+    label: "Google",
+    destinationType: "maps" as const,
+  },
 ];
 
 export function FooterSection() {
@@ -125,18 +142,29 @@ export function FooterSection() {
         </div>
         <div className="flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-widest opacity-90">
           {links.map((link) => (
-            <a
+            <TrackedLink
               key={link.label}
               className="hover:text-[#F28C28] transition-colors focus-ring rounded-sm inline-flex items-center gap-2"
+              ctaText={link.label}
+              destinationType={link.destinationType}
+              eventName="click_social"
               href={link.href}
+              placement="footer_social_row"
               rel="noopener noreferrer"
               target="_blank"
             >
               <SocialIcon label={link.label} />
               {link.label}
-            </a>
+            </TrackedLink>
           ))}
         </div>
+        <button
+          className="text-[11px] uppercase tracking-[0.2em] text-white/70 underline-offset-4 transition-colors hover:text-[#F28C28] hover:underline"
+          onClick={openCookieBanner}
+          type="button"
+        >
+          Cookie Preferences
+        </button>
         <p className="text-[10px] opacity-40 uppercase tracking-[0.2em] md:self-end">
           © 2026 Lehsun
         </p>
