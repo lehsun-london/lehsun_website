@@ -4,6 +4,18 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgba(217, 56, 30, 0.45);
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);
@@ -17,4 +29,14 @@ body {
   display: flex;
   width: fit-content;
   animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
 }

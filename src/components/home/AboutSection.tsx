@@ -1,21 +1,21 @@
 const features = [
   {
-    icon: 'history_edu',
-    iconClass: 'text-[#F28C28]',
+    icon: '🏺',
+    iconClass: '',
     borderClass: 'border-[#E6A21A]',
     title: 'Authentic Roots',
     body: 'Recipes passed down through generations of home cooks, preserving the essence of regional heritage.',
   },
   {
-    icon: 'skillet',
-    iconClass: 'text-[#D9381E]',
+    icon: '🌶',
+    iconClass: '',
     borderClass: 'border-[#D9381E]',
     title: 'Regional Mastery',
     body: 'Specific spice blends sourced from native terrains to ensure every bite is an authentic journey.',
   },
   {
-    icon: 'favorite',
-    iconClass: 'text-[#E6A21A]',
+    icon: '❤',
+    iconClass: '',
     borderClass: 'border-[#F28C28]',
     title: 'Soul Food',
     body: 'Designed for celebrations that demand the best, cooked with patience and pure intention.',
@@ -25,7 +25,7 @@ const features = [
 export function AboutSection() {
   return (
     <section
-      className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden text-center bg-[url('{{DATA:IMAGE:IMAGE_3}}')] bg-repeat bg-[length:200px] bg-opacity-5"
+      className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden text-center bg-[url('/assets/generated/geometric-motif.png')] bg-repeat bg-[length:220px] bg-[position:center] bg-blend-soft-light scroll-mt-28"
       id="about"
     >
       <div className="max-w-4xl mx-auto">
@@ -42,7 +42,7 @@ export function AboutSection() {
                 key={feature.title}
                 className={`p-8 bg-white/80 backdrop-blur rounded-2xl border-b-4 shadow-xl ${feature.borderClass}`}
               >
-                <span className={`material-symbols-outlined text-5xl mb-4 ${feature.iconClass}`}>{feature.icon}</span>
+                <span className={`text-5xl mb-4 block ${feature.iconClass}`}>{feature.icon}</span>
                 <h3 className="font-black text-xl mb-3">{feature.title}</h3>
                 <p className="text-sm text-slate-700 leading-relaxed">{feature.body}</p>
               </div>

@@ -24,12 +24,8 @@ export function ReviewsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((review) => (
             <div key={review.author} className="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
-              <div className="flex text-mustard mb-4">
-                <span className="material-symbols-outlined">star</span>
-                <span className="material-symbols-outlined">star</span>
-                <span className="material-symbols-outlined">star</span>
-                <span className="material-symbols-outlined">star</span>
-                <span className="material-symbols-outlined">star</span>
+              <div className="flex text-mustard mb-4 text-lg" aria-label="5 star review">
+                <span>★★★★★</span>
               </div>
               <p className="text-slate-600 italic mb-6">{review.text}</p>
               <p className="font-bold text-slate-900">{review.author}</p>

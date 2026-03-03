@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const links = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
@@ -9,10 +11,12 @@ export function NavSection() {
   return (
     <header className="fixed top-0 z-50 w-full bg-background-light/90 backdrop-blur-md border-b border-primary/10 px-6 lg:px-20 py-4 flex items-center justify-between">
       <div className="flex items-center gap-3">
-        <img
+        <Image
           alt="Lehsun Logo"
           className="size-12 object-contain"
+          height={48}
           src="/assets/stitch/lehsun-branded-final/logo.png"
+          width={48}
         />
         <h2 className="text-2xl font-black uppercase tracking-tighter text-vermillion">Lehsun</h2>
       </div>
@@ -20,16 +24,21 @@ export function NavSection() {
         {links.map((link) => (
           <a
             key={link.href}
-            className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+            className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors focus-ring rounded-sm"
             href={link.href}
           >
             {link.label}
           </a>
         ))}
       </nav>
-      <button className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20">
+      <a
+        className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
+        href="https://wa.me/c/447768892652"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
         Order Now
-      </button>
+      </a>
     </header>
   );
 }

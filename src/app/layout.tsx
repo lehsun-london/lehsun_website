@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
 
 export const metadata: Metadata = {
   title: "Lehsun | Authentic Flavors, Modern Soul",
@@ -14,18 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" />
         <script
@@ -45,8 +44,8 @@ export default function RootLayout({
                   "background-dark": "#221910",
                 },
                 fontFamily: {
-                  "display": ["Inter", "sans-serif"],
-                  "serif": ["Playfair Display", "serif"]
+                  "display": ["var(--font-display)", "sans-serif"],
+                  "serif": ["var(--font-serif)", "serif"]
                 },
                 borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
               },
@@ -55,7 +54,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#F7E6D2] text-slate-900 font-display">{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} bg-[#F7E6D2] text-slate-900 font-display`}>{children}</body>
     </html>
   );
 }
