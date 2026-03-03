@@ -7,10 +7,42 @@ function SocialIcon({ type }: { type: 'whatsapp' | 'website' | 'instagram' | 'fa
     );
   }
 
-  if (type === 'instagram') return <span aria-hidden className="text-base text-[#E1306C]">●</span>;
-  if (type === 'facebook') return <span aria-hidden className="text-base text-[#1877F2]">●</span>;
-  if (type === 'google') return <span aria-hidden className="text-base text-[#EA4335]">●</span>;
-  return <span aria-hidden className="text-base text-[#2563EB]">●</span>;
+  if (type === 'website') {
+    return (
+      <svg aria-hidden className="size-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3 12h18M12 3c2.2 2.4 3.4 5.6 3.4 9S14.2 18.6 12 21M12 3C9.8 5.4 8.6 8.6 8.6 12s1.2 6.6 3.4 9" stroke="currentColor" strokeWidth="1.6" />
+      </svg>
+    );
+  }
+
+  if (type === 'instagram') {
+    return (
+      <svg aria-hidden className="size-4 text-[#E1306C]" fill="none" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="12" cy="12" r="3.6" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (type === 'facebook') {
+    return (
+      <svg aria-hidden className="size-4" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="#1877F2" />
+        <path d="M13.3 19v-6.1h2l.3-2.3h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.2v1.8H9v2.3h2V19h2.3Z" fill="#fff" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden className="size-4" viewBox="0 0 24 24">
+      <path d="M12 2c3.7 0 6.8 3 6.8 6.8 0 4.8-6.8 13.3-6.8 13.3S5.2 13.6 5.2 8.8C5.2 5 8.3 2 12 2Z" fill="#EA4335" />
+      <circle cx="12" cy="8.8" r="2.8" fill="#FBBC05" />
+      <path d="M12 2a6.8 6.8 0 0 1 5.2 2.4l-2.4 1.9A3.7 3.7 0 0 0 12 5.1V2Z" fill="#4285F4" />
+      <path d="M6.8 4.4A6.8 6.8 0 0 1 12 2v3.1a3.7 3.7 0 0 0-2.8 1.2L6.8 4.4Z" fill="#34A853" />
+    </svg>
+  );
 }
 
 const socialLinks = [
