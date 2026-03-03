@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { TrackedLink } from "../analytics/TrackedLink";
 
 const links = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#menu', label: 'Menu' },
-  { href: '#catering', label: 'Catering' },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#menu", label: "Menu" },
+  { href: "#catering", label: "Catering" },
 ];
 
 export function NavSection() {
@@ -19,7 +19,9 @@ export function NavSection() {
           src="/assets/stitch/lehsun-branded-final/logo.png"
           width={48}
         />
-        <h2 className="text-2xl font-black uppercase tracking-tighter text-vermillion">Lehsun</h2>
+        <h2 className="text-2xl font-black uppercase tracking-tighter text-vermillion">
+          Lehsun
+        </h2>
       </div>
       <nav className="hidden md:flex items-center gap-10">
         {links.map((link) => (
@@ -38,13 +40,13 @@ export function NavSection() {
       </nav>
       <TrackedLink
         className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
-        ctaText="Plan Your Event"
+        ctaText="Contact Us"
         destinationType="anchor"
         eventName="click_plan_event"
         href="#catering"
         placement="nav_header"
       >
-        Plan Your Event
+        Contact Us
       </TrackedLink>
     </header>
   );
