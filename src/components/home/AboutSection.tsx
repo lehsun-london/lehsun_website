@@ -25,10 +25,10 @@ const features = [
 export function AboutSection() {
   return (
     <section
-      className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden text-center bg-[url('/assets/generated/geometric-motif.png')] bg-repeat bg-[length:220px] bg-[position:center] bg-blend-soft-light scroll-mt-28"
+      className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden text-center scroll-mt-28 md:bg-[url('/assets/generated/geometric-motif.png')] md:bg-repeat md:bg-[length:220px] md:bg-[position:center] md:bg-blend-soft-light"
       id="about"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto relative z-10">
         <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Why Lehsun</span>
         <h2 className="text-balance text-4xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight">
           Why Choose Lehsun for North Indian Catering in the UK?

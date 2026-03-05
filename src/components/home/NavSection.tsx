@@ -42,8 +42,8 @@ export function NavSection() {
         className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
         ctaText="Contact Us"
         destinationType="anchor"
-        eventName="click_plan_event"
-        href="#catering"
+        eventName="click_contact_us"
+        href="#contact"
         placement="nav_header"
       >
         Contact Us

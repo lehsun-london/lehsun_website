@@ -6,7 +6,7 @@ export type CtaEventName =
   | "click_whatsapp_message"
   | "click_whatsapp_quote"
   | "click_social"
-  | "click_cta";
+  | "click_contact_us";
 
 export type DestinationType =
   | "anchor"

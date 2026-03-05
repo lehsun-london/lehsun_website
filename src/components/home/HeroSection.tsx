@@ -48,7 +48,7 @@ export function HeroSection() {
             ctaText="View Today's Menu"
             destinationType="anchor"
             eventName="click_view_menu"
-            href="#contact"
+            href="https://wa.me/c/447768892652"
             placement="hero"
           >
             View Today&apos;s Menu
