@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
 import "./globals.css";
 
@@ -43,32 +44,6 @@ export const metadata: Metadata = {
     url: "https://www.lehsun.co.uk",
     type: "website",
   },
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "CateringService",
-  name: "Lehsun – Nostalgic North Indian Catering",
-  url: "https://www.lehsun.co.uk",
-  telephone: "+44 7768 892652",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "28 Portbridge Gardens",
-    addressLocality: "Ebbsfleet Valley",
-    postalCode: "DA10 1GG",
-    addressCountry: "GB",
-  },
-  areaServed: [
-    "Ebbsfleet Valley",
-    "Dartford",
-    "Gravesend",
-    "Orpington",
-    "Swanley",
-    "Bexley",
-  ],
-  servesCuisine: "North Indian",
-  priceRange: "££",
-  sameAs: ["https://maps.app.goo.gl/1geULoG9J3w9qzJ89"],
 };
 
 const faqSchema = {
@@ -155,12 +130,7 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
-        />
+        <LocalBusinessSchema />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
