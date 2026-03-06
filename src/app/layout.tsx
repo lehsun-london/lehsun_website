@@ -20,7 +20,11 @@ export const metadata: Metadata = {
   description:
     "Authentic North Indian catering in Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
   alternates: {
-    canonical: "/",
+    canonical: "https://www.lehsun.co.uk/",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
   keywords: [
     "North Indian catering Ebbsfleet Valley",
