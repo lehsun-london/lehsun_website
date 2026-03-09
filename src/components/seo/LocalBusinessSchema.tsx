@@ -5,7 +5,7 @@ const localBusinessSchema = {
   name: "Lehsun - Nostalgic North Indian Catering",
   description:
     "Authentic North Indian catering in Ebbsfleet Valley, Dartford, Gravesend and nearby Kent areas for private parties and corporate events.",
-  url: "https://www.lehsun.co.uk",
+  url: "https://www.lehsun.co.uk/",
   image: "https://www.lehsun.co.uk/apple-touch-icon.png",
   logo: "https://www.lehsun.co.uk/apple-touch-icon.png",
   email: "lehsun.london@gmail.com",

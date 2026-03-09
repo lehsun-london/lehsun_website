@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.lehsun.co.uk"),
+  metadataBase: new URL("https://www.lehsun.co.uk/"),
   title: "Lehsun | North Indian Catering in Ebbsfleet Valley, Dartford & Kent",
   description:
     "Authentic North Indian catering in Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Lehsun – North Indian Catering in Kent",
     description:
       "Catering in Ebbsfleet Valley, Dartford, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
-    url: "https://www.lehsun.co.uk",
+    url: "https://www.lehsun.co.uk/",
     type: "website",
   },
 };

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://www.lehsun.co.uk/sitemap.xml",
-    host: "https://www.lehsun.co.uk",
+    host: "https://www.lehsun.co.uk/",
   };
 }
