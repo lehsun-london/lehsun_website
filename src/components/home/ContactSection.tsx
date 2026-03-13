@@ -156,7 +156,7 @@ export function ContactSection() {
             Planning an Event?
           </h3>
           <p className="text-slate-700 text-lg md:text-xl mb-8">
-            Authentic Indian catering for 15+ guests.
+            Authentic Indian catering.
             <br />
             Flavours like you remember. Nostalgia in every bite.
           </p>

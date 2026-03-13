@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "Do you provide catering services in Dartford?",
     answer:
-      "Yes, we provide North Indian catering across Dartford and surrounding areas for private parties and corporate events (15+ guests).",
+      "Yes, we provide North Indian party catering for birthdays, family gatherings, festive celebrations and corporate events.",
   },
   {
     question: "Are you based in Ebbsfleet Valley, Kent?",

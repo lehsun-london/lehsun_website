@@ -25,8 +25,8 @@ export function HeroSection() {
           Flavours like you remember.
         </p>
         <p className="text-white text-base font-medium max-w-[52ch] mx-auto opacity-95 leading-relaxed">
-          Party catering for 15+ guests across Dartford, Ebbsfleet Valley,
-          Gravesend and surrounding Kent areas.
+          Party catering across Dartford, Ebbsfleet Valley, Gravesend and
+          surrounding Kent areas.
           <br />
           <span className="text-white text-sm opacity-80 mt-2">
             Private events • Birthdays • Corporate catering

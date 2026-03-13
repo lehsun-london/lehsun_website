@@ -5,7 +5,7 @@ const points = [
   "Customisable vegetarian & non-veg catering menus",
   "Reliable delivery & setup",
   "Freshly prepared in batches",
-  "Designed for gatherings of 15+ guests",
+  "Designed for gatherings and parties of 15+ guests",
 ];
 
 export function CateringSection() {

@@ -1,24 +1,24 @@
 const features = [
   {
-    icon: '🍲',
-    iconClass: '',
-    borderClass: 'border-[#E6A21A]',
-    title: 'Authentic Regional Recipes',
-    body: 'Traditional North Indian dishes cooked in small batches.',
+    icon: "🍲",
+    iconClass: "",
+    borderClass: "border-[#E6A21A]",
+    title: "Authentic Regional Recipes",
+    body: "Traditional North Indian dishes cooked in small batches.",
   },
   {
-    icon: '🌶',
-    iconClass: '',
-    borderClass: 'border-[#D9381E]',
-    title: 'Bold, Proper Spice',
-    body: 'Deep gravies and real tempering — never toned down.',
+    icon: "🌶",
+    iconClass: "",
+    borderClass: "border-[#D9381E]",
+    title: "Bold, Proper Spice",
+    body: "Deep gravies and real tempering — never toned down.",
   },
   {
-    icon: '👨‍👩‍👧‍👦',
-    iconClass: '',
-    borderClass: 'border-[#F28C28]',
-    title: 'Made for Gatherings',
-    body: 'Private parties & corporate events (15+ guests).',
+    icon: "👨‍👩‍👧‍👦",
+    iconClass: "",
+    borderClass: "border-[#F28C28]",
+    title: "Made for Gatherings",
+    body: "Birthday Parties, private gatherings & corporate events.",
   },
 ];
 
@@ -29,7 +29,9 @@ export function AboutSection() {
       id="about"
     >
       <div className="max-w-4xl mx-auto relative z-10">
-        <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Why Lehsun</span>
+        <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+          Why Lehsun
+        </span>
         <h2 className="text-balance text-4xl lg:text-6xl font-black text-slate-900 mb-8 leading-tight">
           Why Choose Lehsun for North Indian Catering in the UK?
         </h2>
@@ -42,7 +44,8 @@ export function AboutSection() {
           and the comfort of home in India.
           <br />
           <br />
-          Based in Ebbsfleet Valley (DA10 1GG), we proudly serve Dartford, Gravesend and nearby areas.
+          Based in Ebbsfleet Valley (DA10 1GG), we proudly serve Dartford,
+          Gravesend and nearby areas.
           <br />
           <br />
           No watered-down gravies. No commercial shortcuts.
@@ -56,9 +59,13 @@ export function AboutSection() {
                 key={feature.title}
                 className={`p-8 bg-white/80 backdrop-blur rounded-2xl border-b-4 shadow-xl ${feature.borderClass}`}
               >
-                <span className={`text-5xl mb-4 block ${feature.iconClass}`}>{feature.icon}</span>
+                <span className={`text-5xl mb-4 block ${feature.iconClass}`}>
+                  {feature.icon}
+                </span>
                 <h3 className="font-black text-xl mb-3">{feature.title}</h3>
-                <p className="text-sm text-slate-700 leading-relaxed">{feature.body}</p>
+                <p className="text-sm text-slate-700 leading-relaxed">
+                  {feature.body}
+                </p>
               </div>
             ))}
           </div>

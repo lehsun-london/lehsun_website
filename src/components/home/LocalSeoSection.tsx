@@ -9,8 +9,8 @@ export function LocalSeoSection() {
         <div className="text-slate-800 text-lg leading-relaxed space-y-5">
           <p>
             Lehsun – Nostalgic North Indian Catering is based in Ebbsfleet
-            Valley (DA10 1GG) and provides authentic North Indian catering
-            across:
+            Valley (DA10 1GG) and provides authentic North Indian catering for
+            private parties, birthdays and corporate events across:
           </p>
           <ul className="space-y-2 pl-4">
             <li>• Ebbsfleet Valley</li>
