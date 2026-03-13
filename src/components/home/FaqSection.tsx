@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We provide catering across Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+      "We provide catering across Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
   },
 ];
 

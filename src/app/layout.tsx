@@ -17,9 +17,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lehsun.co.uk/"),
-  title: "Lehsun | North Indian Catering in Ebbsfleet Valley, Dartford & Kent",
+  title:
+    "Authentic North Indian Catering in Dartford, Ebbsfleet Valley | Lehsun",
   description:
-    "Authentic North Indian catering in Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
+    "Authentic North Indian catering in Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events (15+ guests). Flavours like you remember. Nostalgia in every bite.",
   alternates: {
     canonical: "https://www.lehsun.co.uk/",
   },
@@ -28,7 +29,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "North Indian catering Ebbsfleet Valley",
+    "North Indian catering Dartford",
+    "catering Ebbsfleet Valley",
     "catering Dartford",
     "Indian catering Gravesend",
     "catering Orpington",
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lehsun – North Indian Catering in Kent",
     description:
-      "Catering in Ebbsfleet Valley, Dartford, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
+      "Catering in Dartford, Ebbsfleet Valley, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events (15+ guests).",
     url: "https://www.lehsun.co.uk/",
     type: "website",
   },
@@ -71,7 +73,7 @@ const faqSchema = {
       name: "What areas do you serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We provide catering across Ebbsfleet Valley, Dartford, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+        text: "We provide catering across Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
       },
     },
   ],
