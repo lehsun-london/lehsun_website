@@ -18,9 +18,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.lehsun.co.uk/"),
   title:
-    "Authentic North Indian Catering in Dartford, Ebbsfleet Valley | Lehsun",
+    "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
   description:
-    "Authentic North Indian catering in Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley and Bexley. Private parties & corporate events. Flavours like you remember. Nostalgia in every bite.",
+    "Lehsun provides North Indian catering in Dartford and Ebbsfleet Valley for birthdays, house parties and corporate events. Authentic flavours, delivery, setup and event catering for 15 to 300 guests.",
   alternates: {
     canonical: "https://www.lehsun.co.uk/",
   },
@@ -30,19 +30,18 @@ export const metadata: Metadata = {
   },
   keywords: [
     "North Indian catering Dartford",
-    "catering Ebbsfleet Valley",
-    "catering Dartford",
-    "Indian catering Gravesend",
-    "catering Orpington",
-    "catering Swanley",
-    "catering Bexley",
-    "party catering Kent",
-    "corporate catering Kent",
+    "Indian catering Ebbsfleet Valley",
+    "party catering Dartford",
+    "corporate catering Dartford",
+    "birthday catering Dartford",
+    "Indian party catering Kent",
+    "North Indian catering Kent",
+    "event catering Ebbsfleet Valley",
   ],
   openGraph: {
-    title: "Lehsun – North Indian Catering in Kent",
+    title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
     description:
-      "Catering in Dartford, Ebbsfleet Valley, Gravesend and nearby areas. Authentic North Indian flavour for private parties & corporate events.",
+      "North Indian catering for birthdays, family events and corporate gatherings in Dartford and Ebbsfleet Valley.",
     url: "https://www.lehsun.co.uk/",
     type: "website",
   },
@@ -54,7 +53,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you provide catering services in Dartford?",
+      name: "Do you provide North Indian catering in Dartford?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, we provide North Indian catering across Dartford and surrounding areas for private parties and corporate events.",
@@ -62,7 +61,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Are you based in Ebbsfleet Valley, Kent?",
+      name: "Do you cater private parties in Ebbsfleet Valley?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, Lehsun – Nostalgic North Indian Catering is based in Ebbsfleet Valley (DA10 1GG) and regularly caters events locally.",
@@ -70,13 +69,24 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What areas do you serve?",
+      name: "What types of events do you cater?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We provide catering across Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley, Bexley and nearby Kent areas.",
+        text: "We cater birthdays, family gatherings, festive celebrations, house parties and corporate events, typically for 15 to 300 guests.",
       },
     },
   ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.lehsun.co.uk/#website",
+  url: "https://www.lehsun.co.uk/",
+  name: "Lehsun",
+  description:
+    "North Indian catering in Dartford and Ebbsfleet Valley for private parties and corporate events.",
+  inLanguage: "en-GB",
 };
 
 export default function RootLayout({
@@ -136,6 +146,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body

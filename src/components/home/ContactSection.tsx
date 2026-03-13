@@ -116,29 +116,31 @@ export function ContactSection() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 italic font-serif">
-            Today&apos;s Specials
+            Book Catering for Your Event
           </h2>
           <p className="text-slate-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Limited daily food orders — cooked in small batches.
+            Planning a birthday, house party, family celebration or office
+            event in Dartford or Ebbsfleet Valley?
             <br />
-            Boldly spiced, freshly prepared, flavours like you remember.
+            Tell us your guest count, event date and preferred dishes, and
+            we&apos;ll help you plan the catering.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-10">
             <TrackedLink
               className="w-full md:w-auto flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.02] transition-all shadow-xl shadow-green-500/20 focus-ring"
-              ctaText="Order on WhatsApp"
+              ctaText="Get Quote on WhatsApp"
               destinationType="whatsapp"
               eventName="click_whatsapp_order"
-              href="https://wa.me/c/447768892652"
+              href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20a%20catering%20quote%20for%20my%20event."
               placement="contact_top"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Order on WhatsApp
+              Get Quote on WhatsApp
             </TrackedLink>
             <TrackedLink
               className="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] transition-colors shadow-xl shadow-primary/20 text-center focus-ring"
-              ctaText="View Today's Menu"
+              ctaText="View Catering Menu"
               destinationType="whatsapp"
               eventName="click_whatsapp_order"
               href="https://wa.me/c/447768892652"
@@ -146,19 +148,20 @@ export function ContactSection() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              View Today&apos;s Menu
+              View Catering Menu
             </TrackedLink>
           </div>
         </div>
 
         <div className="bg-cream/70 border border-[#efcaa4] rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            Planning an Event?
+            Why Hosts Choose Lehsun in Dartford &amp; Ebbsfleet
           </h3>
           <p className="text-slate-700 text-lg md:text-xl mb-8">
-            Authentic Indian catering.
+            Authentic North Indian dishes, dependable communication, and event
+            catering designed for gatherings from 15 to 300 guests.
             <br />
-            Flavours like you remember. Nostalgia in every bite.
+            Ideal for birthdays, home celebrations and corporate events.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <TrackedLink
@@ -184,6 +187,21 @@ export function ContactSection() {
               Message on WhatsApp
             </TrackedLink>
           </div>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {[
+            "Birthday and house party catering in Dartford",
+            "Private event catering in Ebbsfleet Valley",
+            "Corporate and festive catering across nearby Kent areas",
+          ].map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-[#efcaa4] bg-white px-6 py-5 text-center text-sm font-semibold text-slate-700"
+            >
+              {item}
+            </div>
+          ))}
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3 justify-center">

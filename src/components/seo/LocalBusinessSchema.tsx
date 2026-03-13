@@ -4,14 +4,19 @@ const localBusinessSchema = {
   "@id": "https://www.lehsun.co.uk/#localbusiness",
   name: "Lehsun - Nostalgic North Indian Catering",
   description:
-    "Authentic North Indian catering in Dartford, Ebbsfleet Valley, Gravesend and nearby Kent areas for private parties and corporate events.",
+    "North Indian catering in Dartford and Ebbsfleet Valley for birthdays, house parties, family celebrations and corporate events.",
   url: "https://www.lehsun.co.uk/",
-  image: "https://www.lehsun.co.uk/apple-touch-icon.png",
+  image: [
+    "https://www.lehsun.co.uk/assets/stitch/lehsun-branded-final/hero-bg.png",
+    "https://www.lehsun.co.uk/assets/stitch/lehsun-branded-final/catering-table.png",
+    "https://www.lehsun.co.uk/assets/food/lehsuns-royal-thaali.jpg",
+  ],
   logo: "https://www.lehsun.co.uk/apple-touch-icon.png",
   email: "lehsun.london@gmail.com",
   telephone: "+44 7768 892652",
   priceRange: "££",
   servesCuisine: ["North Indian", "Indian"],
+  slogan: "Flavours like you remember.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "28 Portbridge Gardens",
@@ -29,19 +34,15 @@ const localBusinessSchema = {
   areaServed: [
     {
       "@type": "City",
-      name: "Ebbsfleet Valley",
-    },
-    {
-      "@type": "City",
       name: "Dartford",
     },
     {
       "@type": "City",
-      name: "Gravesend",
+      name: "Ebbsfleet Valley",
     },
     {
       "@type": "City",
-      name: "Orpington",
+      name: "Gravesend",
     },
     {
       "@type": "City",
@@ -61,6 +62,24 @@ const localBusinessSchema = {
     "Private event catering",
     "Corporate catering",
     "North Indian catering",
+    "Birthday catering",
+    "Home event catering",
+  ],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
+      opens: "09:00",
+      closes: "20:00",
+    },
   ],
   sameAs: [
     "https://www.instagram.com/lehsun.london",

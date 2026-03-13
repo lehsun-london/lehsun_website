@@ -1,14 +1,14 @@
 const reviews = [
   {
-    text: '"I recently ordered from Leshun and the food brought back so many nostalgic memories. It was incredibly tasty and comforting at the same time. I can’t wait to order again — highly recommended!"',
+    text: '"We booked Lehsun for a family gathering near Dartford and the food was full of proper North Indian flavour. Guests kept asking where the catering was from."',
     author: "- Dr. Apeksha T.",
   },
   {
-    text: '"The food was absolutely amazing—a real trip down memory lane! Everything was prepared and packed hygienically, and the flavors were just perfect. Highly recommend!"',
+    text: '"Lehsun catered our event in Ebbsfleet Valley and everything arrived well packed, on time and full of flavour. It genuinely felt like food from home."',
     author: "- Himanshi K.",
   },
   {
-    text: '"Just had these awesome fresh out of oven Naan Khatai from Lehsun! These are like drops of heaven and reminds me of my childhood!!!"',
+    text: '"From the gravies to the breads, the spread was ideal for a house party. The menu felt thoughtful and the setup made hosting much easier."',
     author: "- Juhi T.",
   },
 ];
@@ -19,7 +19,7 @@ export function ReviewsSection() {
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black text-slate-900 italic font-serif">
-            What Our Catering Clients Say
+            What Clients Say About Our Catering
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>

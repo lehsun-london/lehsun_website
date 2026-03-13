@@ -17,17 +17,18 @@ export function CateringSection() {
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div className="lg:w-1/2">
           <h2 className="text-balance text-4xl lg:text-6xl font-black mb-2 leading-tight">
-            North Indian Catering
+            North Indian Catering for Events
           </h2>
           <h3 className="text-balance text-xl lg:text-2xl font-black mb-8 leading-tight">
-            for Private Parties & Corporate Events
+            in Dartford, Ebbsfleet Valley & Nearby Areas
           </h3>
           <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed max-w-[62ch]">
-            Lehsun provides authentic North Indian catering in the UK for house
-            parties, birthdays, family celebrations, and corporate events.
+            Lehsun provides authentic North Indian catering for house parties,
+            birthdays, anniversaries, festive gatherings and corporate events.
             <br />
             <br />
-            We provide North Indian catering across Kent and South East London.
+            We regularly cater across Dartford, Ebbsfleet Valley, Gravesend,
+            Swanley and nearby parts of Kent.
             <br />
             <br />
             From 15 to 300 guests, we create a spread people remember long after
@@ -39,8 +40,9 @@ export function CateringSection() {
             One bite, and you&rsquo;re back in India.
           </p>
           <p className="text-white/90 text-base mb-12 leading-relaxed max-w-[62ch]">
-            If you&apos;re looking for authentic Indian catering with proper
-            flavour, Lehsun delivers the taste you remember.
+            If you&apos;re looking for party catering in Dartford or Indian
+            catering in Ebbsfleet Valley, Lehsun delivers proper flavour with
+            dependable delivery and setup.
           </p>
           <ul className="space-y-6">
             {points.map((point) => (
