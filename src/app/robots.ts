@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.lehsun.co.uk/sitemap.xml",
-    host: "https://www.lehsun.co.uk/",
+    sitemap: "https://lehsun.co.uk/sitemap.xml",
+    host: "https://lehsun.co.uk/",
   };
 }

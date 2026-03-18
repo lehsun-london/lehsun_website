@@ -1,17 +1,17 @@
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "CateringService"],
-  "@id": "https://www.lehsun.co.uk/#localbusiness",
+  "@id": "https://lehsun.co.uk/#localbusiness",
   name: "Lehsun - Nostalgic North Indian Catering",
   description:
     "North Indian catering in Dartford and Ebbsfleet Valley for birthdays, house parties, family celebrations and corporate events.",
-  url: "https://www.lehsun.co.uk/",
+  url: "https://lehsun.co.uk/",
   image: [
-    "https://www.lehsun.co.uk/assets/stitch/lehsun-branded-final/hero-bg.png",
-    "https://www.lehsun.co.uk/assets/stitch/lehsun-branded-final/catering-table.png",
-    "https://www.lehsun.co.uk/assets/food/lehsuns-royal-thaali.jpg",
+    "https://lehsun.co.uk/assets/stitch/lehsun-branded-final/hero-bg.png",
+    "https://lehsun.co.uk/assets/stitch/lehsun-branded-final/catering-table.png",
+    "https://lehsun.co.uk/assets/food/lehsuns-royal-thaali.jpg",
   ],
-  logo: "https://www.lehsun.co.uk/apple-touch-icon.png",
+  logo: "https://lehsun.co.uk/apple-touch-icon.png",
   email: "lehsun.london@gmail.com",
   telephone: "+44 7768 892652",
   priceRange: "££",

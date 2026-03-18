@@ -16,13 +16,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.lehsun.co.uk/"),
-  title:
-    "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
+  metadataBase: new URL("https://lehsun.co.uk/"),
+  title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
   description:
     "Lehsun provides North Indian catering in Dartford and Ebbsfleet Valley for birthdays, house parties and corporate events. Authentic flavours, delivery, setup and event catering for 15 to 300 guests.",
   alternates: {
-    canonical: "https://www.lehsun.co.uk/",
+    canonical: "https://lehsun.co.uk/",
   },
   robots: {
     index: true,
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
     title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
     description:
       "North Indian catering for birthdays, family events and corporate gatherings in Dartford and Ebbsfleet Valley.",
-    url: "https://www.lehsun.co.uk/",
+    url: "https://lehsun.co.uk/",
     type: "website",
   },
 };
@@ -81,8 +80,8 @@ const faqSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://www.lehsun.co.uk/#website",
-  url: "https://www.lehsun.co.uk/",
+  "@id": "https://lehsun.co.uk/#website",
+  url: "https://lehsun.co.uk/",
   name: "Lehsun",
   description:
     "North Indian catering in Dartford and Ebbsfleet Valley for private parties and corporate events.",
