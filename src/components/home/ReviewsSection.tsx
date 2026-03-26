@@ -77,6 +77,12 @@ export function ReviewsSection() {
         </div>
 
         <div className="mt-12 text-center">
+          <div className="mb-8">
+            Our catering has been loved by customers across Dartford, Gravesend
+            and Ebbsfleet Valley — especially for <br />
+            birthday parties, family gatherings and special occasions.
+          </div>
+
           <TrackedLink
             className="inline-flex items-center gap-3 rounded-full bg-[#1A73E8] px-8 py-4 font-bold uppercase tracking-[0.18em] text-white shadow-lg transition-colors hover:bg-[#1558B0] focus-ring"
             ctaText="Read More Reviews on Google"

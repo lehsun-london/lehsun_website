@@ -55,7 +55,7 @@ export function HeroSection() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            View Catering Menu
+            View Daily Menu
           </TrackedLink>
         </div>
       </div>

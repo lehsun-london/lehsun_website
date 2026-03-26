@@ -2,10 +2,10 @@ import Image from "next/image";
 import { TrackedLink } from "../analytics/TrackedLink";
 
 const points = [
-  "Customisable vegetarian & non-veg catering menus",
-  "Reliable delivery & setup",
-  "Freshly prepared in batches",
-  "Designed for gatherings and parties of 15+ guests",
+  "Birthday parties in Dartford",
+  "Family gatherings in Gravesend",
+  "Events in Northfleet",
+  "Private catering across Kent",
 ];
 
 export function CateringSection() {
@@ -20,18 +20,20 @@ export function CateringSection() {
             North Indian Catering for Events
           </h2>
           <h3 className="text-balance text-xl lg:text-2xl font-black mb-8 leading-tight">
-            in Dartford, Ebbsfleet Valley & Nearby Areas
+            in Dartford, Gravesend, Ebbsfleet Valley & Surrounding Areas
           </h3>
           <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed max-w-[62ch]">
-            Lehsun provides authentic North Indian catering for house parties,
-            birthdays, anniversaries, festive gatherings and corporate events.
+            Lehsun provides authentic North Indian catering for private parties,
+            birthdays and events across Dartford, Gravesend, Northfleet,
+            Ebbsfleet Valley and nearby Kent areas.
             <br />
             <br />
-            We regularly cater across Dartford, Ebbsfleet Valley, Gravesend,
-            Swanley and nearby parts of Kent.
+            Whether it’s a house party in Dartford, a family gathering in
+            Gravesend, or a celebration in Northfleet — we bring proper ghar
+            (India) jaisa swad to your event.
             <br />
             <br />
-            From 15 to 300 guests, we create a spread people remember long after
+            From 15 to 100 guests, we create a spread people remember long after
             the event.
             <br />
             <br />
@@ -40,9 +42,8 @@ export function CateringSection() {
             One bite, and you&rsquo;re back in India.
           </p>
           <p className="text-white/90 text-base mb-12 leading-relaxed max-w-[62ch]">
-            If you&apos;re looking for party catering in Dartford or Indian
-            catering in Ebbsfleet Valley, Lehsun delivers proper flavour with
-            dependable delivery and setup.
+            If you’re searching for Indian catering near Dartford or Gravesend,
+            Lehsun delivers flavours like you remember. We regularly cater for:
           </p>
           <ul className="space-y-6">
             {points.map((point) => (
