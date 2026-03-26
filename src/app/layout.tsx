@@ -18,9 +18,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lehsun.co.uk/"),
-  title: "North Indian Catering in Ebbsfleet Valley, Dartford & Kent | Lehsun",
+  title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
   description:
-    "Lehsun is based in Ebbsfleet Valley and provides North Indian catering for parties, gatherings and events across Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
+    "Based in Ebbsfleet Valley, Lehsun provides North Indian catering for parties, gatherings and events across Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
   alternates: {
     canonical: "https://lehsun.co.uk/",
   },
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     "real North Indian flavours Kent",
   ],
   openGraph: {
-    title: "North Indian Catering in Ebbsfleet Valley, Dartford & Kent | Lehsun",
+    title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
     description:
-      "Based in Ebbsfleet Valley, Lehsun serves Dartford, Gravesend, Northfleet and nearby Kent with North Indian catering for parties, events and gatherings.",
+      "Based in Ebbsfleet Valley, Lehsun serves Dartford, Gravesend, Northfleet and nearby Kent with North Indian catering and real flavours like back home.",
     url: "https://lehsun.co.uk/",
     type: "website",
   },
@@ -67,7 +67,7 @@ const websiteSchema = {
   url: "https://lehsun.co.uk/",
   name: "Lehsun",
   description:
-    "North Indian catering based in Ebbsfleet Valley, serving Dartford, Gravesend, Northfleet and nearby Kent for parties and gatherings.",
+    "Based in Ebbsfleet Valley, Lehsun provides North Indian catering across Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
   inLanguage: "en-GB",
 };
 
