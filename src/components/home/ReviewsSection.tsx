@@ -1,7 +1,6 @@
 import { TrackedLink } from "../analytics/TrackedLink";
 
-const googleReviewsUrl =
-  "https://www.google.com/maps/place/Lehsun+%E2%80%93+Nostalgic+North+Indian+Catering/@51.4391298,0.2981501,17z/data=!4m8!3m7!1s0x47d8b74bf97b3043:0xfe7b3d927e4704c6!8m2!3d51.4391265!4d0.300725!9m1!1b1!16s%2Fg%2F11x7whmsl4?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D";
+const googleReviewsUrl = "https://g.page/r/CcYER36SPXv-EBM/review";
 
 const reviews = [
   {
