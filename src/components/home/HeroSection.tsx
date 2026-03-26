@@ -18,22 +18,22 @@ export function HeroSection() {
 
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#2b1307]/40 via-[#3d1c0f]/50 to-[#2a1309]/75" />
       <div className="relative z-10 text-center px-4 max-w-3xl flex flex-col items-center gap-4">
-        <h1 className="text-balance text-primary text-4xl md:text-5xl lg:text-6xl font-black leading-[0.95] tracking-tight">
+        <h1 className="text-balance text-primary text-4xl md:text-5xl lg:text-6xl font-black leading-[0.95] tracking-tight animate-fade-in-up">
           North Indian Catering in Dartford &amp; Ebbsfleet Valley
         </h1>
-        <p className="text-balance text-white italic font-serif text-xl md:text-2xl leading-tight">
+        <p className="text-balance text-white italic font-serif text-xl md:text-2xl leading-tight animate-fade-in-up" style={{ animationDelay: '100ms' }}>
           Real North Indian flavours — the kind you miss from back home.
         </p>
-        <p className="text-white text-base font-medium max-w-[44ch] mx-auto opacity-95 leading-relaxed">
+        <p className="text-white text-base font-medium max-w-[44ch] mx-auto opacity-95 leading-relaxed animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           Based in Ebbsfleet Valley, serving Dartford, Gravesend, Northfleet
           and nearby Kent.
         </p>
-        <div className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm">
+        <div className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm animate-fade-in-up" style={{ animationDelay: '300ms' }}>
           ⭐ 5-Star Food Hygiene Rated
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-1">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-1 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
           <TrackedLink
-            className="bg-[#D9381E] text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-[#F28C28] transition-colors shadow-lg shadow-vermillion/20 flex items-center justify-center focus-ring"
+            className="bg-[#D9381E] text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-[#F28C28] hover:scale-[1.02] hover:-translate-y-[2px] hover:shadow-xl transition-all shadow-lg shadow-vermillion/20 flex items-center justify-center focus-ring"
             ctaText="Plan Your Event"
             destinationType="anchor"
             eventName="click_plan_event"
@@ -43,7 +43,7 @@ export function HeroSection() {
             Plan Your Event
           </TrackedLink>
           <TrackedLink
-            className="border-2 border-white text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#D9381E] transition-all flex items-center justify-center focus-ring"
+            className="border-2 border-white text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#D9381E] hover:scale-[1.02] hover:-translate-y-[2px] hover:shadow-xl transition-all flex items-center justify-center focus-ring"
             ctaText="View Today's Menu"
             destinationType="whatsapp"
             eventName="click_view_menu"

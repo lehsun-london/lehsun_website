@@ -14,7 +14,7 @@ export function FaqSection() {
           {faqs.map((faq) => (
             <article
               key={faq.question}
-              className="rounded-2xl bg-white border border-[#efcaa4] p-6 md:p-8"
+              className="rounded-2xl bg-white border border-[#efcaa4] p-6 md:p-8 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl md:text-2xl font-black text-[#1f120d] mb-3">
                 {faq.question}

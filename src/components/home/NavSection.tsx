@@ -28,7 +28,7 @@ export function NavSection() {
         {links.map((link) => (
           <TrackedLink
             key={link.href}
-            className="text-xs font-bold uppercase tracking-[0.18em] hover:text-primary transition-colors focus-ring rounded-sm"
+            className="text-sm font-bold uppercase tracking-[0.18em] hover:text-primary transition-colors focus-ring rounded-sm"
             ctaText={link.label}
             destinationType="anchor"
             eventName="click_scroll_section"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ScrollReveal } from "../ui/ScrollReveal";
 
 const trustPoints = [
   {
@@ -21,7 +22,7 @@ export function AboutSection() {
       className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden scroll-mt-28 md:bg-[url('/assets/generated/geometric-motif.png')] md:bg-repeat md:bg-[length:220px] md:bg-[position:center] md:bg-blend-soft-light"
       id="about"
     >
-      <div className="max-w-6xl mx-auto relative z-10">
+      <ScrollReveal className="max-w-6xl mx-auto relative z-10">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,1fr)] lg:items-start">
           <div>
             <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
@@ -79,7 +80,7 @@ export function AboutSection() {
             </div>
           </article>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 }

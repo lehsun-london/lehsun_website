@@ -11,7 +11,7 @@ const points = [
 export function CateringSection() {
   return (
     <section
-      className="bg-vermillion text-white py-24 px-6 lg:px-20 relative scroll-mt-28"
+      className="bg-vermillion bg-noise text-white py-24 px-6 lg:px-20 relative scroll-mt-28"
       id="catering"
     >
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-center gap-16">

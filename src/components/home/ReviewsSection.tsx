@@ -44,7 +44,7 @@ export function ReviewsSection() {
           {reviews.map((review) => (
             <article
               key={review.author}
-              className="flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 shadow-lg"
+              className="flex h-full flex-col rounded-2xl border border-primary/10 bg-white p-8 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/30"
             >
               <div
                 className="flex text-mustard mb-4 text-lg"

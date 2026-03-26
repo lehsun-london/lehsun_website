@@ -85,7 +85,7 @@ export function LocalSeoSection() {
               coverage across the nearby places families book from most often.
             </p>
             <div
-              className="relative mt-6 w-full overflow-hidden rounded-2xl border-4 border-[#fff7ef] shadow-lg"
+              className="relative mt-6 w-full overflow-hidden rounded-2xl border-4 border-[#fff7ef] shadow-lg grayscale opacity-90 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
               style={{ paddingTop: "60%" }}
             >
               <iframe
