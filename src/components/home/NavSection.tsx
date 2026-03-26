@@ -3,9 +3,10 @@ import { TrackedLink } from "../analytics/TrackedLink";
 
 const links = [
   { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#menu", label: "Menu" },
   { href: "#catering", label: "Catering" },
+  { href: "#areas", label: "Areas" },
+  { href: "#daily-menu", label: "Daily Menu" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export function NavSection() {
@@ -23,11 +24,11 @@ export function NavSection() {
           Lehsun
         </h2>
       </div>
-      <nav className="hidden md:flex items-center gap-10">
+      <nav className="hidden md:flex items-center gap-6">
         {links.map((link) => (
           <TrackedLink
             key={link.href}
-            className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors focus-ring rounded-sm"
+            className="text-xs font-bold uppercase tracking-[0.18em] hover:text-primary transition-colors focus-ring rounded-sm"
             ctaText={link.label}
             destinationType="anchor"
             eventName="click_scroll_section"

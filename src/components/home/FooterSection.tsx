@@ -136,8 +136,9 @@ export function FooterSection() {
             Phone: +44 7768 892652
             <br />
             <br />
-            Serving: Dartford, Ebbsfleet Valley, Gravesend, Orpington, Swanley
-            &amp; Bexley
+            Based in Ebbsfleet Valley
+            <br />
+            Serving Dartford, Gravesend, Northfleet and nearby Kent
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 text-xs font-bold uppercase tracking-widest opacity-90">

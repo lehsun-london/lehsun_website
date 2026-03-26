@@ -119,16 +119,13 @@ export function ContactSection() {
             Book Catering for Your Event
           </h2>
           <p className="text-slate-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Planning a birthday, house party, family celebration or office
-            event in Dartford or Ebbsfleet Valley?
-            <br />
-            Tell us your guest count, event date and preferred dishes, and
-            we&apos;ll help you plan the catering.
+            We&apos;ll help you plan everything — from menu to quantities — so
+            your event runs smoothly.
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-10">
             <TrackedLink
               className="w-full md:w-auto flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.02] transition-all shadow-xl shadow-green-500/20 focus-ring"
-              ctaText="Get Quote on WhatsApp"
+              ctaText="Get Catering Quote"
               destinationType="whatsapp"
               eventName="click_whatsapp_order"
               href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20a%20catering%20quote%20for%20my%20event."
@@ -136,7 +133,7 @@ export function ContactSection() {
               rel="noopener noreferrer"
               target="_blank"
             >
-              Get Quote on WhatsApp
+              Get Catering Quote
             </TrackedLink>
             <TrackedLink
               className="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] transition-colors shadow-xl shadow-primary/20 text-center focus-ring"
@@ -155,45 +152,34 @@ export function ContactSection() {
 
         <div className="bg-cream/70 border border-[#efcaa4] rounded-3xl p-8 md:p-12 text-center">
           <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            Why Hosts Choose Lehsun in Dartford &amp; Ebbsfleet
+            What to send with your enquiry
           </h3>
           <p className="text-slate-700 text-lg md:text-xl mb-8">
-            Authentic North Indian dishes, dependable communication, and event
-            catering designed for gatherings from 15 to 300 guests.
-            <br />
-            Ideal for birthdays, home celebrations and corporate events.
+            A few details help us guide you quickly and properly for your
+            gathering.
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <TrackedLink
-              className="w-full md:w-auto bg-[#D9381E] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#B52E18] transition-colors shadow-lg focus-ring"
-              ctaText="Plan Your Event"
-              destinationType="anchor"
-              eventName="click_plan_event"
-              href="#catering"
-              placement="contact_event_card"
-            >
-              Plan Your Event
-            </TrackedLink>
-            <TrackedLink
-              className="w-full md:w-auto border-2 border-[#D9381E] text-[#D9381E] px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] hover:text-white transition-all focus-ring"
-              ctaText="Message on WhatsApp"
-              destinationType="whatsapp"
-              eventName="click_whatsapp_message"
-              href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20to%20plan%20an%20event."
-              placement="contact_event_card"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Message on WhatsApp
-            </TrackedLink>
+          <div className="grid gap-4 md:grid-cols-4 text-left">
+            {[
+              "Event date",
+              "Guest count (15+)",
+              "Your area",
+              "Preferred dishes or style",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-[#efcaa4] bg-white px-5 py-4 text-sm font-semibold text-slate-700"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {[
-            "Birthday and house party catering in Dartford",
-            "Private event catering in Ebbsfleet Valley",
-            "Corporate and festive catering across nearby Kent areas",
+            "Catering-led North Indian menus",
+            "Prepared with care for proper gatherings",
+            "Based in Ebbsfleet Valley and serving nearby Kent",
           ].map((item) => (
             <div
               key={item}

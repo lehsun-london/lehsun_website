@@ -17,24 +17,21 @@ export function HeroSection() {
       />
 
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#2b1307]/40 via-[#3d1c0f]/50 to-[#2a1309]/75" />
-      <div className="relative z-10 text-center px-4 max-w-4xl flex flex-col items-center gap-4">
+      <div className="relative z-10 text-center px-4 max-w-3xl flex flex-col items-center gap-4">
         <h1 className="text-balance text-primary text-4xl md:text-5xl lg:text-6xl font-black leading-[0.95] tracking-tight">
           North Indian Catering in Dartford &amp; Ebbsfleet Valley
         </h1>
         <p className="text-balance text-white italic font-serif text-xl md:text-2xl leading-tight">
-          Flavours like you remember.
+          Real North Indian flavours — the kind you miss from back home.
         </p>
-        <p className="text-white text-base font-medium max-w-[52ch] mx-auto opacity-95 leading-relaxed">
-          Event catering for birthdays, house parties, family gatherings and
-          corporate events across Dartford, Ebbsfleet Valley and nearby Kent
-          areas.
-          <br />
-          <span className="text-white text-sm opacity-80 mt-2">
-            15 to 300 guests • Delivery &amp; setup • Authentic North Indian
-            dishes
-          </span>
+        <p className="text-white text-base font-medium max-w-[44ch] mx-auto opacity-95 leading-relaxed">
+          Based in Ebbsfleet Valley, serving Dartford, Gravesend, Northfleet
+          and nearby Kent.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
+        <div className="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur-sm">
+          ⭐ 5-Star Food Hygiene Rated
+        </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-1">
           <TrackedLink
             className="bg-[#D9381E] text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-[#F28C28] transition-colors shadow-lg shadow-vermillion/20 flex items-center justify-center focus-ring"
             ctaText="Plan Your Event"
@@ -58,6 +55,9 @@ export function HeroSection() {
             View Daily Menu
           </TrackedLink>
         </div>
+        <p className="text-sm font-medium text-white/80">
+          Perfect for birthdays, house parties and family gatherings.
+        </p>
       </div>
       <TrackedLink
         className="absolute bottom-10 left-1/2 -translate-x-1/2 motion-safe:animate-bounce focus-ring rounded-sm"

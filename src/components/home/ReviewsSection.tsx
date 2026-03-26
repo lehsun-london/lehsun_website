@@ -22,12 +22,22 @@ const reviews = [
 
 export function ReviewsSection() {
   return (
-    <section className="bg-off-white py-24 px-6 lg:px-20">
+    <section
+      className="bg-off-white py-24 px-6 lg:px-20 scroll-mt-28"
+      id="reviews"
+    >
       <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-16">
+          <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
+            Google Reviews
+          </span>
           <h2 className="text-4xl font-black text-slate-900 italic font-serif">
-            What Customers Say on Google
+            What Families Across Ebbsfleet Valley &amp; Kent Say
           </h2>
+          <p className="mt-5 text-slate-700 text-lg leading-relaxed max-w-3xl mx-auto">
+            Trusted for gatherings, parties and celebrations across Ebbsfleet
+            Valley and nearby Kent.
+          </p>
           <div className="w-24 h-1 bg-primary mx-auto mt-4" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -76,10 +86,9 @@ export function ReviewsSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <div className="mb-8">
-            Our catering has been loved by customers across Dartford, Gravesend
-            and Ebbsfleet Valley — especially for <br />
-            birthday parties, family gatherings and special occasions.
+          <div className="mb-8 text-slate-700 leading-relaxed">
+            Customers come back for the flavour, the care and the comfort of
+            food that feels right for a proper gathering.
           </div>
 
           <TrackedLink

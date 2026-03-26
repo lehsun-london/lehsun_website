@@ -4,7 +4,7 @@ const localBusinessSchema = {
   "@id": "https://lehsun.co.uk/#localbusiness",
   name: "Lehsun - Nostalgic North Indian Catering",
   description:
-    "North Indian catering in Dartford and Ebbsfleet Valley for birthdays, house parties, family celebrations and corporate events.",
+    "North Indian catering based in Ebbsfleet Valley, serving Dartford, Gravesend, Northfleet and nearby Kent for parties, gatherings and events.",
   url: "https://lehsun.co.uk/",
   image: [
     "https://lehsun.co.uk/assets/stitch/lehsun-branded-final/hero-bg.png",
@@ -33,12 +33,12 @@ const localBusinessSchema = {
   hasMap: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   areaServed: [
     {
-      "@type": "City",
-      name: "Dartford",
+      "@type": "Place",
+      name: "Ebbsfleet Valley",
     },
     {
       "@type": "City",
-      name: "Ebbsfleet Valley",
+      name: "Dartford",
     },
     {
       "@type": "City",
@@ -46,11 +46,7 @@ const localBusinessSchema = {
     },
     {
       "@type": "City",
-      name: "Swanley",
-    },
-    {
-      "@type": "City",
-      name: "Bexley",
+      name: "Northfleet",
     },
     {
       "@type": "AdministrativeArea",
@@ -58,12 +54,12 @@ const localBusinessSchema = {
     },
   ],
   serviceType: [
+    "North Indian catering",
     "Party catering",
     "Private event catering",
-    "Corporate catering",
-    "North Indian catering",
     "Birthday catering",
-    "Home event catering",
+    "Family gathering catering",
+    "Small corporate event catering",
   ],
   openingHoursSpecification: [
     {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TrackedLink } from "../analytics/TrackedLink";
 
 const dishes = [
   {
@@ -35,14 +36,15 @@ export function MenuSection() {
   return (
     <section
       className="bg-[#FFF8F0] py-24 px-6 lg:px-20 relative scroll-mt-28"
-      id="menu"
+      id="daily-menu"
     >
       <div className="max-w-[1200px] mx-auto text-center mb-16">
         <h2 className="text-4xl font-black text-slate-900 mb-4 italic font-serif">
-          Signature North Indian Dishes
+          Daily Menu
         </h2>
         <p className="text-slate-700 max-w-3xl mx-auto text-lg leading-relaxed mb-6">
-          Classic favourites, cooked with depth and care.
+          A changing daily menu — a more regular way to enjoy Lehsun&apos;s
+          cooking.
         </p>
         <div className="w-24 h-1 bg-primary mx-auto" />
       </div>
@@ -71,6 +73,21 @@ export function MenuSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <TrackedLink
+          className="inline-flex items-center justify-center rounded-full border-2 border-[#D9381E] px-8 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#D9381E] transition-all hover:bg-[#D9381E] hover:text-white focus-ring"
+          ctaText="View Today's Menu"
+          destinationType="whatsapp"
+          eventName="click_view_menu"
+          href="https://wa.me/c/447768892652"
+          placement="daily_menu_section"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          View Today&apos;s Menu
+        </TrackedLink>
       </div>
     </section>
   );

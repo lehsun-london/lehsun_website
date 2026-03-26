@@ -16,13 +16,13 @@ export function HomePage() {
       <NavSection />
       <HeroSection />
       <AboutSection />
-      <MenuSection />
-      <EmotionStripSection />
-      <ReviewsSection />
       <CateringSection />
+      <LocalSeoSection />
+      <ReviewsSection />
+      <EmotionStripSection />
+      <MenuSection />
       <FaqSection />
       <ContactSection />
-      <LocalSeoSection />
       <FooterSection />
     </div>
   );
