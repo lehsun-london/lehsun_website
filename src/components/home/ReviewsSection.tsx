@@ -67,8 +67,8 @@ export function ReviewsSection() {
                 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-[#1A73E8] transition-colors hover:text-[#1558B0] focus-ring rounded-sm"
                 ctaText={`View ${review.author} review on Google`}
                 destinationType="maps"
-                eventName="click_social"
                 href={googleReviewsUrl}
+                intent="social"
                 placement="reviews_card"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -95,8 +95,8 @@ export function ReviewsSection() {
             className="inline-flex items-center gap-3 rounded-full bg-[#1A73E8] px-8 py-4 font-bold uppercase tracking-[0.18em] text-white shadow-lg transition-colors hover:bg-[#1558B0] focus-ring"
             ctaText="Read More Reviews on Google"
             destinationType="maps"
-            eventName="click_social"
             href={googleReviewsUrl}
+            intent="social"
             placement="reviews_section"
             rel="noopener noreferrer"
             target="_blank"

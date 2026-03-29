@@ -148,8 +148,8 @@ export function FooterSection() {
               className="hover:text-[#F28C28] transition-colors focus-ring rounded-sm inline-flex items-center gap-2"
               ctaText={link.label}
               destinationType={link.destinationType}
-              eventName="click_social"
               href={link.href}
+              intent="social"
               placement="footer_social_row"
               rel="noopener noreferrer"
               target="_blank"

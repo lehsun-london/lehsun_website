@@ -2,25 +2,27 @@
 
 import type { ComponentPropsWithoutRef, MouseEvent } from "react";
 import {
-  type CtaEventName,
   type DestinationType,
-  trackCtaClick,
+  type TrackedLinkIntent,
+  trackLinkInteraction,
 } from "@/lib/analytics";
 
 type AnchorProps = ComponentPropsWithoutRef<"a">;
 
 type TrackedLinkProps = AnchorProps & {
-  eventName: CtaEventName;
+  intent: TrackedLinkIntent;
   placement: string;
   destinationType: DestinationType;
   ctaText?: string;
+  isPrimaryCta?: boolean;
 };
 
 export function TrackedLink({
-  eventName,
+  intent,
   placement,
   destinationType,
   ctaText,
+  isPrimaryCta = false,
   href,
   onClick,
   ...props
@@ -39,12 +41,14 @@ export function TrackedLink({
         ? hrefValue.slice(1)
         : undefined;
 
-    trackCtaClick(eventName, {
+    trackLinkInteraction({
+      intent,
       placement,
       destination_type: destinationType,
       href: hrefValue,
-      cta_text: ctaText,
+      link_text: ctaText,
       section_id: sectionId,
+      is_primary_cta: isPrimaryCta,
     });
   }
 

@@ -127,8 +127,9 @@ export function ContactSection() {
               className="w-full md:w-auto flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.02] transition-all shadow-xl shadow-green-500/20 focus-ring"
               ctaText="Get Catering Quote"
               destinationType="whatsapp"
-              eventName="click_whatsapp_order"
               href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20a%20catering%20quote%20for%20my%20event."
+              intent="lead"
+              isPrimaryCta
               placement="contact_top"
               rel="noopener noreferrer"
               target="_blank"
@@ -139,8 +140,9 @@ export function ContactSection() {
               className="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] transition-colors shadow-xl shadow-primary/20 text-center focus-ring"
               ctaText="View Catering Menu"
               destinationType="whatsapp"
-              eventName="click_whatsapp_order"
               href="https://wa.me/c/447768892652"
+              intent="menu"
+              isPrimaryCta
               placement="contact_top"
               rel="noopener noreferrer"
               target="_blank"
@@ -197,8 +199,8 @@ export function ContactSection() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-off-white border border-primary/20 text-sm font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors focus-ring"
               ctaText={link.label}
               destinationType={link.destinationType as DestinationType}
-              eventName="click_social"
               href={link.href}
+              intent="social"
               placement="contact_social_row"
               rel="noopener noreferrer"
               target="_blank"

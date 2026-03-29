@@ -49,8 +49,9 @@ export function CateringSection() {
             className="mt-12 bg-white text-vermillion px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-cream transition-colors shadow-xl inline-flex focus-ring"
             ctaText="Get Catering Quote"
             destinationType="whatsapp"
-            eventName="click_whatsapp_quote"
             href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20to%20inquire%20about%20catering."
+            intent="lead"
+            isPrimaryCta
             placement="catering_section"
             rel="noopener noreferrer"
             target="_blank"

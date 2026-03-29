@@ -80,8 +80,9 @@ export function MenuSection() {
           className="inline-flex items-center justify-center rounded-full border-2 border-[#D9381E] px-8 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#D9381E] transition-all hover:bg-[#D9381E] hover:text-white focus-ring"
           ctaText="View Today's Menu"
           destinationType="whatsapp"
-          eventName="click_view_menu"
           href="https://wa.me/c/447768892652"
+          intent="menu"
+          isPrimaryCta
           placement="daily_menu_section"
           rel="noopener noreferrer"
           target="_blank"

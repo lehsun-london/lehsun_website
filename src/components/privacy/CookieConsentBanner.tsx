@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import {
+  COOKIE_CONSENT_KEY,
+  type ConsentValue,
+  getStoredAnalyticsConsent,
+} from "@/lib/consent";
 
-const COOKIE_CONSENT_KEY = "lehsun_cookie_consent_v1";
 const COOKIE_BANNER_OPEN_EVENT = "lehsun:cookie-banner-open";
-
-type ConsentValue = "granted" | "denied";
 
 function updateAnalyticsConsent(value: ConsentValue) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") {
@@ -27,10 +29,7 @@ export function CookieConsentBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const storedValue =
-      typeof window !== "undefined"
-        ? (window.localStorage.getItem(COOKIE_CONSENT_KEY) as ConsentValue | null)
-        : null;
+    const storedValue = getStoredAnalyticsConsent();
 
     if (storedValue === "granted" || storedValue === "denied") {
       updateAnalyticsConsent(storedValue);

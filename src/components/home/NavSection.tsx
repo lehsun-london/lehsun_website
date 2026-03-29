@@ -31,8 +31,8 @@ export function NavSection() {
             className="text-sm font-bold uppercase tracking-[0.18em] hover:text-primary transition-colors focus-ring rounded-sm"
             ctaText={link.label}
             destinationType="anchor"
-            eventName="click_scroll_section"
             href={link.href}
+            intent="section_navigation"
             placement="nav_header"
           >
             {link.label}
@@ -43,8 +43,9 @@ export function NavSection() {
         className="bg-primary hover:bg-mustard text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all shadow-lg shadow-primary/20 focus-ring"
         ctaText="Contact Us"
         destinationType="anchor"
-        eventName="click_contact_us"
         href="#contact"
+        intent="section_navigation"
+        isPrimaryCta
         placement="nav_header"
       >
         Contact Us

@@ -1,12 +1,4 @@
-export type CtaEventName =
-  | "click_plan_event"
-  | "click_view_menu"
-  | "click_scroll_section"
-  | "click_whatsapp_order"
-  | "click_whatsapp_message"
-  | "click_whatsapp_quote"
-  | "click_social"
-  | "click_contact_us";
+import { getStoredAnalyticsConsent } from "@/lib/consent";
 
 export type DestinationType =
   | "anchor"
@@ -16,39 +8,80 @@ export type DestinationType =
   | "facebook"
   | "external";
 
-export type CtaEventParams = {
+export type TrackedLinkIntent =
+  | "lead"
+  | "menu"
+  | "section_navigation"
+  | "social";
+
+export type LinkEventName =
+  | "generate_lead"
+  | "view_menu"
+  | "select_content"
+  | "click_social";
+
+export type LinkEventParams = {
+  placement: string;
+  destination_type: DestinationType;
+  link_url: string;
+  link_text?: string;
+  section_id?: string;
+  is_primary_cta: boolean;
+};
+
+export type LinkTrackInput = {
+  intent: TrackedLinkIntent;
   placement: string;
   destination_type: DestinationType;
   href: string;
-  cta_text?: string;
-  section_id?: string;
-  link_url: string;
   link_text?: string;
-  outbound: boolean;
-  transport_type: "beacon";
+  section_id?: string;
+  is_primary_cta: boolean;
 };
 
-type CtaTrackInput = Omit<
-  CtaEventParams,
-  "link_url" | "link_text" | "outbound" | "transport_type"
-> &
-  Partial<Pick<CtaEventParams, "cta_text" | "section_id">>;
+export type SectionViewParams = {
+  section_id: string;
+  section_name: string;
+  section_order: number;
+};
 
-export function trackCtaClick(
-  eventName: CtaEventName,
-  params: CtaTrackInput,
-): void {
+const eventNameByIntent: Record<TrackedLinkIntent, LinkEventName> = {
+  lead: "generate_lead",
+  menu: "view_menu",
+  section_navigation: "select_content",
+  social: "click_social",
+};
+
+function canTrackAnalytics(): boolean {
   if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return false;
+  }
+
+  return getStoredAnalyticsConsent() === "granted";
+}
+
+function trackEvent(
+  eventName: LinkEventName | "view_section",
+  params: LinkEventParams | SectionViewParams,
+): void {
+  if (!canTrackAnalytics()) {
     return;
   }
 
-  const finalParams: CtaEventParams = {
-    ...params,
-    link_url: params.href,
-    link_text: params.cta_text,
-    outbound: params.destination_type !== "anchor",
-    transport_type: "beacon",
-  };
+  window.gtag?.("event", eventName, params);
+}
 
-  window.gtag("event", eventName, finalParams);
+export function trackLinkInteraction(params: LinkTrackInput): void {
+  trackEvent(eventNameByIntent[params.intent], {
+    placement: params.placement,
+    destination_type: params.destination_type,
+    link_url: params.href,
+    link_text: params.link_text,
+    section_id: params.section_id,
+    is_primary_cta: params.is_primary_cta,
+  });
+}
+
+export function trackSectionView(params: SectionViewParams): void {
+  trackEvent("view_section", params);
 }

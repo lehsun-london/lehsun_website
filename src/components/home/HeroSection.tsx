@@ -36,8 +36,9 @@ export function HeroSection() {
             className="bg-[#D9381E] text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-[#F28C28] hover:scale-[1.02] hover:-translate-y-[2px] hover:shadow-xl transition-all shadow-lg shadow-vermillion/20 flex items-center justify-center focus-ring"
             ctaText="Plan Your Event"
             destinationType="anchor"
-            eventName="click_plan_event"
             href="#catering"
+            intent="section_navigation"
+            isPrimaryCta
             placement="hero"
           >
             Plan Your Event
@@ -46,8 +47,9 @@ export function HeroSection() {
             className="border-2 border-white text-white h-14 px-10 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#D9381E] hover:scale-[1.02] hover:-translate-y-[2px] hover:shadow-xl transition-all flex items-center justify-center focus-ring"
             ctaText="View Today's Menu"
             destinationType="whatsapp"
-            eventName="click_view_menu"
             href="https://wa.me/c/447768892652"
+            intent="menu"
+            isPrimaryCta
             placement="hero"
             rel="noopener noreferrer"
             target="_blank"
@@ -63,8 +65,8 @@ export function HeroSection() {
         className="absolute bottom-10 left-1/2 -translate-x-1/2 motion-safe:animate-bounce focus-ring rounded-sm"
         ctaText="scroll_down"
         destinationType="anchor"
-        eventName="click_scroll_section"
         href="#about"
+        intent="section_navigation"
         placement="hero"
       >
         <span aria-hidden className="text-white text-3xl">
