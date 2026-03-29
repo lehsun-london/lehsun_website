@@ -100,7 +100,7 @@ export default function RootLayout({
                     function gtag(){dataLayer.push(arguments);}
                     window.gtag = gtag;
 
-                    var analyticsConsent = 'denied';
+                    var analyticsConsent = 'granted';
 
                     try {
                       var storedConsent = window.localStorage.getItem(${JSON.stringify(COOKIE_CONSENT_KEY)});
@@ -113,6 +113,7 @@ export default function RootLayout({
                     gtag('consent', 'default', { analytics_storage: analyticsConsent });
                     gtag('js', new Date());
                     gtag('config', ${JSON.stringify(gaMeasurementId)}, {
+                      debug_mode: ${process.env.NODE_ENV !== "production"},
                       page_path: window.location.pathname,
                     });
                   })();

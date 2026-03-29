@@ -1,4 +1,4 @@
-import { getStoredAnalyticsConsent } from "@/lib/consent";
+import { getEffectiveAnalyticsConsent } from "@/lib/consent";
 
 export type DestinationType =
   | "anchor"
@@ -27,6 +27,7 @@ export type LinkEventParams = {
   link_text?: string;
   section_id?: string;
   is_primary_cta: boolean;
+  debug_mode?: boolean;
 };
 
 export type LinkTrackInput = {
@@ -43,6 +44,7 @@ export type SectionViewParams = {
   section_id: string;
   section_name: string;
   section_order: number;
+  debug_mode?: boolean;
 };
 
 const eventNameByIntent: Record<TrackedLinkIntent, LinkEventName> = {
@@ -52,12 +54,16 @@ const eventNameByIntent: Record<TrackedLinkIntent, LinkEventName> = {
   social: "click_social",
 };
 
+function isDebugModeEnabled(): boolean {
+  return process.env.NODE_ENV !== "production";
+}
+
 function canTrackAnalytics(): boolean {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+  if (typeof window === "undefined") {
     return false;
   }
 
-  return getStoredAnalyticsConsent() === "granted";
+  return getEffectiveAnalyticsConsent() === "granted";
 }
 
 function trackEvent(
@@ -68,7 +74,15 @@ function trackEvent(
     return;
   }
 
-  window.gtag?.("event", eventName, params);
+  if (typeof window.gtag === "function") {
+    window.gtag("event", eventName, params);
+  } else {
+    window.dataLayer = window.dataLayer || [];
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- required for arguments binding
+    (function gtag(_a: string, _b: string, _c: object) {
+      window.dataLayer.push(arguments);
+    })("event", eventName, params);
+  }
 }
 
 export function trackLinkInteraction(params: LinkTrackInput): void {
@@ -79,9 +93,13 @@ export function trackLinkInteraction(params: LinkTrackInput): void {
     link_text: params.link_text,
     section_id: params.section_id,
     is_primary_cta: params.is_primary_cta,
+    debug_mode: isDebugModeEnabled(),
   });
 }
 
 export function trackSectionView(params: SectionViewParams): void {
-  trackEvent("view_section", params);
+  trackEvent("view_section", {
+    ...params,
+    debug_mode: isDebugModeEnabled(),
+  });
 }

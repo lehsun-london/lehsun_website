@@ -4,17 +4,26 @@ import { useEffect, useState } from "react";
 import {
   COOKIE_CONSENT_KEY,
   type ConsentValue,
+  getEffectiveAnalyticsConsent,
   getStoredAnalyticsConsent,
 } from "@/lib/consent";
 
 const COOKIE_BANNER_OPEN_EVENT = "lehsun:cookie-banner-open";
 
 function updateAnalyticsConsent(value: ConsentValue) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+  if (typeof window === "undefined") {
     return;
   }
 
-  window.gtag("consent", "update", { analytics_storage: value });
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", { analytics_storage: value });
+  } else {
+    window.dataLayer = window.dataLayer || [];
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- required for arguments binding
+    (function gtag(_a: string, _b: string, _c: object) {
+      window.dataLayer.push(arguments);
+    })("consent", "update", { analytics_storage: value });
+  }
 }
 
 export function openCookieBanner(): void {
@@ -31,9 +40,7 @@ export function CookieConsentBanner() {
   useEffect(() => {
     const storedValue = getStoredAnalyticsConsent();
 
-    if (storedValue === "granted" || storedValue === "denied") {
-      updateAnalyticsConsent(storedValue);
-    }
+    updateAnalyticsConsent(getEffectiveAnalyticsConsent());
 
     // eslint-disable-next-line react-hooks/set-state-in-effect -- Visibility is initialized from client-only localStorage on mount.
     setIsVisible(!(storedValue === "granted" || storedValue === "denied"));
@@ -76,7 +83,8 @@ export function CookieConsentBanner() {
       <div className="mx-auto max-w-3xl rounded-2xl border border-[#efcaa4] bg-[#fff8f1] p-4 shadow-2xl">
         <p className="text-sm text-slate-800 leading-relaxed">
           We use analytics cookies to understand site traffic and improve
-          Lehsun. You can accept or reject.
+          Lehsun. They are enabled by default, and you can reject them here at
+          any time.
         </p>
         <div className="mt-3 flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
           <button
@@ -91,7 +99,7 @@ export function CookieConsentBanner() {
             onClick={handleAccept}
             type="button"
           >
-            Accept
+            Keep Enabled
           </button>
         </div>
       </div>

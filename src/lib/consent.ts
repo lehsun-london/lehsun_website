@@ -17,3 +17,7 @@ export function getStoredAnalyticsConsent(): ConsentValue | null {
     return null;
   }
 }
+
+export function getEffectiveAnalyticsConsent(): ConsentValue {
+  return getStoredAnalyticsConsent() ?? "granted";
+}

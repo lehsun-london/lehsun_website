@@ -17,10 +17,14 @@ export function SectionViewTracker({ sections }: SectionViewTrackerProps) {
   const seenSectionIds = useRef<Set<string>>(new Set());
 
   useEffect(() => {
+    const viewportHeight = window.innerHeight || 1;
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
+          const visibleViewportShare =
+            entry.intersectionRect.height / viewportHeight;
+
+          if (!entry.isIntersecting || visibleViewportShare < 0.5) {
             continue;
           }
 
@@ -45,7 +49,9 @@ export function SectionViewTracker({ sections }: SectionViewTrackerProps) {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.5 },
+      // Use several thresholds because the trigger condition is based on
+      // viewport coverage, not the section's own intersection ratio.
+      { threshold: [0, 0.25, 0.5, 0.75, 1] },
     );
 
     for (const section of sections) {
