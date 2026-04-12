@@ -1,34 +1,40 @@
 import type { Metadata } from "next";
 import { CateringPage } from "@/components/catering/CateringPage";
+import FaqSchema from "@/components/seo/FaqSchema";
+import { cateringFaqs } from "@/content/faqs";
 
 export const metadata: Metadata = {
-  title: "North Indian Catering in Dartford, Gravesend, Bexley & Kent | Lehsun",
+  title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
   description:
-    "Lehsun provides North Indian catering for events in Dartford, Gravesend, Ebbsfleet Valley, Bexley, Orpington and nearby Kent. Birthdays, Diwali, family gatherings and more — from £11.99 per head.",
+    "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. From £11.99 per head.",
   alternates: {
     canonical: "https://lehsun.co.uk/catering",
   },
   keywords: [
+    "North Indian catering Ebbsfleet",
     "North Indian catering Dartford",
     "Indian catering Gravesend",
-    "Indian catering Bexley",
-    "Indian catering Orpington",
     "North Indian catering Ebbsfleet Valley",
-    "party catering Kent",
-    "event catering Dartford",
+    "birthday catering Dartford",
+    "housewarming catering Gravesend",
+    "baby shower catering Ebbsfleet",
     "Diwali catering Kent",
-    "birthday catering Gravesend",
     "Indian catering for events Kent",
   ],
   openGraph: {
-    title: "North Indian Catering in Dartford, Gravesend, Bexley & Kent | Lehsun",
+    title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
     description:
-      "Proper North Indian catering for birthdays, Diwali, family gatherings and events across Dartford, Gravesend, Bexley, Orpington and Kent. From £11.99 per head.",
+      "Proper North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent.",
     url: "https://lehsun.co.uk/catering",
     type: "website",
   },
 };
 
 export default function Page() {
-  return <CateringPage />;
+  return (
+    <>
+      <FaqSchema faqs={cateringFaqs} />
+      <CateringPage />
+    </>
+  );
 }

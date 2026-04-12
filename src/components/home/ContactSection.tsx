@@ -60,7 +60,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
     : "Ready to Plan Your Event?";
 
   const subtext = isMenu
-    ? "Browse the WhatsApp catalogue, drop us a message, or give us a call. Collection is available, and delivery within 2 miles on orders above \u00a325."
+    ? "Browse the WhatsApp catalogue, drop us a message, or give us a call. Collection is available in Ebbsfleet Valley, and local delivery is available within 2 miles on orders above \u00a325."
     : "Message us on WhatsApp with a few details and we\u2019ll come back with a tailored quote — usually the same day.";
 
   return (

@@ -1,9 +1,23 @@
 import { Star, ShieldCheck, MapPin } from "lucide-react";
-import { reviewStats, serviceAreas } from "@/content/businessInfo";
+import {
+  dailyMenuInfo,
+  primaryCateringAreas,
+  reviewStats,
+  serviceAreas,
+} from "@/content/businessInfo";
 
 const areas = serviceAreas.filter((a) => a !== "Nearby Kent");
 
-export function TrustStripSection() {
+interface TrustStripSectionProps {
+  variant?: "general" | "catering" | "menu";
+}
+
+export function TrustStripSection({
+  variant = "general",
+}: TrustStripSectionProps) {
+  const isMenu = variant === "menu";
+  const displayAreas = isMenu ? primaryCateringAreas : areas;
+
   return (
     <div
       className="relative overflow-hidden"
@@ -49,13 +63,21 @@ export function TrustStripSection() {
         <span className="hidden sm:block text-[#F1E1AA]/30" aria-hidden>·</span>
         <div className="flex flex-wrap items-center gap-1.5">
           <MapPin className="size-3 text-[#E69B39]" aria-hidden />
-          <span className="text-[11px] text-[#F1E1AA]/70 font-medium">Serving</span>
-          {areas.map((area, i) => (
+          <span className="text-[11px] text-[#F1E1AA]/70 font-medium">
+            {isMenu ? "Catering across" : "Serving"}
+          </span>
+          {displayAreas.map((area, i) => (
             <span key={area} className="text-[11px] font-bold text-[#F1E1AA]">
-              {area}{i < areas.length - 1 ? " ·" : ""}
+              {area}{i < displayAreas.length - 1 ? " ·" : ""}
             </span>
           ))}
-          <span className="text-[11px] font-bold text-[#F1E1AA]">&amp; nearby Kent</span>
+          {isMenu ? (
+            <span className="text-[11px] font-bold text-[#F1E1AA]">
+              · daily menu from {dailyMenuInfo.collectionPoint}
+            </span>
+          ) : (
+            <span className="text-[11px] font-bold text-[#F1E1AA]">&amp; nearby Kent</span>
+          )}
         </div>
       </div>
     </div>

@@ -63,6 +63,3 @@ export const menuFaqs = [
       "Yes — we use separate kitchens for veg and non-veg food, so pure vegetarian customers can order with full confidence.",
   },
 ] as const;
-
-// Combined export for pages that need all FAQs (e.g. layout schema)
-export const faqs = [...cateringFaqs, ...menuFaqs] as const;

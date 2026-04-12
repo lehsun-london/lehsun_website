@@ -20,13 +20,13 @@ const infoCards = [
     icon: Store,
     color: "text-[#D9381E]",
     title: "Collection",
-    body: "Collect from Ebbsfleet Valley, DA10. We confirm your collection time when you order.",
+    body: `Collect from ${dailyMenuInfo.collectionPoint}. We confirm your collection time when you order.`,
   },
   {
     icon: Truck,
     color: "text-[#C8881A]",
     title: "Delivery",
-    body: `Delivery within ${dailyMenuInfo.deliveryRadius} for orders above ${dailyMenuInfo.deliveryMinimum}. Ebbsfleet Valley and surrounding areas.`,
+    body: `${dailyMenuInfo.localDeliveryNote} Orders above ${dailyMenuInfo.deliveryMinimum}.`,
   },
 ];
 
@@ -61,29 +61,62 @@ export function OrderingInfoSection() {
         </div>
 
         <ScrollReveal delay={240}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <TrackedLink
-              className="flex items-center justify-center gap-2 bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all focus-ring cursor-pointer"
-              ctaText="Browse Menu on WhatsApp"
-              destinationType="whatsapp"
-              href={whatsapp.catalog}
-              intent="menu"
-              isPrimaryCta
-              leadType="menu_enquiry"
-              value={15}
-              placement="ordering_info"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <MessageCircle className="size-4" aria-hidden />
-              Browse Menu on WhatsApp
-            </TrackedLink>
-            <a
-              href={`tel:${contact.phone.replace(/\s/g, "")}`}
-              className="flex items-center justify-center gap-2 border border-[#E8D5C0] bg-white text-[#1C0A00] px-8 py-4 rounded-full font-semibold text-sm hover:border-[#2E8B7A] hover:text-[#2E8B7A] transition-colors focus-ring cursor-pointer"
-            >
-              Call to Order
-            </a>
+          <div className="space-y-5">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <TrackedLink
+                className="flex items-center justify-center gap-2 bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all focus-ring cursor-pointer"
+                ctaText="Browse Menu on WhatsApp"
+                destinationType="whatsapp"
+                href={whatsapp.catalog}
+                intent="menu"
+                isPrimaryCta
+                leadType="menu_enquiry"
+                value={15}
+                placement="ordering_info"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <MessageCircle className="size-4" aria-hidden />
+                Browse Menu on WhatsApp
+              </TrackedLink>
+              <a
+                href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                className="flex items-center justify-center gap-2 border border-[#E8D5C0] bg-white text-[#1C0A00] px-8 py-4 rounded-full font-semibold text-sm hover:border-[#2E8B7A] hover:text-[#2E8B7A] transition-colors focus-ring cursor-pointer"
+              >
+                Call to Order
+              </a>
+            </div>
+
+            <div className="mx-auto max-w-3xl rounded-[28px] border border-[#E8D5C0] bg-white p-6 md:p-7 shadow-sm">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
+                Planning for 15+ guests?
+              </p>
+              <h3 className="font-serif italic font-black text-[#1C0A00] text-2xl md:text-[2rem] leading-tight mb-3">
+                Catering is the better fit for larger family orders and events
+              </h3>
+              <p className="text-sm md:text-base text-[#6B3A2A] leading-relaxed mb-5">
+                If you are ordering for birthdays, housewarmings, baby showers or festive gatherings
+                across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent, talk to us about a
+                tailored catering menu instead of the daily drop.
+              </p>
+              <div className="flex justify-center">
+                <TrackedLink
+                  className="flex items-center justify-center gap-2 bg-[#D9381E] hover:bg-[#B52D18] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all focus-ring cursor-pointer"
+                  ctaText="Ask About Catering"
+                  destinationType="whatsapp"
+                  href={whatsapp.cateringEnquiry}
+                  intent="lead"
+                  leadType="catering_enquiry"
+                  value={40}
+                  placement="menu_catering_bridge"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <MessageCircle className="size-4" aria-hidden />
+                  Ask About Catering
+                </TrackedLink>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
       </div>

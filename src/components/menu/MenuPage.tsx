@@ -25,7 +25,7 @@ export function MenuPage() {
       <NavSection />
       <main className="pt-[60px]">
         <MenuHeroSection />
-        <TrustStripSection />
+        <TrustStripSection variant="menu" />
         <FeaturedDishesSection />
         <HowItWorksSection />
         <OrderingInfoSection />

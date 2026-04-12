@@ -26,7 +26,7 @@ const steps = [
   {
     icon: Store,
     step: "04",
-    title: "Collect or get delivery",
+    title: "Collect or get local delivery",
     body: "Collect from Ebbsfleet Valley, or we deliver within 2 miles on orders of £25 or more.",
     color: "bg-[#C8881A]",
   },
@@ -45,7 +45,7 @@ export function HowItWorksSection() {
               className="font-serif italic font-black text-[#1C0A00] text-balance"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)" }}
             >
-              Fresh food, delivered in four simple steps
+              Fresh food in four simple steps
             </h2>
           </div>
         </ScrollReveal>

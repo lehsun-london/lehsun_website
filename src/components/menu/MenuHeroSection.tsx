@@ -31,7 +31,8 @@ export function MenuHeroSection() {
               style={{ animationDelay: "160ms" }}
             >
               A rotating daily menu — browse today&apos;s dishes on our WhatsApp catalogue,
-              order what you want, and collect or get delivery within 2 miles.
+              order what you want, and collect in Ebbsfleet Valley or get local
+              delivery within 2 miles.
             </p>
 
             <div
@@ -63,7 +64,7 @@ export function MenuHeroSection() {
               <span className="text-[#E8D5C0]" aria-hidden>·</span>
               <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
                 <Clock className="size-3.5 text-[#2E8B7A]" aria-hidden />
-                Collection &amp; delivery within 2 miles
+                Collection in DA10 · local delivery within 2 miles
               </div>
             </div>
           </div>

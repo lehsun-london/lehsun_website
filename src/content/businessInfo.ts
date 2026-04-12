@@ -35,6 +35,12 @@ export const serviceAreas = [
 
 export type ServiceArea = (typeof serviceAreas)[number];
 
+export const primaryCateringAreas = [
+  "Ebbsfleet Valley",
+  "Dartford",
+  "Gravesend",
+] as const;
+
 // ─── Reviews ──────────────────────────────────────────────────────────────────
 
 export const reviewStats = {
@@ -190,11 +196,13 @@ export const dailyMenuInfo = {
   posting: "Posted fresh daily",
   orderChannels: "Pre-order via WhatsApp catalogue, direct message, or a quick call.",
   fulfilment:
-    "Collection is available, and delivery is available within 2 miles for orders above £25.",
+    "Collection is available from Ebbsfleet Valley, and local delivery is available within 2 miles for orders above £25.",
   format:
     "Order dish by dish, or go for the daily thaali when you want a complete meal.",
   deliveryMinimum: "£25",
   deliveryRadius: "2 miles",
+  collectionPoint: "Ebbsfleet Valley, DA10",
+  localDeliveryNote: "Local delivery within 2 miles of Ebbsfleet Valley only.",
 } as const;
 
 export const dailyMenuDishes = [

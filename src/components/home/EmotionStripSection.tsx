@@ -8,7 +8,7 @@ export function EmotionStripSection() {
       {/* Tile motif texture overlay — very subtle */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.06] pointer-events-none"
+        className="absolute inset-0 opacity-[0.06] pointer-events-none hidden md:block"
         style={{
           backgroundImage: "url('/assets/brand/lehsun-motifs-2200.png')",
           backgroundSize: "300px auto",
@@ -19,7 +19,7 @@ export function EmotionStripSection() {
       {/* Geometric motif — large decorative circle, right side */}
       <div
         aria-hidden
-        className="absolute -right-32 top-1/2 -translate-y-1/2 w-[480px] h-[480px] opacity-[0.07] pointer-events-none"
+        className="absolute -right-32 top-1/2 -translate-y-1/2 w-[480px] h-[480px] opacity-[0.07] pointer-events-none hidden md:block"
         style={{
           backgroundImage: "url('/assets/generated/geometric-motif.png')",
           backgroundSize: "contain",

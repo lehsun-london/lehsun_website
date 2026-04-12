@@ -31,7 +31,7 @@ export function CateringPage() {
       <NavSection />
       <main className="pt-[60px]">
         <CateringHeroSection />
-        <TrustStripSection />
+        <TrustStripSection variant="catering" />
         <EventTypesSection />
         <CateringProcessSection />
         <PricingSection />

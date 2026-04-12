@@ -5,7 +5,14 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { visualAssets, cateringPricing, whatsapp } from "@/content/businessInfo";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
 
-const eventSnippets = ["Birthdays", "Diwali", "Holi", "Family gatherings", "House parties", "Festive events"];
+const eventSnippets = [
+  "Birthdays",
+  "Housewarmings",
+  "Baby showers",
+  "Diwali",
+  "Family gatherings",
+  "Festive events",
+];
 
 const dailyPoints = [
   "Posted fresh daily on WhatsApp",
@@ -26,7 +33,7 @@ export function ServicesSection() {
               className="font-serif italic font-black text-[#1C0A00] text-balance"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
-              Events or everyday — we&apos;ve got you covered
+              Catering for your event, plus a daily menu for nearby orders
             </h2>
           </div>
         </ScrollReveal>
@@ -69,7 +76,7 @@ export function ServicesSection() {
                   North Indian catering for your event
                 </h3>
                 <p className="text-[#6B3A2A] text-sm leading-relaxed mb-4">
-                  Proper North Indian menus for birthdays, family gatherings, festive events and parties.
+                  Proper North Indian menus for birthdays, housewarmings, baby showers, family gatherings and festive occasions.
                 </p>
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {eventSnippets.map((e) => (
@@ -143,7 +150,7 @@ export function ServicesSection() {
                   Fresh North Indian meals, every day
                 </h3>
                 <p className="text-[#6B3A2A] text-sm leading-relaxed mb-4">
-                  A rotating daily menu posted fresh each morning. Order via WhatsApp, collect or get delivery within 2 miles.
+                  A rotating daily menu posted fresh each morning for Ebbsfleet Valley collection and nearby local delivery.
                 </p>
                 <div className="space-y-1.5 mb-5">
                   {dailyPoints.map((point) => (

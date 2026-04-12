@@ -13,7 +13,7 @@ export function HeroSection() {
       {/* Full-bleed tile texture — very subtle richness across whole bg */}
       <div
         aria-hidden
-        className="absolute inset-0 opacity-[0.035] pointer-events-none z-0"
+        className="absolute inset-0 opacity-[0.035] pointer-events-none z-0 hidden md:block"
         style={{
           backgroundImage: "url('/assets/brand/lehsun-motifs-2200.png')",
           backgroundSize: "220px",
@@ -96,7 +96,6 @@ export function HeroSection() {
           fill
           className="object-contain scale-125"
           sizes="(max-width: 768px) 160px, 288px"
-          priority
         />
       </div>
 
@@ -111,7 +110,6 @@ export function HeroSection() {
           fill
           className="object-contain rotate-[-15deg] scale-110"
           sizes="(max-width: 768px) 192px, 320px"
-          priority
         />
       </div>
 
@@ -175,10 +173,10 @@ export function HeroSection() {
             animationDelay: "80ms",
           }}
         >
-          North Indian
+          North Indian Catering for
           <br />
-          <span style={{ color: "#D93423" }}>Catering</span>{" "}
-          <span style={{ color: "#03B6AA" }}>in Kent</span>
+          <span style={{ color: "#D93423" }}>Ebbsfleet, Dartford</span>{" "}
+          <span style={{ color: "#03B6AA" }}>&amp; Gravesend</span>
         </h1>
 
         {/* Subheadings */}
@@ -186,16 +184,35 @@ export function HeroSection() {
           className="text-xl md:text-2xl font-serif italic mb-5 animate-fade-in-up"
           style={{ color: "#993786", animationDelay: "160ms" }}
         >
-          Real flavours — the kind you miss from back home.
+          Proper flavours for birthdays, housewarmings, baby showers and family events.
         </p>
 
         <p
           className="text-lg md:text-xl leading-relaxed mb-6 max-w-[45ch] animate-fade-in-up"
           style={{ color: "#5C2A10", animationDelay: "240ms" }}
         >
-          Catering for events and daily meals across Dartford, Gravesend,
-          Ebbsfleet Valley, Bexley, Orpington and nearby Kent.
+          Based in Ebbsfleet Valley, we create tailored North Indian catering menus
+          across Dartford, Gravesend and nearby Kent. Our daily menu stays local
+          with collection in DA10 and nearby delivery only.
         </p>
+
+        <div
+          className="flex flex-wrap justify-center gap-2.5 mb-8 animate-fade-in-up"
+          style={{ animationDelay: "280ms" }}
+        >
+          {[
+            "Tailored quotes, usually same day",
+            "Separate veg & non-veg kitchens",
+            "Minimum 15 guests for catering",
+          ].map((point) => (
+            <span
+              key={point}
+              className="rounded-full border border-[#E8D5C0] bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#6B3A2A]"
+            >
+              {point}
+            </span>
+          ))}
+        </div>
 
         {/* CTA Buttons */}
         <div
@@ -265,7 +282,7 @@ export function HeroSection() {
               style={{ color: "#D93423" }}
               aria-hidden
             />
-            6 Areas in Kent
+            Ebbsfleet · Dartford · Gravesend
           </div>
         </div>
       </div>

@@ -1,31 +1,39 @@
 import type { Metadata } from "next";
 import { MenuPage } from "@/components/menu/MenuPage";
+import FaqSchema from "@/components/seo/FaqSchema";
+import { menuFaqs } from "@/content/faqs";
 
 export const metadata: Metadata = {
-  title: "Daily North Indian Menu — Order via WhatsApp | Lehsun",
+  title: "Daily North Indian Menu in Ebbsfleet Valley | Order on WhatsApp | Lehsun",
   description:
-    "Lehsun posts a fresh North Indian menu every day. Order via WhatsApp catalogue — collection from Ebbsfleet Valley or delivery within 2 miles on orders above £25.",
+    "Lehsun posts a fresh North Indian menu every day. Order on WhatsApp for collection in Ebbsfleet Valley, DA10, or local delivery within 2 miles on orders above £25.",
   alternates: {
     canonical: "https://lehsun.co.uk/menu",
   },
   keywords: [
     "daily Indian food Ebbsfleet Valley",
-    "North Indian food delivery Dartford",
-    "Indian takeaway Ebbsfleet Valley",
-    "daily thaali Gravesend",
-    "fresh Indian food Kent",
+    "Indian food collection Ebbsfleet Valley",
     "WhatsApp food order Ebbsfleet Valley",
-    "Indian home delivery Northfleet",
+    "North Indian meals Ebbsfleet Valley",
+    "daily thaali Ebbsfleet Valley",
+    "fresh Indian food Ebbsfleet Valley",
+    "Indian food DA10",
+    "local Indian delivery Ebbsfleet Valley",
   ],
   openGraph: {
-    title: "Daily North Indian Menu — Order via WhatsApp | Lehsun",
+    title: "Daily North Indian Menu in Ebbsfleet Valley | Order on WhatsApp | Lehsun",
     description:
-      "Fresh North Indian dishes posted daily. Order via WhatsApp — collection or delivery within 2 miles from Ebbsfleet Valley.",
+      "Fresh North Indian dishes posted daily. Order via WhatsApp for collection in Ebbsfleet Valley or local delivery within 2 miles.",
     url: "https://lehsun.co.uk/menu",
     type: "website",
   },
 };
 
 export default function Page() {
-  return <MenuPage />;
+  return (
+    <>
+      <FaqSchema faqs={menuFaqs} />
+      <MenuPage />
+    </>
+  );
 }

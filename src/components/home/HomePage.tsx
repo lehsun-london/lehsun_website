@@ -28,7 +28,7 @@ export function HomePage() {
       <NavSection />
       <main className="pt-[60px]">
         <HeroSection />
-        <TrustStripSection />
+        <TrustStripSection variant="general" />
         <JaliWaveDivider height={52} />
         <ServicesSection />
         <JaliWaveDivider height={52} />
