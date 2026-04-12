@@ -173,10 +173,12 @@ export function HeroSection() {
             animationDelay: "80ms",
           }}
         >
-          North Indian Catering for
+          North <span style={{ color: "#D93423" }}>Indian</span> <br />
+          <span style={{ color: "#03B6AA" }}>Catering</span>
           <br />
-          <span style={{ color: "#D93423" }}>Ebbsfleet, Dartford</span>{" "}
-          <span style={{ color: "#03B6AA" }}>&amp; Gravesend</span>
+          <span style={{ fontSize: "30px" }}>
+            for Ebbsfleet, Dartford, Gravesend
+          </span>{" "}
         </h1>
 
         {/* Subheadings */}
@@ -184,16 +186,16 @@ export function HeroSection() {
           className="text-xl md:text-2xl font-serif italic mb-5 animate-fade-in-up"
           style={{ color: "#993786", animationDelay: "160ms" }}
         >
-          Proper flavours for birthdays, housewarmings, baby showers and family events.
+          Proper flavours for birthdays, house warmings, <br />
+          baby showers and family events.
         </p>
 
         <p
           className="text-lg md:text-xl leading-relaxed mb-6 max-w-[45ch] animate-fade-in-up"
           style={{ color: "#5C2A10", animationDelay: "240ms" }}
         >
-          Based in Ebbsfleet Valley, we create tailored North Indian catering menus
-          across Dartford, Gravesend and nearby Kent. Our daily menu stays local
-          with collection in DA10 and nearby delivery only.
+          Based in Ebbsfleet Valley, we create tailored North Indian catering
+          menus across Dartford, Gravesend and nearby
         </p>
 
         <div
