@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Karla, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { faqs } from "@/content/faqs";
@@ -7,9 +7,10 @@ import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
 import { COOKIE_CONSENT_KEY } from "@/lib/consent";
 import "./globals.css";
 
-const inter = Inter({
+const karla = Karla({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const playfair = Playfair_Display({
@@ -152,7 +153,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} bg-[#F7E6D2] text-slate-900 font-display`}
+        className={`${karla.variable} ${playfair.variable} font-body text-[#1A0600] bg-[#FDF8F0]`}
       >
         {children}
         <CookieConsentBanner />

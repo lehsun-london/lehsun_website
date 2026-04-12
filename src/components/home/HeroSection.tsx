@@ -6,38 +6,62 @@ import { whatsapp, visualAssets, reviewStats } from "@/content/businessInfo";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#FFFDF9] py-16 md:py-24 px-5 lg:px-10 overflow-hidden" id="home">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-[#FDF8F0] py-16 md:py-24 px-5 lg:px-10 overflow-hidden" id="home">
+      {/* Spice-burst — large decorative top-right */}
+      <div
+        aria-hidden
+        className="absolute -top-16 -right-16 w-[420px] h-[420px] opacity-[0.08] pointer-events-none animate-spin-slow"
+        style={{
+          backgroundImage: "url('/assets/generated/spice-burst.svg')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      {/* Spice-burst — small bottom-left */}
+      <div
+        aria-hidden
+        className="absolute -bottom-20 -left-20 w-[280px] h-[280px] opacity-[0.06] pointer-events-none"
+        style={{
+          backgroundImage: "url('/assets/generated/spice-burst.svg')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto">
         <div className="grid md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 items-center">
 
           {/* Left — text */}
           <div className="order-2 md:order-1">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#E8D5C0] bg-[#FFF5E4] px-4 py-1.5 mb-6 animate-fade-in-up">
-              <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#6B3A2A]">
+            {/* Badge pill */}
+            <div className="inline-flex items-center gap-2 rounded-full border-2 border-[#D93423]/20 bg-[#D93423]/8 px-4 py-1.5 mb-6 animate-fade-in-up" style={{ backgroundColor: "rgba(217,52,35,0.07)" }}>
+              <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D93423]">
                 {reviewStats.average} · {reviewStats.count} Google Reviews · Kent
               </span>
             </div>
 
             <h1
-              className="font-serif italic font-black text-[#1C0A00] text-balance leading-[1.0] tracking-tight mb-5 animate-fade-in-up"
+              className="font-serif italic font-black text-[#1A0600] text-balance leading-[1.0] tracking-tight mb-5 animate-fade-in-up"
               style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", animationDelay: "80ms" }}
             >
               Proper North Indian
               <br />
-              <span className="text-[#F5821F]">Catering in Kent</span>
+              <span style={{ color: "#D93423" }}>Catering</span>
+              {" "}
+              <span style={{ color: "#03B6AA" }}>in Kent</span>
             </h1>
 
             <p
-              className="text-lg md:text-xl font-serif italic text-[#6B3A2A] mb-3 animate-fade-in-up"
-              style={{ animationDelay: "160ms" }}
+              className="text-lg md:text-xl font-serif italic mb-3 animate-fade-in-up"
+              style={{ color: "#993786", animationDelay: "160ms" }}
             >
               Real flavours — the kind you miss from back home.
             </p>
 
             <p
-              className="text-[#6B3A2A] text-base leading-relaxed mb-8 max-w-[40ch] animate-fade-in-up"
-              style={{ animationDelay: "240ms" }}
+              className="text-base leading-relaxed mb-8 max-w-[40ch] animate-fade-in-up"
+              style={{ color: "#5C2A10", animationDelay: "240ms" }}
             >
               Catering for events and daily meals across Dartford, Gravesend,
               Ebbsfleet Valley, Bexley, Orpington and nearby Kent.
@@ -48,7 +72,8 @@ export function HeroSection() {
               style={{ animationDelay: "320ms" }}
             >
               <TrackedLink
-                className="flex items-center justify-center gap-2 bg-[#D9381E] hover:bg-[#F5821F] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-[#D9381E]/25 hover:-translate-y-0.5 focus-ring cursor-pointer"
+                className="flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:-translate-y-0.5 focus-ring cursor-pointer"
+                style={{ backgroundColor: "#D93423", boxShadow: "0 8px 24px rgba(217,52,35,0.35)" }}
                 ctaText="Plan Your Event"
                 destinationType="whatsapp"
                 href={whatsapp.cateringEnquiry}
@@ -62,36 +87,57 @@ export function HeroSection() {
               </TrackedLink>
               <Link
                 href="/menu"
-                className="flex items-center justify-center gap-2 border border-[#E8D5C0] text-[#1C0A00] bg-white px-8 py-4 rounded-full font-semibold text-sm hover:border-[#F5821F] hover:text-[#F5821F] transition-colors focus-ring cursor-pointer"
+                className="flex items-center justify-center gap-2 border-2 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 focus-ring cursor-pointer"
+                style={{ borderColor: "#03B6AA", color: "#03B6AA" }}
               >
                 View Daily Menu
               </Link>
             </div>
 
+            {/* Trust chips */}
             <div
-              className="flex flex-wrap gap-3 animate-fade-in-up"
+              className="flex flex-wrap gap-4 animate-fade-in-up"
               style={{ animationDelay: "400ms" }}
             >
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
-                <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
+              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
+                <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
                 5.0 Google Reviews
               </div>
-              <span className="text-[#E8D5C0]" aria-hidden>&middot;</span>
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
-                <ShieldCheck className="size-3.5 text-[#2E8B7A]" aria-hidden />
-                5-Star Hygiene Rated
+              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
+                <ShieldCheck className="size-3.5" style={{ color: "#03B6AA" }} aria-hidden />
+                5-Star Hygiene
               </div>
-              <span className="text-[#E8D5C0]" aria-hidden>&middot;</span>
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
-                <MapPin className="size-3.5 text-[#F5821F]" aria-hidden />
+              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
+                <MapPin className="size-3.5" style={{ color: "#D93423" }} aria-hidden />
                 6 Areas in Kent
               </div>
             </div>
           </div>
 
-          {/* Right — food image */}
-          <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in-up" style={{ animationDelay: "100ms" }}>
-            <div className="relative w-full max-w-sm md:max-w-none md:w-[420px] lg:w-[500px] aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-[#FFF5E4]">
+          {/* Right — food image with floating circles */}
+          <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in-up relative" style={{ animationDelay: "100ms" }}>
+
+            {/* Floating circle — top right */}
+            <div className="absolute -top-4 -right-4 md:-right-6 z-10 animate-float" style={{ animationDelay: "0ms" }} aria-hidden>
+              <div className="relative size-16 rounded-full overflow-hidden shadow-xl"
+                style={{ border: "3px solid #03B6AA" }}>
+                <Image src={visualAssets.cateringImage} alt="" fill className="object-cover" sizes="64px" />
+              </div>
+            </div>
+
+            {/* Floating circle — bottom left */}
+            <div className="absolute -bottom-4 -left-4 md:-left-6 z-10 animate-float-slow" style={{ animationDelay: "800ms" }} aria-hidden>
+              <div className="relative size-20 rounded-full overflow-hidden shadow-xl"
+                style={{ border: "3px solid #E69B39" }}>
+                <Image src="/assets/food/pav-bhaji-1400.jpg" alt="" fill className="object-cover" sizes="80px" />
+              </div>
+            </div>
+
+            {/* Main image */}
+            <div
+              className="relative w-full max-w-sm md:max-w-none md:w-[420px] lg:w-[500px] aspect-square rounded-3xl overflow-hidden shadow-2xl"
+              style={{ border: "4px solid #F1E1AA" }}
+            >
               <Image
                 alt="Authentic North Indian spread — Amritsari thaali with rich curries, breads and chutneys"
                 className="object-cover"
@@ -100,13 +146,21 @@ export function HeroSection() {
                 sizes="(max-width: 768px) 90vw, (max-width: 1024px) 40vw, 500px"
                 src={visualAssets.heroImage}
               />
-              <div className="absolute inset-0 ring-1 ring-inset ring-[#F5821F]/20 rounded-3xl pointer-events-none" />
+              {/* Ring inset */}
+              <div className="absolute inset-0 rounded-3xl pointer-events-none"
+                style={{ boxShadow: "inset 0 0 0 2px rgba(217,52,35,0.25)" }} />
+
+              {/* Review badge */}
+              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-md">
+                <Star className="size-3 fill-[#E69B39] text-[#E69B39]" aria-hidden />
+                <span className="text-[10px] font-bold text-[#1A0600]">5.0 · 50 Reviews</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* WhatsApp FAB — mobile only */}
+      {/* WhatsApp FAB */}
       <TrackedLink
         aria-label="Message us on WhatsApp"
         className="whatsapp-fab md:hidden"

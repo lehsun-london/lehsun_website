@@ -235,6 +235,6 @@ export const visualAssets = {
   aboutImage: "/assets/food/litti-chokha-1400.jpg",
   cateringImage: "/assets/food/butter-chicken-1400.png",
   dailyMenuImage: "/assets/food/lehsuns-royal-thaali.jpg",
-  hygieneRating: "/assets/brand/hygiene-rating-5star.png",
+  hygieneRating: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/food-hygiene-Rating%205_a_preview.jpeg?itok=ao2_ogm4",
   logo: "/assets/stitch/lehsun-branded-final/logo.png",
 } as const;

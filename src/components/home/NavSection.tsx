@@ -19,7 +19,7 @@ export function NavSection() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-[#E8D5C0]">
+    <header className="fixed top-0 z-50 w-full bg-white/97 backdrop-blur-sm" style={{ borderBottom: "1px solid #EAD6A8" }}>
       <div className="max-w-7xl mx-auto px-5 lg:px-10 py-3.5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 focus-ring rounded-sm">
@@ -45,9 +45,10 @@ export function NavSection() {
                 href={link.href}
                 className={`text-sm font-semibold transition-colors focus-ring rounded-sm ${
                   active
-                    ? "text-[#D9381E] underline underline-offset-4 decoration-[#D9381E]/50"
-                    : "text-[#6B3A2A] hover:text-[#F5821F]"
+                    ? "underline underline-offset-4"
+                    : "hover:opacity-70"
                 }`}
+              style={{ color: active ? "#D93423" : "#5C2A10" }}
               >
                 {link.label}
               </Link>

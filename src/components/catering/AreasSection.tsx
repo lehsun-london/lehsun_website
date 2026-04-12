@@ -55,18 +55,22 @@ export function AreasSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={120}>
-          <div className="rounded-2xl overflow-hidden border border-[#E8D5C0] shadow-sm">
+          <div className="rounded-2xl overflow-hidden border-2 shadow-md" style={{ borderColor: "#EAD6A8" }}>
             <iframe
-              className="w-full h-72 grayscale hover:grayscale-0 transition-all duration-500"
+              className="w-full h-80"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19904.827!2d0.3192!3d51.4453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8b0f4e9f5f0a1%3A0x1f2e3d4c5b6a7b8c!2sEbbsfleet%20Valley%2C%20Swanscombe%2C%20Gravesend!5e0!3m2!1sen!2suk!4v1681000000000!5m2!1sen!2suk"
-              title="Lehsun service area map — Ebbsfleet Valley, Dartford, Gravesend, Bexley, Orpington"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1242.3!2d0.300725!3d51.4391265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8b74bf97b3043%3A0xfe7b3d927e4704c6!2sLehsun%20%E2%80%93%20Nostalgic%20North%20Indian%20Catering!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+              title="Lehsun – Nostalgic North Indian Catering location on Google Maps"
             />
-            <div className="bg-white border-t border-[#E8D5C0] px-5 py-3 flex items-center justify-between flex-wrap gap-3">
-              <p className="text-xs text-[#6B3A2A] font-medium">Based in Ebbsfleet Valley, DA10</p>
+            <div className="bg-white border-t px-5 py-3 flex items-center justify-between flex-wrap gap-3" style={{ borderColor: "#EAD6A8" }}>
+              <div className="flex items-center gap-2">
+                <MapPin className="size-3.5 flex-shrink-0" style={{ color: "#D93423" }} aria-hidden />
+                <p className="text-xs font-medium" style={{ color: "#5C2A10" }}>Lehsun — Ebbsfleet Valley, DA10</p>
+              </div>
               <TrackedLink
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1A73E8] hover:underline cursor-pointer focus-ring"
+                className="inline-flex items-center gap-1.5 text-xs font-bold hover:underline cursor-pointer focus-ring"
+                style={{ color: "#1A73E8" }}
                 ctaText="View on Google Maps"
                 destinationType="maps"
                 href={contact.googleMaps}

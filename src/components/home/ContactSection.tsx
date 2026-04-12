@@ -1,16 +1,16 @@
 import { type DestinationType } from "@/lib/analytics";
-import { MessageCircle, Calendar, Users, MapPin, UtensilsCrossed } from "lucide-react";
+import { MessageCircle, Calendar, Users, MapPin, UtensilsCrossed, Info } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
 import { contact, whatsapp } from "@/content/businessInfo";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export type ContactVariant = "general" | "catering" | "menu";
 
-const enquiryDetails = [
-  { icon: Calendar, label: "Event date" },
-  { icon: Users, label: "Guest count (15+)" },
+const enquiryTips = [
+  { icon: Calendar, label: "Your event date" },
+  { icon: Users, label: "Number of guests (15+)" },
   { icon: MapPin, label: "Your area" },
-  { icon: UtensilsCrossed, label: "Preferred dishes" },
+  { icon: UtensilsCrossed, label: "Any dishes in mind" },
 ];
 
 function SocialIcon({ type }: { type: "instagram" | "facebook" | "google" }) {
@@ -61,23 +61,23 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
 
   const subtext = isMenu
     ? "Browse the WhatsApp catalogue, drop us a message, or give us a call. Collection is available, and delivery within 2 miles on orders above \u00a325."
-    : "We\u2019ll help you plan everything \u2014 from menu to quantities \u2014 so your event runs smoothly.";
+    : "Message us on WhatsApp with a few details and we\u2019ll come back with a tailored quote — usually the same day.";
 
   return (
-    <section className="bg-gradient-to-b from-[#FFF5E4] to-[#FFF0D0] py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="contact">
+    <section className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="contact">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-10">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-4">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C42B0A] mb-4">
               {isMenu ? "Order Now" : "Get in Touch"}
             </p>
             <h2
-              className="font-serif italic font-black text-[#1C0A00] mb-5 text-balance"
+              className="font-serif italic font-black text-[#1A0600] mb-5 text-balance"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
               {heading}
             </h2>
-            <p className="text-[#6B3A2A] text-base max-w-xl mx-auto leading-relaxed">
+            <p className="text-[#6B3520] text-base max-w-xl mx-auto leading-relaxed">
               {subtext}
             </p>
           </div>
@@ -118,7 +118,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                 </TrackedLink>
                 {!isCatering && (
                   <TrackedLink
-                    className="flex items-center justify-center gap-2 border border-[#E8D5C0] bg-white text-[#1C0A00] px-10 py-4 rounded-full font-semibold text-sm hover:border-[#2E8B7A] hover:text-[#2E8B7A] transition-colors focus-ring cursor-pointer"
+                    className="flex items-center justify-center gap-2 border border-[#E2C9A8] bg-white text-[#1A0600] px-10 py-4 rounded-full font-semibold text-sm hover:border-[#E8751A] hover:text-[#E8751A] transition-colors focus-ring cursor-pointer"
                     ctaText="Browse Daily Menu"
                     destinationType="external"
                     href="/menu"
@@ -133,26 +133,27 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
           </div>
         </ScrollReveal>
 
-        {/* Enquiry guide — catering/general only */}
+        {/* Quick tip — catering/general only */}
         {!isMenu && (
           <ScrollReveal delay={150}>
-            <div className="bg-white border border-[#E8D5C0] rounded-2xl p-7 md:p-9 text-center mb-10 shadow-sm">
-              <h3 className="text-lg font-black text-[#1C0A00] mb-2">
-                What to include in your enquiry
-              </h3>
-              <p className="text-[#6B3A2A] text-sm mb-7">
-                A few details help us get back to you with a tailored quote quickly.
-              </p>
-              <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 text-left">
-                {enquiryDetails.map(({ icon: Icon, label }) => (
-                  <div
-                    key={label}
-                    className="flex items-center gap-2.5 rounded-xl border border-[#E8D5C0] bg-[#FFF5E4] px-4 py-3 text-sm font-semibold text-[#1C0A00]"
-                  >
-                    <Icon className="size-4 text-[#F5821F] flex-shrink-0" aria-hidden />
-                    {label}
-                  </div>
-                ))}
+            <div className="flex gap-3 bg-white/70 border border-[#E2C9A8] rounded-2xl p-5 mb-10 shadow-sm">
+              <div className="flex-shrink-0 mt-0.5">
+                <div className="size-8 rounded-full bg-[#E8751A]/10 flex items-center justify-center">
+                  <Info className="size-4 text-[#E8751A]" aria-hidden />
+                </div>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-[#1A0600] mb-3">
+                  A few details help us quote faster
+                </p>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {enquiryTips.map(({ icon: Icon, label }) => (
+                    <div key={label} className="flex items-center gap-2 text-sm text-[#6B3520]">
+                      <Icon className="size-3.5 text-[#E8751A] flex-shrink-0" aria-hidden />
+                      {label}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </ScrollReveal>
@@ -164,7 +165,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
             {socialLinks.map((link) => (
               <TrackedLink
                 key={link.label}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E8D5C0] text-sm font-semibold text-[#6B3A2A] hover:border-[#F5821F] hover:text-[#F5821F] transition-colors focus-ring cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E2C9A8] text-sm font-semibold text-[#6B3520] hover:border-[#E8751A] hover:text-[#E8751A] transition-colors focus-ring cursor-pointer shadow-sm"
                 ctaText={link.label}
                 destinationType={link.destinationType}
                 href={link.href}

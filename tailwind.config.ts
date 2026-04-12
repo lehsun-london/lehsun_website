@@ -5,51 +5,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FFF5E4",
-        foreground: "#2F160D",
-        muted: {
-          foreground: "#6B564C",
-        },
-        // Brand palette — sourced from Lehsun printed menu identity
-        saffron: "#F5821F",
-        vermillion: "#D9381E",
-        teal: "#2E8B7A",
-        purple: "#7B3399",
-        gold: "#E6A21A",
-        cream: "#FFF5E4",
-        brown: "#2F160D",
-        // Legacy aliases (kept for backward compat during migration)
-        primary: "#F5821F",
-        mustard: "#E6A21A",
-        "off-white": "#FFF5E4",
-        "background-light": "#FFF5E4",
-        "background-dark": "#2F160D",
+        // Actual Lehsun brand palette — from /assets/brand/ and /assets/generated/
+        "brand-red":    "#D93423",  // primary brand, jali-wave background
+        "brand-teal":   "#03B6AA",  // logo outer ring
+        "brand-purple": "#993786",  // spice-burst circles
+        "brand-gold":   "#E69B39",  // sunburst, dot accents
+        "brand-orange": "#E8540A",  // logo middle ring
+        "brand-cream":  "#F1E1AA",  // brand cream
+        // Semantic
+        background: "#FDF8F0",
+        foreground: "#1A0600",
+        cream:      "#FFF4E0",
+        border:     "#EAD6A8",
       },
       fontFamily: {
-        display: ["var(--font-display)", "sans-serif"],
-        serif: ["var(--font-serif)", "serif"],
-      },
-      borderRadius: {
-        DEFAULT: "0.25rem",
-        lg: "0.5rem",
-        xl: "0.75rem",
-        full: "9999px",
-      },
-      backgroundImage: {
-        "tile-pattern": "var(--tile-pattern-url)",
-      },
-      keyframes: {
-        float: {
-          "0%, 100%": {
-            transform: "translateY(0px)",
-          },
-          "50%": {
-            transform: "translateY(-20px)",
-          },
-        },
-      },
-      animation: {
-        float: "float 6s ease-in-out infinite",
+        body:  ["var(--font-body)", "Karla", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Playfair Display", "Georgia", "serif"],
       },
     },
   },
