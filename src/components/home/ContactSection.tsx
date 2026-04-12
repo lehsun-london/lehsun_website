@@ -1,215 +1,184 @@
 import { type DestinationType } from "@/lib/analytics";
+import { MessageCircle, Calendar, Users, MapPin, UtensilsCrossed } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
+import { contact, whatsapp } from "@/content/businessInfo";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-function SocialIcon({
-  type,
-}: {
-  type: "whatsapp" | "instagram" | "facebook" | "google";
-}) {
-  if (type === "whatsapp") {
-    return (
-      <svg
-        aria-hidden
-        className="size-4 text-[#25D366]"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884" />
-      </svg>
-    );
-  }
+export type ContactVariant = "general" | "catering" | "menu";
 
+const enquiryDetails = [
+  { icon: Calendar, label: "Event date" },
+  { icon: Users, label: "Guest count (15+)" },
+  { icon: MapPin, label: "Your area" },
+  { icon: UtensilsCrossed, label: "Preferred dishes" },
+];
+
+function SocialIcon({ type }: { type: "instagram" | "facebook" | "google" }) {
   if (type === "instagram") {
     return (
-      <svg
-        aria-hidden
-        className="size-4 text-[#E1306C]"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
-        <rect
-          x="4"
-          y="4"
-          width="16"
-          height="16"
-          rx="5"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
-        <circle
-          cx="12"
-          cy="12"
-          r="3.6"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
+      <svg aria-hidden className="size-4" fill="none" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="12" cy="12" r="3.6" stroke="currentColor" strokeWidth="1.8" />
         <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
       </svg>
     );
   }
-
   if (type === "facebook") {
     return (
       <svg aria-hidden className="size-4" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" fill="#1877F2" />
-        <path
-          d="M13.3 19v-6.1h2l.3-2.3h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.2v1.8H9v2.3h2V19h2.3Z"
-          fill="#fff"
-        />
+        <path d="M13.3 19v-6.1h2l.3-2.3h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.2v1.8H9v2.3h2V19h2.3Z" fill="#fff" />
       </svg>
     );
   }
-
   return (
     <svg aria-hidden className="size-4" viewBox="0 0 24 24">
-      <path
-        d="M12 2c3.7 0 6.8 3 6.8 6.8 0 4.8-6.8 13.3-6.8 13.3S5.2 13.6 5.2 8.8C5.2 5 8.3 2 12 2Z"
-        fill="#EA4335"
-      />
+      <path d="M12 2c3.7 0 6.8 3 6.8 6.8 0 4.8-6.8 13.3-6.8 13.3S5.2 13.6 5.2 8.8C5.2 5 8.3 2 12 2Z" fill="#EA4335" />
       <circle cx="12" cy="8.8" r="2.8" fill="#FBBC05" />
-      <path
-        d="M12 2a6.8 6.8 0 0 1 5.2 2.4l-2.4 1.9A3.7 3.7 0 0 0 12 5.1V2Z"
-        fill="#4285F4"
-      />
-      <path
-        d="M6.8 4.4A6.8 6.8 0 0 1 12 2v3.1a3.7 3.7 0 0 0-2.8 1.2L6.8 4.4Z"
-        fill="#34A853"
-      />
+      <path d="M12 2a6.8 6.8 0 0 1 5.2 2.4l-2.4 1.9A3.7 3.7 0 0 0 12 5.1V2Z" fill="#4285F4" />
+      <path d="M6.8 4.4A6.8 6.8 0 0 1 12 2v3.1a3.7 3.7 0 0 0-2.8 1.2L6.8 4.4Z" fill="#34A853" />
     </svg>
   );
 }
 
 const socialLinks = [
-  {
-    href: "https://wa.me/c/447768892652",
-    icon: "whatsapp" as const,
-    label: "WhatsApp",
-    destinationType: "whatsapp" as const,
-  },
-  {
-    href: "https://www.instagram.com/lehsun.london",
-    icon: "instagram" as const,
-    label: "Instagram",
-    destinationType: "instagram" as const,
-  },
-  {
-    href: "https://www.facebook.com/people/Lehsun-Nostalgic-Indian-Cuisine/61580851580948/",
-    icon: "facebook" as const,
-    label: "Facebook",
-    destinationType: "facebook" as const,
-  },
-  {
-    href: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
-    icon: "google" as const,
-    label: "Google",
-    destinationType: "maps" as const,
-  },
+  { href: contact.instagram, icon: "instagram" as const, label: "Instagram", destinationType: "instagram" as DestinationType },
+  { href: contact.facebook, icon: "facebook" as const, label: "Facebook", destinationType: "facebook" as DestinationType },
+  { href: contact.googleMaps, icon: "google" as const, label: "Google", destinationType: "maps" as DestinationType },
 ];
 
-export function ContactSection() {
-  return (
-    <section
-      className="bg-[#fffaf4] py-24 border-t border-cream scroll-mt-28"
-      id="contact"
-    >
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 italic font-serif">
-            Book Catering for Your Event
-          </h2>
-          <p className="text-slate-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            We&apos;ll help you plan everything — from menu to quantities — so
-            your event runs smoothly.
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center mt-10">
-            <TrackedLink
-              className="w-full md:w-auto flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.02] transition-all shadow-xl shadow-green-500/20 focus-ring"
-              ctaText="Get Catering Quote"
-              destinationType="whatsapp"
-              href="https://wa.me/447768892652?text=Hi%20Lehsun%2C%20I%27d%20like%20a%20catering%20quote%20for%20my%20event."
-              intent="lead"
-              isPrimaryCta
-              placement="contact_top"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Get Catering Quote
-            </TrackedLink>
-            <TrackedLink
-              className="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-[#D9381E] transition-colors shadow-xl shadow-primary/20 text-center focus-ring"
-              ctaText="View Catering Menu"
-              destinationType="whatsapp"
-              href="https://wa.me/c/447768892652"
-              intent="menu"
-              isPrimaryCta
-              placement="contact_top"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              View Catering Menu
-            </TrackedLink>
-          </div>
-        </div>
+interface ContactSectionProps {
+  variant?: ContactVariant;
+}
 
-        <div className="bg-cream/70 border border-[#efcaa4] rounded-3xl p-8 md:p-12 text-center">
-          <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            What to send with your enquiry
-          </h3>
-          <p className="text-slate-700 text-lg md:text-xl mb-8">
-            A few details help us guide you quickly and properly for your
-            gathering.
-          </p>
-          <div className="grid gap-4 md:grid-cols-4 text-left">
-            {[
-              "Event date",
-              "Guest count (15+)",
-              "Your area",
-              "Preferred dishes or style",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-[#efcaa4] bg-white px-5 py-4 text-sm font-semibold text-slate-700"
+export function ContactSection({ variant = "general" }: ContactSectionProps) {
+  const isMenu = variant === "menu";
+  const isCatering = variant === "catering";
+
+  const heading = isMenu
+    ? "Order Today\u2019s Menu on WhatsApp"
+    : "Ready to Plan Your Event?";
+
+  const subtext = isMenu
+    ? "Browse the WhatsApp catalogue, drop us a message, or give us a call. Collection is available, and delivery within 2 miles on orders above \u00a325."
+    : "We\u2019ll help you plan everything \u2014 from menu to quantities \u2014 so your event runs smoothly.";
+
+  return (
+    <section className="bg-gradient-to-b from-[#FFF5E4] to-[#FFF0D0] py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="contact">
+      <div className="max-w-3xl mx-auto">
+        <ScrollReveal>
+          <div className="text-center mb-10">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-4">
+              {isMenu ? "Order Now" : "Get in Touch"}
+            </p>
+            <h2
+              className="font-serif italic font-black text-[#1C0A00] mb-5 text-balance"
+              style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+            >
+              {heading}
+            </h2>
+            <p className="text-[#6B3A2A] text-base max-w-xl mx-auto leading-relaxed">
+              {subtext}
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            {isMenu ? (
+              <TrackedLink
+                className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:-translate-y-0.5 transition-all shadow-lg shadow-green-500/20 focus-ring text-sm cursor-pointer"
+                ctaText="Browse Menu on WhatsApp"
+                destinationType="whatsapp"
+                href={whatsapp.catalog}
+                intent="menu"
+                isPrimaryCta
+                placement="contact_menu"
+                rel="noopener noreferrer"
+                target="_blank"
               >
-                {item}
+                <MessageCircle className="size-4" aria-hidden />
+                Browse Menu on WhatsApp
+              </TrackedLink>
+            ) : (
+              <>
+                <TrackedLink
+                  className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:-translate-y-0.5 transition-all shadow-lg shadow-green-500/20 focus-ring text-sm cursor-pointer"
+                  ctaText="Get Catering Quote"
+                  destinationType="whatsapp"
+                  href={whatsapp.cateringEnquiry}
+                  intent="lead"
+                  isPrimaryCta
+                  placement={`contact_${variant}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <MessageCircle className="size-4" aria-hidden />
+                  Get Catering Quote
+                </TrackedLink>
+                {!isCatering && (
+                  <TrackedLink
+                    className="flex items-center justify-center gap-2 border border-[#E8D5C0] bg-white text-[#1C0A00] px-10 py-4 rounded-full font-semibold text-sm hover:border-[#2E8B7A] hover:text-[#2E8B7A] transition-colors focus-ring cursor-pointer"
+                    ctaText="Browse Daily Menu"
+                    destinationType="external"
+                    href="/menu"
+                    intent="section_navigation"
+                    placement="contact_general"
+                  >
+                    Browse Daily Menu
+                  </TrackedLink>
+                )}
+              </>
+            )}
+          </div>
+        </ScrollReveal>
+
+        {/* Enquiry guide — catering/general only */}
+        {!isMenu && (
+          <ScrollReveal delay={150}>
+            <div className="bg-white border border-[#E8D5C0] rounded-2xl p-7 md:p-9 text-center mb-10 shadow-sm">
+              <h3 className="text-lg font-black text-[#1C0A00] mb-2">
+                What to include in your enquiry
+              </h3>
+              <p className="text-[#6B3A2A] text-sm mb-7">
+                A few details help us get back to you with a tailored quote quickly.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-4 text-left">
+                {enquiryDetails.map(({ icon: Icon, label }) => (
+                  <div
+                    key={label}
+                    className="flex items-center gap-2.5 rounded-xl border border-[#E8D5C0] bg-[#FFF5E4] px-4 py-3 text-sm font-semibold text-[#1C0A00]"
+                  >
+                    <Icon className="size-4 text-[#F5821F] flex-shrink-0" aria-hidden />
+                    {label}
+                  </div>
+                ))}
               </div>
+            </div>
+          </ScrollReveal>
+        )}
+
+        {/* Social links */}
+        <ScrollReveal delay={200}>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {socialLinks.map((link) => (
+              <TrackedLink
+                key={link.label}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E8D5C0] text-sm font-semibold text-[#6B3A2A] hover:border-[#F5821F] hover:text-[#F5821F] transition-colors focus-ring cursor-pointer"
+                ctaText={link.label}
+                destinationType={link.destinationType}
+                href={link.href}
+                intent="social"
+                placement="contact_social"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <SocialIcon type={link.icon} />
+                {link.label}
+              </TrackedLink>
             ))}
           </div>
-        </div>
-
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {[
-            "Catering-led North Indian menus",
-            "Prepared with care for proper gatherings",
-            "Based in Ebbsfleet Valley and serving nearby Kent",
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-2xl border border-[#efcaa4] bg-white px-6 py-5 text-center text-sm font-semibold text-slate-700"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          {socialLinks.map((link) => (
-            <TrackedLink
-              key={link.label}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-off-white border border-primary/20 text-sm font-bold text-slate-700 hover:border-primary hover:text-primary transition-colors focus-ring"
-              ctaText={link.label}
-              destinationType={link.destinationType as DestinationType}
-              href={link.href}
-              intent="social"
-              placement="contact_social_row"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <SocialIcon type={link.icon} />
-              {link.label}
-            </TrackedLink>
-          ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

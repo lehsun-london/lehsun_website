@@ -78,8 +78,9 @@ function trackEvent(
     window.gtag("event", eventName, params);
   } else {
     window.dataLayer = window.dataLayer || [];
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- required for arguments binding
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars -- required for gtag arguments binding
     (function gtag(_a: string, _b: string, _c: object) {
+      // eslint-disable-next-line prefer-rest-params
       window.dataLayer.push(arguments);
     })("event", eventName, params);
   }

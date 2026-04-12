@@ -1,40 +1,37 @@
 import { SectionViewTracker } from "../analytics/SectionViewTracker";
-import { AboutSection } from './AboutSection';
-import { CateringSection } from './CateringSection';
-import { ContactSection } from './ContactSection';
-import { EmotionStripSection } from './EmotionStripSection';
-import { FaqSection } from './FaqSection';
-import { FooterSection } from './FooterSection';
-import { HeroSection } from './HeroSection';
-import { LocalSeoSection } from './LocalSeoSection';
-import { MenuSection } from './MenuSection';
-import { NavSection } from './NavSection';
-import { ReviewsSection } from './ReviewsSection';
+import { AboutSection } from "./AboutSection";
+import { ContactSection } from "./ContactSection";
+import { FooterSection } from "./FooterSection";
+import { FaqSection } from "./FaqSection";
+import { HeroSection } from "./HeroSection";
+import { NavSection } from "./NavSection";
+import { ReviewsSection } from "./ReviewsSection";
+import { ServicesSection } from "./ServicesSection";
+import { TrustStripSection } from "./TrustStripSection";
 
 const trackedSections = [
-  { id: "about", name: "About", order: 1 },
-  { id: "catering", name: "Catering", order: 2 },
-  { id: "areas", name: "Areas", order: 3 },
+  { id: "home", name: "Home", order: 1 },
+  { id: "services", name: "Services", order: 2 },
+  { id: "about", name: "About", order: 3 },
   { id: "reviews", name: "Reviews", order: 4 },
-  { id: "daily-menu", name: "Daily Menu", order: 5 },
-  { id: "faq", name: "FAQ", order: 6 },
-  { id: "contact", name: "Contact", order: 7 },
+  { id: "faq", name: "FAQ", order: 5 },
+  { id: "contact", name: "Contact", order: 6 },
 ];
 
 export function HomePage() {
   return (
-    <div className="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
       <SectionViewTracker sections={trackedSections} />
       <NavSection />
-      <HeroSection />
-      <AboutSection />
-      <CateringSection />
-      <LocalSeoSection />
-      <ReviewsSection />
-      <EmotionStripSection />
-      <MenuSection />
-      <FaqSection />
-      <ContactSection />
+      <main className="pt-[60px]">
+        <HeroSection />
+        <TrustStripSection />
+        <ServicesSection />
+        <AboutSection />
+        <ReviewsSection />
+        <FaqSection variant="catering" />
+        <ContactSection variant="general" />
+      </main>
       <FooterSection />
     </div>
   );

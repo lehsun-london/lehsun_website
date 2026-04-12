@@ -19,9 +19,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lehsun.co.uk/"),
-  title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
+  title: "North Indian Catering in Kent | Lehsun",
   description:
-    "Based in Ebbsfleet Valley, Lehsun provides North Indian catering for parties, gatherings and events across Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
+    "Lehsun provides North Indian catering across Dartford, Gravesend, Ebbsfleet Valley, Bexley, Orpington and nearby Kent — real flavours like back home. Plus a daily menu for home orders.",
   alternates: {
     canonical: "https://lehsun.co.uk/",
   },
@@ -30,19 +30,20 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "North Indian catering Ebbsfleet Valley",
+    "North Indian catering Kent",
     "Indian catering Dartford",
     "Indian catering Gravesend",
-    "event catering Northfleet",
-    "party catering Dartford",
-    "North Indian catering Kent",
-    "North Indian food Ebbsfleet Valley",
-    "real North Indian flavours Kent",
+    "Indian catering Bexley",
+    "Indian catering Orpington",
+    "North Indian catering Ebbsfleet Valley",
+    "party catering Kent",
+    "Diwali catering Kent",
+    "daily Indian food Ebbsfleet Valley",
   ],
   openGraph: {
-    title: "North Indian Catering in Dartford & Ebbsfleet Valley | Lehsun",
+    title: "North Indian Catering in Kent | Lehsun",
     description:
-      "Based in Ebbsfleet Valley, Lehsun serves Dartford, Gravesend, Northfleet and nearby Kent with North Indian catering and real flavours like back home.",
+      "Lehsun serves Dartford, Gravesend, Ebbsfleet Valley, Bexley, Orpington and nearby Kent with North Indian catering and daily menu orders.",
     url: "https://lehsun.co.uk/",
     type: "website",
   },

@@ -4,6 +4,8 @@ import { execSync } from "node:child_process";
 const contentPaths = [
   "src/app/layout.tsx",
   "src/components/home",
+  "src/components/catering",
+  "src/components/menu",
   "src/components/seo",
 ];
 
@@ -28,12 +30,25 @@ function getLastModifiedDate(): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastMod = getLastModifiedDate();
   return [
     {
       url: "https://lehsun.co.uk/",
-      lastModified: getLastModifiedDate(),
+      lastModified: lastMod,
       changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: "https://lehsun.co.uk/catering",
+      lastModified: lastMod,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://lehsun.co.uk/menu",
+      lastModified: lastMod,
+      changeFrequency: "daily",
+      priority: 0.8,
     },
   ];
 }

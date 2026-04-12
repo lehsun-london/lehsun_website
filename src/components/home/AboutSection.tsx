@@ -1,86 +1,109 @@
 import Image from "next/image";
-import { ScrollReveal } from "../ui/ScrollReveal";
+import { Flame, Users, BadgeCheck } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { brandLine, reviewStats, visualAssets } from "@/content/businessInfo";
 
-const trustPoints = [
+const pillars = [
   {
-    title: "Proper North Indian Flavours",
-    body: "The kind you miss back home, with spice and depth left in.",
+    icon: Flame,
+    color: "text-[#F5821F]",
+    title: "Authentic flavour — not toned down",
+    body: "Cooked with the depth and spice people actually miss. No adaptations for a British palate, no shortcuts.",
   },
   {
-    title: "Rooted in Regional Styles",
-    body: "Cooked the way it is made back home — Delhi, Punjab and Rajasthan-style.",
+    icon: Users,
+    color: "text-[#2E8B7A]",
+    title: "Made for gatherings",
+    body: "Built around birthdays, house parties, Diwali and family events where the food is part of the occasion.",
   },
   {
-    title: "Trusted for Gatherings",
-    body: "5-star hygiene rated and chosen for family gatherings, parties and celebrations.",
+    icon: BadgeCheck,
+    color: "text-[#D9381E]",
+    title: "Trusted to host with",
+    body: "5-star food hygiene rated, 5.0 on Google. The kind of reassurance you need before a big occasion.",
   },
 ];
 
 export function AboutSection() {
   return (
-    <section
-      className="bg-cream py-24 px-6 lg:px-20 relative overflow-hidden scroll-mt-28 md:bg-[url('/assets/generated/geometric-motif.png')] md:bg-repeat md:bg-[length:220px] md:bg-[position:center] md:bg-blend-soft-light"
-      id="about"
-    >
-      <ScrollReveal className="max-w-6xl mx-auto relative z-10">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,1fr)] lg:items-start">
-          <div>
-            <span className="text-vermillion font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
-              Why Lehsun
-            </span>
-            <h2 className="text-balance text-4xl lg:text-5xl font-black text-slate-900 mb-6 leading-tight">
-              Proper North Indian flavours, made the way you remember
-            </h2>
-            <p className="text-slate-700 text-lg md:text-xl leading-relaxed max-w-[34rem]">
-              Lehsun is rooted in the flavours people miss most: proper North
-              Indian cooking, familiar regional styles, and food hosts can feel
-              confident serving to family and friends.
-            </p>
-            <p className="mt-4 text-base font-semibold tracking-[0.04em] text-[#7c2d12]">
-              Not toned down. Not adapted. Just real flavour.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {trustPoints.map((point) => (
-                <div
-                  key={point.title}
-                  className="rounded-2xl border border-[#efcaa4] bg-white/90 p-5 shadow-lg shadow-[#0000000d]"
-                >
-                  <h3 className="text-base font-black text-slate-900 mb-2">
-                    {point.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-slate-700">
-                    {point.body}
+    <section className="bg-[#FFF5E4] py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="about">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          {/* Text */}
+          <ScrollReveal>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-4">
+                The Lehsun Story
+              </p>
+              <h2
+                className="font-serif italic font-black text-[#1C0A00] mb-6 text-balance leading-tight"
+                style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+              >
+                Proper North Indian flavours, made the way you remember
+              </h2>
+              <p className="text-[#6B3A2A] text-base leading-relaxed mb-4 max-w-[38rem]">
+                Lehsun — meaning garlic in Hindi — was built for one purpose: to bring
+                the real flavours of North Indian cooking to gatherings in Kent. Not a
+                toned-down version. Not adapted. Just the food people genuinely miss.
+              </p>
+              <p className="text-[#F5821F] font-bold italic font-serif text-lg mb-10">
+                &ldquo;{brandLine}&rdquo;
+              </p>
+
+              <div className="space-y-6">
+                {pillars.map(({ icon: Icon, color, title, body }) => (
+                  <div key={title} className="flex items-start gap-4">
+                    <div className={`mt-0.5 flex-shrink-0 ${color}`}>
+                      <Icon className="size-5" aria-hidden />
+                    </div>
+                    <div>
+                      <p className="font-bold text-[#1C0A00] text-sm mb-1">{title}</p>
+                      <p className="text-[#6B3A2A] text-sm leading-relaxed">{body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Image + trust signals */}
+          <ScrollReveal delay={100}>
+            <div className="space-y-4">
+              {/* Main food image */}
+              <div className="relative rounded-2xl overflow-hidden h-72 shadow-lg border border-[#E8D5C0]">
+                <Image
+                  alt="Lehsun litti chokha — traditional North Indian cooking at its best"
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  src={visualAssets.aboutImage}
+                />
+              </div>
+
+              {/* Trust duo */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white rounded-2xl border border-[#E8D5C0] p-5 shadow-sm">
+                  <BadgeCheck className="size-7 text-[#2E8B7A] mb-3" aria-hidden />
+                  <p className="text-xs font-bold uppercase tracking-wide text-[#2E8B7A] mb-1">5-Star Hygiene</p>
+                  <p className="text-xs text-[#6B3A2A] leading-relaxed">Rated by the Food Standards Agency</p>
+                </div>
+
+                <div className="bg-white rounded-2xl border border-[#E8D5C0] p-5 shadow-sm">
+                  <div className="flex gap-0.5 mb-3" aria-label="5 stars">
+                    {[...Array(5)].map((_, i) => (
+                      <Flame key={i} className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
+                    ))}
+                  </div>
+                  <p className="text-3xl font-black text-[#1C0A00]">{reviewStats.average}</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wide text-[#6B3A2A]/60 mt-1">
+                    {reviewStats.count} Google reviews
                   </p>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-
-          <article className="overflow-hidden rounded-[28px] border border-[#efcaa4] bg-white shadow-xl shadow-[#00000014]">
-            <div className="relative aspect-[4/3] bg-[#fff7ef]">
-              <Image
-                alt="Lehsun 5-star food hygiene rating"
-                className="h-full w-full object-cover"
-                fill
-                sizes="(max-width: 1024px) 100vw, 360px"
-                src="/assets/brand/hygiene-rating-5star.png"
-              />
-            </div>
-            <div className="p-6">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-vermillion">
-                5-Star Food Hygiene Rated
-              </p>
-              <h3 className="mt-3 text-2xl font-black text-slate-900">
-                Trusted for gatherings
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">
-                A simple reassurance for hosts who want proper flavour and a
-                well-run kitchen behind their event.
-              </p>
-            </div>
-          </article>
+          </ScrollReveal>
         </div>
-      </ScrollReveal>
+      </div>
     </section>
   );
 }

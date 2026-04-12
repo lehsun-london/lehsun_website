@@ -1,10 +1,12 @@
+import { reviewStats, serviceAreas, contact } from "@/content/businessInfo";
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "CateringService"],
   "@id": "https://lehsun.co.uk/#localbusiness",
   name: "Lehsun - Nostalgic North Indian Catering",
   description:
-    "Based in Ebbsfleet Valley, Lehsun provides North Indian catering for parties, gatherings and events across Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
+    "Based in Ebbsfleet Valley, Lehsun provides North Indian catering for parties, gatherings and events across Dartford, Gravesend, Northfleet, Bexley, Orpington and nearby Kent, with real flavours like back home.",
   url: "https://lehsun.co.uk/",
   image: [
     "https://lehsun.co.uk/assets/stitch/lehsun-branded-final/hero-bg.png",
@@ -12,8 +14,8 @@ const localBusinessSchema = {
     "https://lehsun.co.uk/assets/food/lehsuns-royal-thaali.jpg",
   ],
   logo: "https://lehsun.co.uk/apple-touch-icon.png",
-  email: "lehsun.london@gmail.com",
-  telephone: "+44 7768 892652",
+  email: contact.email,
+  telephone: contact.phone,
   priceRange: "££",
   servesCuisine: ["North Indian", "Indian"],
   slogan: "Flavours like you remember.",
@@ -30,36 +32,29 @@ const localBusinessSchema = {
     latitude: 51.4391049,
     longitude: 0.2981534,
   },
-  hasMap: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
-  areaServed: [
-    {
-      "@type": "Place",
-      name: "Ebbsfleet Valley",
-    },
-    {
-      "@type": "City",
-      name: "Dartford",
-    },
-    {
-      "@type": "City",
-      name: "Gravesend",
-    },
-    {
-      "@type": "City",
-      name: "Northfleet",
-    },
-    {
-      "@type": "AdministrativeArea",
-      name: "Kent",
-    },
-  ],
+  hasMap: contact.googleMaps,
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: reviewStats.average,
+    reviewCount: reviewStats.count,
+  },
+  areaServed: serviceAreas.map((area) => ({
+    "@type":
+      area === "Nearby Kent"
+        ? "AdministrativeArea"
+        : area === "Ebbsfleet Valley"
+          ? "Place"
+          : "City",
+    name: area,
+  })),
   serviceType: [
     "North Indian catering",
     "Party catering",
     "Private event catering",
     "Birthday catering",
+    "Diwali catering",
     "Family gathering catering",
-    "Small corporate event catering",
+    "Festive event catering",
   ],
   openingHoursSpecification: [
     {
@@ -78,9 +73,9 @@ const localBusinessSchema = {
     },
   ],
   sameAs: [
-    "https://www.instagram.com/lehsun.london",
-    "https://www.facebook.com/people/Lehsun-Nostalgic-Indian-Cuisine/61580851580948/",
-    "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+    contact.instagram,
+    contact.facebook,
+    contact.googleMaps,
   ],
 };
 
