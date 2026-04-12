@@ -76,7 +76,7 @@ export function HeroSection() {
       {/* Samosa -> Left Middle */}
       <div className="absolute left-[-5%] md:left-[0%] top-[40%] md:top-[15%] -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 xl:w-[36rem] xl:h-[36rem] animate-float opacity-95 z-0 pointer-events-none scale-[1.3] transform">
         <Image
-          src="/assets/generated/samosa-transparent.png"
+          src="/assets/generated/Samosa-transparent.png"
           alt="Crispy Indian Samosa"
           fill
           className="object-contain"
@@ -106,7 +106,7 @@ export function HeroSection() {
         style={{ animationDelay: "800ms" }}
       >
         <Image
-          src="/assets/generated/naan-transparent.png"
+          src="/assets/generated/Naan-transparent.png"
           alt="Garlic Naan"
           fill
           className="object-contain rotate-[-15deg] scale-110"
