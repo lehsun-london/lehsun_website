@@ -130,13 +130,13 @@ export function ReviewsSection() {
   const rest = reviews.slice(1);
 
   return (
-    <section className="py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="reviews"
+    <section className="py-12 md:py-16 px-5 lg:px-10 scroll-mt-20" id="reviews"
       style={{ backgroundColor: "#FDF8F0" }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <ScrollReveal>
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C42B0A] mb-3">
               What People Say
             </p>
@@ -159,7 +159,7 @@ export function ReviewsSection() {
         </ScrollReveal>
 
         {/* Mobile: stacked cards */}
-        <div className="md:hidden mb-10">
+        <div className="md:hidden mb-6">
           <StackedReviews />
         </div>
 
@@ -218,7 +218,7 @@ export function ReviewsSection() {
               ctaText="Read More Reviews on Google"
               destinationType="maps"
               href={googleReviewsUrl}
-              intent="social"
+              intent="review_click"
               placement="reviews_section"
               rel="noopener noreferrer"
               target="_blank"

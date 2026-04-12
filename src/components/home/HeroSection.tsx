@@ -2,25 +2,69 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star, ShieldCheck, MapPin } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
-import { whatsapp, visualAssets, reviewStats } from "@/content/businessInfo";
+import { whatsapp, reviewStats } from "@/content/businessInfo";
 
 export function HeroSection() {
   return (
-    <section className="relative bg-[#FDF8F0] py-16 md:py-24 px-5 lg:px-10 overflow-hidden" id="home">
+    <section
+      className="relative bg-[#FDF8F0] pt-24 pb-32 px-5 lg:px-10 overflow-hidden flex flex-col items-center text-center isolate min-h-[90vh] justify-center"
+      id="home"
+    >
+      {/* Full-bleed tile texture — very subtle richness across whole bg */}
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.035] pointer-events-none z-0"
+        style={{
+          backgroundImage: "url('/assets/brand/lehsun-motifs-2200.png')",
+          backgroundSize: "220px",
+          backgroundRepeat: "repeat",
+        }}
+      />
+
+      {/* Soft warm gold radial blob — left side, centred on samosa */}
+      <div
+        aria-hidden
+        className="absolute left-[-10%] top-[10%] w-[65vw] h-[80vh] pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 30% 55%, rgba(230,155,57,0.22) 0%, rgba(230,155,57,0.08) 40%, transparent 70%)",
+        }}
+      />
+
+      {/* Soft teal radial blob — top right */}
+      <div
+        aria-hidden
+        className="absolute right-[-5%] top-[-10%] w-[55vw] h-[70vh] pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 70% 30%, rgba(3,182,170,0.13) 0%, rgba(3,182,170,0.04) 45%, transparent 70%)",
+        }}
+      />
+
+      {/* Soft vermillion glow — bottom centre, grounds the layout */}
+      <div
+        aria-hidden
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[80vw] h-48 pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(217,52,35,0.09) 0%, transparent 70%)",
+        }}
+      />
+
       {/* Spice-burst — large decorative top-right */}
       <div
         aria-hidden
-        className="absolute -top-16 -right-16 w-[420px] h-[420px] opacity-[0.08] pointer-events-none animate-spin-slow"
+        className="absolute -top-16 -right-16 w-[420px] h-[420px] opacity-[0.10] pointer-events-none animate-spin-slow z-0"
         style={{
           backgroundImage: "url('/assets/generated/spice-burst.svg')",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
         }}
       />
-      {/* Spice-burst — small bottom-left */}
+      {/* Spice-burst — mid left, behind samosa area */}
       <div
         aria-hidden
-        className="absolute -bottom-20 -left-20 w-[280px] h-[280px] opacity-[0.06] pointer-events-none"
+        className="absolute left-[-8%] top-[35%] -translate-y-1/2 w-[320px] h-[320px] opacity-[0.07] pointer-events-none z-0"
         style={{
           backgroundImage: "url('/assets/generated/spice-burst.svg')",
           backgroundSize: "contain",
@@ -28,134 +72,200 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 items-center">
+      {/* Floating Food Items -> Blended with Multiply to remove white BG */}
+      {/* Samosa -> Left Middle */}
+      <div className="absolute left-[-5%] md:left-[0%] top-[40%] md:top-[15%] -translate-y-1/2 w-72 h-72 md:w-96 md:h-96 xl:w-[36rem] xl:h-[36rem] animate-float opacity-95 z-0 pointer-events-none scale-[1.3] transform">
+        <Image
+          src="/assets/generated/samosa-transparent.png"
+          alt="Crispy Indian Samosa"
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 300px, 500px"
+          priority
+        />
+      </div>
 
-          {/* Left — text */}
-          <div className="order-2 md:order-1">
-            {/* Badge pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border-2 border-[#D93423]/20 bg-[#D93423]/8 px-4 py-1.5 mb-6 animate-fade-in-up" style={{ backgroundColor: "rgba(217,52,35,0.07)" }}>
-              <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#D93423]">
-                {reviewStats.average} · {reviewStats.count} Google Reviews · Kent
-              </span>
-            </div>
+      {/* Paneer -> Top Right */}
+      <div
+        className="absolute right-[-10%] md:right-[2%] top-[5%] md:top-[10%] w-40 h-40 md:w-56 md:h-56 xl:w-96 xl:h-96 animate-float-slow opacity-100 z-0 pointer-events-none drop-shadow-xl"
+        style={{ animationDelay: "400ms" }}
+      >
+        <Image
+          src="/assets/generated/panner-transparent.png"
+          alt="Steaming Paneer Makhani"
+          fill
+          className="object-contain scale-125"
+          sizes="(max-width: 768px) 160px, 288px"
+          priority
+        />
+      </div>
 
-            <h1
-              className="font-serif italic font-black text-[#1A0600] text-balance leading-[1.0] tracking-tight mb-5 animate-fade-in-up"
-              style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", animationDelay: "80ms" }}
-            >
-              Proper North Indian
-              <br />
-              <span style={{ color: "#D93423" }}>Catering</span>
-              {" "}
-              <span style={{ color: "#03B6AA" }}>in Kent</span>
-            </h1>
+      {/* Naan -> Bottom Right */}
+      <div
+        className="absolute right-[-5%] md:right-[8%] bottom-[2%] md:bottom-[10%] w-48 h-48 md:w-60 md:h-60 xl:w-60 xl:h-60 animate-float opacity-95 z-0 pointer-events-none"
+        style={{ animationDelay: "800ms" }}
+      >
+        <Image
+          src="/assets/generated/naan-transparent.png"
+          alt="Garlic Naan"
+          fill
+          className="object-contain rotate-[-15deg] scale-110"
+          sizes="(max-width: 768px) 192px, 320px"
+          priority
+        />
+      </div>
 
-            <p
-              className="text-lg md:text-xl font-serif italic mb-3 animate-fade-in-up"
-              style={{ color: "#993786", animationDelay: "160ms" }}
-            >
-              Real flavours — the kind you miss from back home.
-            </p>
+      {/* Accent Chilli -> Scattered Top Left */}
+      <div
+        className="absolute left-[5%] md:left-[24%] top-[5%] md:top-[10%] w-32 h-32 md:w-48 md:h-48 xl:w-64 xl:h-64 animate-float-slow opacity-90 z-0 pointer-events-none hidden sm:block transform scale-150"
+        style={{ animationDelay: "200ms" }}
+      >
+        <Image
+          src="/assets/generated/chilli-trans.png"
+          alt="Chilli Accent"
+          fill
+          className="object-contain rotate-12"
+          sizes="200px"
+        />
+      </div>
+      {/* Accent Coriander -> Scattered Bottom Left */}
+      <div
+        className="absolute left-[18%] md:left-[70%] bottom-[12%] md:bottom-[36%] w-16 h-16 md:w-24 md:h-24 animate-float opacity-75 z-0 pointer-events-none hidden sm:block"
+        style={{ animationDelay: "600ms" }}
+      >
+        <Image
+          src="/assets/generated/coriander-trans.png"
+          alt="Spices"
+          fill
+          className="object-contain transform rotate-[-45deg] scale-125"
+          sizes="96px"
+        />
+      </div>
+      <div
+        className="absolute left-[18%] md:left-[26%] bottom-[12%] md:bottom-[18%] w-16 h-16 md:w-24 md:h-24 animate-float opacity-75 z-0 pointer-events-none hidden sm:block"
+        style={{ animationDelay: "600ms" }}
+      >
+        <Image
+          src="/assets/generated/coriander-trans.png"
+          alt="Spices"
+          fill
+          className="object-contain transform rotate-[-45deg] scale-125"
+          sizes="96px"
+        />
+      </div>
 
-            <p
-              className="text-base leading-relaxed mb-8 max-w-[40ch] animate-fade-in-up"
-              style={{ color: "#5C2A10", animationDelay: "240ms" }}
-            >
-              Catering for events and daily meals across Dartford, Gravesend,
-              Ebbsfleet Valley, Bexley, Orpington and nearby Kent.
-            </p>
+      {/* Centered Main Content */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center">
+        {/* Badge pill */}
+        <div
+          className="inline-flex items-center gap-2 rounded-full border-2 border-[#D93423]/20 px-5 py-2 mb-8 animate-fade-in-up"
+          style={{ backgroundColor: "rgba(217,52,35,0.07)" }}
+        >
+          <Star className="size-4 fill-[#E69B39] text-[#E69B39]" aria-hidden />
+          <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423]">
+            {reviewStats.average} · {reviewStats.count} Google Reviews · Kent
+          </span>
+        </div>
 
-            <div
-              className="flex flex-col sm:flex-row gap-3 mb-8 animate-fade-in-up"
-              style={{ animationDelay: "320ms" }}
-            >
-              <TrackedLink
-                className="flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:-translate-y-0.5 focus-ring cursor-pointer"
-                style={{ backgroundColor: "#D93423", boxShadow: "0 8px 24px rgba(217,52,35,0.35)" }}
-                ctaText="Plan Your Event"
-                destinationType="whatsapp"
-                href={whatsapp.cateringEnquiry}
-                intent="lead"
-                isPrimaryCta
-                placement="hero"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Plan Your Event &rarr;
-              </TrackedLink>
-              <Link
-                href="/menu"
-                className="flex items-center justify-center gap-2 border-2 px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all hover:-translate-y-0.5 focus-ring cursor-pointer"
-                style={{ borderColor: "#03B6AA", color: "#03B6AA" }}
-              >
-                View Daily Menu
-              </Link>
-            </div>
+        {/* Huge Centered Heading */}
+        <h1
+          className="font-serif italic font-black text-[#1A0600] text-balance leading-[1.0] tracking-tight mb-6 animate-fade-in-up"
+          style={{
+            fontSize: "clamp(2.8rem, 6vw, 5rem)",
+            animationDelay: "80ms",
+          }}
+        >
+          North Indian
+          <br />
+          <span style={{ color: "#D93423" }}>Catering</span>{" "}
+          <span style={{ color: "#03B6AA" }}>in Kent</span>
+        </h1>
 
-            {/* Trust chips */}
-            <div
-              className="flex flex-wrap gap-4 animate-fade-in-up"
-              style={{ animationDelay: "400ms" }}
-            >
-              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
-                <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
-                5.0 Google Reviews
-              </div>
-              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
-                <ShieldCheck className="size-3.5" style={{ color: "#03B6AA" }} aria-hidden />
-                5-Star Hygiene
-              </div>
-              <div className="flex items-center gap-1.5 text-xs font-semibold" style={{ color: "#5C2A10" }}>
-                <MapPin className="size-3.5" style={{ color: "#D93423" }} aria-hidden />
-                6 Areas in Kent
-              </div>
-            </div>
+        {/* Subheadings */}
+        <p
+          className="text-xl md:text-2xl font-serif italic mb-5 animate-fade-in-up"
+          style={{ color: "#993786", animationDelay: "160ms" }}
+        >
+          Real flavours — the kind you miss from back home.
+        </p>
+
+        <p
+          className="text-lg md:text-xl leading-relaxed mb-6 max-w-[45ch] animate-fade-in-up"
+          style={{ color: "#5C2A10", animationDelay: "240ms" }}
+        >
+          Catering for events and daily meals across Dartford, Gravesend,
+          Ebbsfleet Valley, Bexley, Orpington and nearby Kent.
+        </p>
+
+        {/* CTA Buttons */}
+        <div
+          className="flex flex-col sm:flex-row gap-4 mb-8 w-full max-w-lg justify-center animate-fade-in-up"
+          style={{ animationDelay: "320ms" }}
+        >
+          <TrackedLink
+            className="flex items-center justify-center gap-2 text-white px-8 py-4 md:py-5 rounded-full font-bold text-sm md:text-base uppercase tracking-wider transition-all shadow-xl hover:-translate-y-1 focus-ring cursor-pointer w-full sm:w-auto"
+            style={{
+              backgroundColor: "#D93423",
+              boxShadow: "0 10px 30px rgba(217,52,35,0.4)",
+            }}
+            ctaText="Plan Your Event"
+            destinationType="whatsapp"
+            href={whatsapp.cateringEnquiry}
+            intent="lead"
+            isPrimaryCta
+            leadType="catering_enquiry"
+            value={150}
+            placement="hero"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Plan Your Event &rarr;
+          </TrackedLink>
+          <Link
+            href="/menu"
+            className="flex items-center justify-center gap-2 border-2 px-8 py-4 md:py-5 rounded-full font-bold text-sm md:text-base uppercase tracking-wider transition-all hover:-translate-y-1 hover:bg-[#03B6AA]/5 focus-ring cursor-pointer w-full sm:w-auto bg-white/50 backdrop-blur-sm"
+            style={{ borderColor: "#03B6AA", color: "#03B6AA" }}
+          >
+            View Daily Menu
+          </Link>
+        </div>
+
+        {/* Trust chips */}
+        <div
+          className="flex flex-wrap justify-center gap-6 md:gap-10 animate-fade-in-up pt-4 border-t border-[#5C2A10]/10 w-full max-w-2xl"
+          style={{ animationDelay: "400ms" }}
+        >
+          <div
+            className="flex items-center gap-2 text-sm md:text-base font-bold tracking-tight"
+            style={{ color: "#5C2A10" }}
+          >
+            <Star
+              className="size-5 fill-[#E69B39] text-[#E69B39]"
+              aria-hidden
+            />
+            5.0 Google Reviews
           </div>
-
-          {/* Right — food image with floating circles */}
-          <div className="order-1 md:order-2 flex justify-center md:justify-end animate-fade-in-up relative" style={{ animationDelay: "100ms" }}>
-
-            {/* Floating circle — top right */}
-            <div className="absolute -top-4 -right-4 md:-right-6 z-10 animate-float" style={{ animationDelay: "0ms" }} aria-hidden>
-              <div className="relative size-16 rounded-full overflow-hidden shadow-xl"
-                style={{ border: "3px solid #03B6AA" }}>
-                <Image src={visualAssets.cateringImage} alt="" fill className="object-cover" sizes="64px" />
-              </div>
-            </div>
-
-            {/* Floating circle — bottom left */}
-            <div className="absolute -bottom-4 -left-4 md:-left-6 z-10 animate-float-slow" style={{ animationDelay: "800ms" }} aria-hidden>
-              <div className="relative size-20 rounded-full overflow-hidden shadow-xl"
-                style={{ border: "3px solid #E69B39" }}>
-                <Image src="/assets/food/pav-bhaji-1400.jpg" alt="" fill className="object-cover" sizes="80px" />
-              </div>
-            </div>
-
-            {/* Main image */}
-            <div
-              className="relative w-full max-w-sm md:max-w-none md:w-[420px] lg:w-[500px] aspect-square rounded-3xl overflow-hidden shadow-2xl"
-              style={{ border: "4px solid #F1E1AA" }}
-            >
-              <Image
-                alt="Authentic North Indian spread — Amritsari thaali with rich curries, breads and chutneys"
-                className="object-cover"
-                fill
-                priority
-                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 40vw, 500px"
-                src={visualAssets.heroImage}
-              />
-              {/* Ring inset */}
-              <div className="absolute inset-0 rounded-3xl pointer-events-none"
-                style={{ boxShadow: "inset 0 0 0 2px rgba(217,52,35,0.25)" }} />
-
-              {/* Review badge */}
-              <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-md">
-                <Star className="size-3 fill-[#E69B39] text-[#E69B39]" aria-hidden />
-                <span className="text-[10px] font-bold text-[#1A0600]">5.0 · 50 Reviews</span>
-              </div>
-            </div>
+          <div
+            className="flex items-center gap-2 text-sm md:text-base font-bold tracking-tight"
+            style={{ color: "#5C2A10" }}
+          >
+            <ShieldCheck
+              className="size-5"
+              style={{ color: "#03B6AA" }}
+              aria-hidden
+            />
+            5-Star Hygiene
+          </div>
+          <div
+            className="flex items-center gap-2 text-sm md:text-base font-bold tracking-tight"
+            style={{ color: "#5C2A10" }}
+          >
+            <MapPin
+              className="size-5"
+              style={{ color: "#D93423" }}
+              aria-hidden
+            />
+            6 Areas in Kent
           </div>
         </div>
       </div>
@@ -163,17 +273,24 @@ export function HeroSection() {
       {/* WhatsApp FAB */}
       <TrackedLink
         aria-label="Message us on WhatsApp"
-        className="whatsapp-fab md:hidden"
+        className="whatsapp-fab md:hidden z-20"
         ctaText="WhatsApp FAB"
         destinationType="whatsapp"
         href={whatsapp.cateringEnquiry}
         intent="lead"
         isPrimaryCta
+        leadType="catering_enquiry"
+        value={150}
         placement="hero_fab"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <svg className="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+        <svg
+          className="size-6"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden
+        >
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
         </svg>
       </TrackedLink>

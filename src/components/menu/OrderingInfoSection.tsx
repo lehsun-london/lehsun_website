@@ -32,10 +32,10 @@ const infoCards = [
 
 export function OrderingInfoSection() {
   return (
-    <section className="bg-[#FFF5E4] py-20 md:py-24 px-5 lg:px-10" id="ordering-info">
+    <section className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10" id="ordering-info">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               Good to know
             </p>
@@ -48,7 +48,7 @@ export function OrderingInfoSection() {
           </div>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 gap-5 mb-10">
+        <div className="grid sm:grid-cols-2 gap-5 mb-6">
           {infoCards.map(({ icon: Icon, color, title, body }, i) => (
             <ScrollReveal key={title} delay={i * 60}>
               <div className="bg-white border border-[#E8D5C0] rounded-2xl p-7 shadow-sm h-full">
@@ -69,6 +69,8 @@ export function OrderingInfoSection() {
               href={whatsapp.catalog}
               intent="menu"
               isPrimaryCta
+              leadType="menu_enquiry"
+              value={15}
               placement="ordering_info"
               rel="noopener noreferrer"
               target="_blank"

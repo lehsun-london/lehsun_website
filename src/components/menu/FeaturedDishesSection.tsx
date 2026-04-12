@@ -5,10 +5,10 @@ import { dailyMenuDishes, whatsapp } from "@/content/businessInfo";
 
 export function FeaturedDishesSection() {
   return (
-    <section className="bg-white py-20 md:py-24 px-5 lg:px-10" id="dishes">
+    <section className="bg-white py-12 md:py-16 px-5 lg:px-10" id="dishes">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               On the menu
             </p>
@@ -55,6 +55,8 @@ export function FeaturedDishesSection() {
               href={whatsapp.catalog}
               intent="menu"
               isPrimaryCta
+              leadType="menu_enquiry"
+              value={15}
               placement="featured_dishes"
               rel="noopener noreferrer"
               target="_blank"

@@ -5,7 +5,7 @@ import { whatsapp, visualAssets } from "@/content/businessInfo";
 
 export function MenuHeroSection() {
   return (
-    <section className="bg-[#FFFDF9] py-16 md:py-24 px-5 lg:px-10" id="menu-hero">
+    <section className="bg-[#FFFDF9] py-10 md:py-14 px-5 lg:px-10" id="menu-hero">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 items-center">
 
@@ -45,6 +45,8 @@ export function MenuHeroSection() {
                 href={whatsapp.catalog}
                 intent="menu"
                 isPrimaryCta
+                leadType="menu_enquiry"
+                value={15}
                 placement="menu_hero"
                 rel="noopener noreferrer"
                 target="_blank"

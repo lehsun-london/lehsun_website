@@ -30,10 +30,10 @@ const steps = [
 
 export function CateringProcessSection() {
   return (
-    <section className="bg-white py-20 md:py-24 px-5 lg:px-10" id="process">
+    <section className="bg-white py-12 md:py-16 px-5 lg:px-10" id="process">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               How it works
             </p>

@@ -3,6 +3,7 @@
 import type { ComponentPropsWithoutRef, MouseEvent } from "react";
 import {
   type DestinationType,
+  type LeadType,
   type TrackedLinkIntent,
   trackLinkInteraction,
 } from "@/lib/analytics";
@@ -15,6 +16,10 @@ type TrackedLinkProps = AnchorProps & {
   destinationType: DestinationType;
   ctaText?: string;
   isPrimaryCta?: boolean;
+  /** Differentiates catering vs menu WhatsApp leads in GA4 reports */
+  leadType?: LeadType;
+  /** Estimated GBP value of this conversion — used by Google Ads for ROAS */
+  value?: number;
 };
 
 export function TrackedLink({
@@ -23,6 +28,8 @@ export function TrackedLink({
   destinationType,
   ctaText,
   isPrimaryCta = false,
+  leadType,
+  value,
   href,
   onClick,
   ...props
@@ -49,6 +56,8 @@ export function TrackedLink({
       link_text: ctaText,
       section_id: sectionId,
       is_primary_cta: isPrimaryCta,
+      leadType,
+      value,
     });
   }
 

@@ -4,6 +4,7 @@ import Script from "next/script";
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { faqs } from "@/content/faqs";
 import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
+import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { COOKIE_CONSENT_KEY } from "@/lib/consent";
 import "./globals.css";
 
@@ -116,7 +117,7 @@ export default function RootLayout({
                     gtag('js', new Date());
                     gtag('config', ${JSON.stringify(gaMeasurementId)}, {
                       debug_mode: ${process.env.NODE_ENV !== "production"},
-                      page_path: window.location.pathname,
+                      page_location: window.location.href,
                     });
                   })();
                 `,
@@ -156,6 +157,7 @@ export default function RootLayout({
         className={`${karla.variable} ${playfair.variable} font-body text-[#1A0600] bg-[#FDF8F0]`}
       >
         {children}
+        <PageViewTracker />
         <CookieConsentBanner />
       </body>
     </html>

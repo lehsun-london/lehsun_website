@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function EmotionStripSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 px-5 lg:px-10" id="emotion-strip"
+    <section className="relative overflow-hidden py-12 md:py-16 px-5 lg:px-10" id="emotion-strip"
       style={{ backgroundColor: "#D93423" }}>
 
       {/* Tile motif texture overlay — very subtle */}

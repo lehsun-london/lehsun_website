@@ -64,10 +64,10 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
     : "Message us on WhatsApp with a few details and we\u2019ll come back with a tailored quote — usually the same day.";
 
   return (
-    <section className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] py-20 md:py-28 px-5 lg:px-10 scroll-mt-20" id="contact">
+    <section className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] py-12 md:py-16 px-5 lg:px-10 scroll-mt-20" id="contact">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#C42B0A] mb-4">
               {isMenu ? "Order Now" : "Get in Touch"}
             </p>
@@ -84,7 +84,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             {isMenu ? (
               <TrackedLink
                 className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:-translate-y-0.5 transition-all shadow-lg shadow-green-500/20 focus-ring text-sm cursor-pointer"
@@ -93,6 +93,8 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                 href={whatsapp.catalog}
                 intent="menu"
                 isPrimaryCta
+                leadType="menu_enquiry"
+                value={15}
                 placement="contact_menu"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -109,6 +111,8 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                   href={whatsapp.cateringEnquiry}
                   intent="lead"
                   isPrimaryCta
+                  leadType="catering_enquiry"
+                  value={150}
                   placement={`contact_${variant}`}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -136,7 +140,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
         {/* Quick tip — catering/general only */}
         {!isMenu && (
           <ScrollReveal delay={150}>
-            <div className="flex gap-3 bg-white/70 border border-[#E2C9A8] rounded-2xl p-5 mb-10 shadow-sm">
+            <div className="flex gap-3 bg-white/70 border border-[#E2C9A8] rounded-2xl p-5 mb-6 shadow-sm">
               <div className="flex-shrink-0 mt-0.5">
                 <div className="size-8 rounded-full bg-[#E8751A]/10 flex items-center justify-center">
                   <Info className="size-4 text-[#E8751A]" aria-hidden />

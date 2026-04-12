@@ -14,10 +14,10 @@ const areas = [
 
 export function AreasSection() {
   return (
-    <section className="bg-[#FFF5E4] py-20 md:py-24 px-5 lg:px-10" id="areas">
+    <section className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10" id="areas">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               Where we cater
             </p>
@@ -35,7 +35,7 @@ export function AreasSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={60}>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
             {areas.map(({ name, postcode, note }) => (
               <div
                 key={name}

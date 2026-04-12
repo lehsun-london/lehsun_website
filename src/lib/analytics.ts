@@ -12,13 +12,18 @@ export type TrackedLinkIntent =
   | "lead"
   | "menu"
   | "section_navigation"
-  | "social";
+  | "social"
+  | "review_click";
 
 export type LinkEventName =
   | "generate_lead"
   | "view_menu"
   | "select_content"
-  | "click_social";
+  | "click_social"
+  | "click_review";
+
+// Lead types for differentiating WhatsApp CTA intent in GA4
+export type LeadType = "catering_enquiry" | "menu_enquiry" | "general";
 
 export type LinkEventParams = {
   placement: string;
@@ -27,6 +32,10 @@ export type LinkEventParams = {
   link_text?: string;
   section_id?: string;
   is_primary_cta: boolean;
+  // GA4 recommended conversion params
+  lead_type?: LeadType;
+  value?: number;
+  currency?: string;
   debug_mode?: boolean;
 };
 
@@ -38,6 +47,8 @@ export type LinkTrackInput = {
   link_text?: string;
   section_id?: string;
   is_primary_cta: boolean;
+  leadType?: LeadType;
+  value?: number;
 };
 
 export type SectionViewParams = {
@@ -47,11 +58,19 @@ export type SectionViewParams = {
   debug_mode?: boolean;
 };
 
+export type FaqOpenParams = {
+  question: string;
+  faq_index: number;
+  faq_variant: string;
+  debug_mode?: boolean;
+};
+
 const eventNameByIntent: Record<TrackedLinkIntent, LinkEventName> = {
   lead: "generate_lead",
   menu: "view_menu",
   section_navigation: "select_content",
   social: "click_social",
+  review_click: "click_review",
 };
 
 function isDebugModeEnabled(): boolean {
@@ -66,10 +85,8 @@ function canTrackAnalytics(): boolean {
   return getEffectiveAnalyticsConsent() === "granted";
 }
 
-function trackEvent(
-  eventName: LinkEventName | "view_section",
-  params: LinkEventParams | SectionViewParams,
-): void {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function trackEvent(eventName: string, params: Record<string, any>): void {
   if (!canTrackAnalytics()) {
     return;
   }
@@ -87,7 +104,7 @@ function trackEvent(
 }
 
 export function trackLinkInteraction(params: LinkTrackInput): void {
-  trackEvent(eventNameByIntent[params.intent], {
+  const eventParams: LinkEventParams = {
     placement: params.placement,
     destination_type: params.destination_type,
     link_url: params.href,
@@ -95,12 +112,41 @@ export function trackLinkInteraction(params: LinkTrackInput): void {
     section_id: params.section_id,
     is_primary_cta: params.is_primary_cta,
     debug_mode: isDebugModeEnabled(),
-  });
+  };
+
+  if (params.leadType) {
+    eventParams.lead_type = params.leadType;
+  }
+
+  if (params.value !== undefined) {
+    eventParams.value = params.value;
+    eventParams.currency = "GBP";
+  }
+
+  trackEvent(eventNameByIntent[params.intent], eventParams);
 }
 
 export function trackSectionView(params: SectionViewParams): void {
   trackEvent("view_section", {
     ...params,
+    debug_mode: isDebugModeEnabled(),
+  });
+}
+
+/** Fire when a FAQ accordion item is opened — strong buying intent signal. */
+export function trackFaqOpen(params: FaqOpenParams): void {
+  trackEvent("faq_open", {
+    ...params,
+    debug_mode: isDebugModeEnabled(),
+  });
+}
+
+/** Fire on client-side route changes in Next.js App Router. */
+export function trackPageView(path: string, title: string): void {
+  trackEvent("page_view", {
+    page_location: window.location.href,
+    page_path: path,
+    page_title: title,
     debug_mode: isDebugModeEnabled(),
   });
 }

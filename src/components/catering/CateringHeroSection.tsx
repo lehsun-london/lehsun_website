@@ -5,7 +5,7 @@ import { whatsapp, visualAssets, reviewStats } from "@/content/businessInfo";
 
 export function CateringHeroSection() {
   return (
-    <section className="bg-[#FFFDF9] py-16 md:py-24 px-5 lg:px-10" id="catering-hero">
+    <section className="bg-[#FFFDF9] py-10 md:py-14 px-5 lg:px-10" id="catering-hero">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-[55fr_45fr] gap-10 lg:gap-16 items-center">
 
@@ -46,6 +46,8 @@ export function CateringHeroSection() {
                 href={whatsapp.cateringEnquiry}
                 intent="lead"
                 isPrimaryCta
+                leadType="catering_enquiry"
+                value={150}
                 placement="catering_hero"
                 rel="noopener noreferrer"
                 target="_blank"

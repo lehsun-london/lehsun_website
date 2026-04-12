@@ -6,10 +6,10 @@ const eventIcons = [Cake, Home, PartyPopper, Sparkles, Palette, Gift, Sun, Baby,
 
 export function EventTypesSection() {
   return (
-    <section className="bg-[#FFF5E4] py-16 md:py-20 px-5 lg:px-10 border-y border-[#E8D5C0]">
+    <section className="bg-[#FFF5E4] py-10 md:py-14 px-5 lg:px-10 border-y border-[#E8D5C0]">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               Events we cater for
             </p>

@@ -34,10 +34,10 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section className="bg-[#FFF5E4] py-20 md:py-24 px-5 lg:px-10 border-y border-[#E8D5C0]" id="ordering">
+    <section className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10 border-y border-[#E8D5C0]" id="ordering">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               How to order
             </p>

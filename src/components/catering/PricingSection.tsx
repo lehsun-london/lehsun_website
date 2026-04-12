@@ -14,10 +14,10 @@ const included = [
 
 export function PricingSection() {
   return (
-    <section className="bg-[#FFF5E4] py-20 md:py-24 px-5 lg:px-10" id="pricing">
+    <section className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10" id="pricing">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
               Pricing
             </p>
@@ -69,6 +69,8 @@ export function PricingSection() {
                   href={whatsapp.cateringEnquiry}
                   intent="lead"
                   isPrimaryCta
+                  leadType="catering_enquiry"
+                  value={150}
                   placement="pricing_section"
                   rel="noopener noreferrer"
                   target="_blank"
@@ -80,7 +82,9 @@ export function PricingSection() {
                   ctaText="Request Full Brochure"
                   destinationType="whatsapp"
                   href={whatsapp.brochure}
-                  intent="menu"
+                  intent="lead"
+                  leadType="catering_enquiry"
+                  value={150}
                   placement="pricing_brochure"
                   rel="noopener noreferrer"
                   target="_blank"

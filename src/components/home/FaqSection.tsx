@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, UtensilsCrossed, MapPin, Banknote, Leaf, Clock, Package } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { cateringFaqs, menuFaqs } from "@/content/faqs";
+import { trackFaqOpen } from "@/lib/analytics";
 
 interface FaqSectionProps {
   variant?: "catering" | "menu";
@@ -35,8 +36,8 @@ const questionIcons: Record<string, React.ElementType> = {
 };
 
 function AccordionItem({
-  question, answer, index,
-}: { question: string; answer: string; index: number }) {
+  question, answer, index, variant,
+}: { question: string; answer: string; index: number; variant: string }) {
   const [open, setOpen] = useState(false);
   const Icon = questionIcons[question] ?? UtensilsCrossed;
   const color = brandColors[index % brandColors.length];
@@ -51,7 +52,13 @@ function AccordionItem({
     >
       <button
         className="flex w-full items-start gap-4 p-5 text-left cursor-pointer focus-ring"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          const opening = !open;
+          setOpen(opening);
+          if (opening) {
+            trackFaqOpen({ question, faq_index: index, faq_variant: variant });
+          }
+        }}
         aria-expanded={open}
         type="button"
       >
@@ -100,13 +107,13 @@ export function FaqSection({ variant = "catering" }: FaqSectionProps) {
   const faqs = variant === "menu" ? menuFaqs : cateringFaqs;
 
   return (
-    <section className="py-20 md:py-28 scroll-mt-20" id="faq"
+    <section className="py-12 md:py-16 scroll-mt-20" id="faq"
       style={{ backgroundColor: "#FDF8F0" }}>
 
       <div className="px-5 lg:px-10">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal>
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
               {/* Tile motif header badge */}
               <div className="inline-flex items-center gap-3 mb-5">
                 <div className="size-2 rounded-full" style={{ backgroundColor: "#D93423" }} />
@@ -149,6 +156,7 @@ export function FaqSection({ variant = "catering" }: FaqSectionProps) {
                   question={faq.question}
                   answer={faq.answer}
                   index={i}
+                  variant={variant}
                 />
               ))}
             </div>
