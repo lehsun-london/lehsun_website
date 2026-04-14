@@ -74,23 +74,29 @@ export function FooterSection() {
             <p className="text-sm font-serif italic text-[#C8881A] mb-4">
               Flavours like you remember.
             </p>
-            <p className="text-xs text-white/60 leading-relaxed">
+            <p className="text-sm text-white/60 leading-relaxed">
               Lehsun &ndash; Nostalgic North Indian Catering
               <br />28 Portbridge Gardens, Ebbsfleet Valley
               <br />DA10 1GG, United Kingdom
               <br /><br />
-              <a
+              <TrackedLink
                 href={`tel:${contact.phone.replace(/\s/g, "")}`}
                 className="hover:text-[#F5821F] transition-colors"
+                ctaText={contact.phone}
+                destinationType="phone"
+                intent="lead"
+                isPrimaryCta={false}
+                leadType="general"
+                placement="footer_call"
               >
                 {contact.phone}
-              </a>
+              </TrackedLink>
             </p>
           </div>
 
           {/* Navigation + areas */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-3 font-bold">Pages</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 font-bold">Pages</p>
             <nav className="flex flex-col gap-2 mb-6" aria-label="Footer navigation">
               {pageLinks.map((link) => (
                 <Link
@@ -102,21 +108,25 @@ export function FooterSection() {
                 </Link>
               ))}
             </nav>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">Areas served</p>
-            <p className="text-xs text-white/50 leading-relaxed">
-              North Indian catering across Ebbsfleet Valley, Dartford, Gravesend, Northfleet,
-              Bexley, Orpington and nearby Kent.
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">Areas served</p>
+            <nav className="flex flex-col gap-1.5 mb-3" aria-label="Location pages">
+              <Link href="/catering/ebbsfleet-valley" className="text-xs text-white/50 hover:text-[#F5821F] transition-colors">Ebbsfleet Valley (DA10)</Link>
+              <Link href="/catering/dartford" className="text-xs text-white/50 hover:text-[#F5821F] transition-colors">Dartford (DA1, DA2)</Link>
+              <Link href="/catering/gravesend" className="text-xs text-white/50 hover:text-[#F5821F] transition-colors">Gravesend (DA11, DA12)</Link>
+            </nav>
+            <p className="text-xs text-white/40 leading-relaxed">
+              Also covering Northfleet, Bexley, Orpington and nearby Kent.
             </p>
           </div>
 
           {/* Social */}
           <div>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4 font-bold">Find us</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 font-bold">Find us</p>
             <div className="flex flex-col gap-3">
               {socialLinks.map((link) => (
                 <TrackedLink
                   key={link.label}
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-white/60 hover:text-[#F5821F] transition-colors focus-ring rounded-sm cursor-pointer"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-white/60 hover:text-[#F5821F] transition-colors focus-ring rounded-sm cursor-pointer py-2"
                   ctaText={link.label}
                   destinationType={link.destinationType}
                   href={link.href}
@@ -134,9 +144,9 @@ export function FooterSection() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-white/30">&copy; 2026 Lehsun</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-white/30">&copy; 2026 Lehsun</p>
           <button
-            className="text-[10px] uppercase tracking-[0.2em] text-white/30 hover:text-[#F5821F] hover:underline underline-offset-4 transition-colors cursor-pointer"
+            className="text-xs uppercase tracking-[0.2em] text-white/30 hover:text-[#F5821F] hover:underline underline-offset-4 transition-colors cursor-pointer"
             onClick={openCookieBanner}
             type="button"
           >

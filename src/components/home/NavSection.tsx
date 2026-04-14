@@ -51,7 +51,7 @@ export function NavSection() {
                 style={{ color: active ? "#D93423" : "#5C2A10" }}
                 onClick={() => {
                   if (!active) {
-                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "anchor", href: link.href, link_text: link.label, is_primary_cta: false });
+                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "internal", href: link.href, link_text: link.label, is_primary_cta: false });
                   }
                 }}
               >
@@ -66,7 +66,7 @@ export function NavSection() {
           <Link
             href="/menu"
             className="text-sm font-semibold text-[#6B3A2A] hover:text-[#2E8B7A] px-4 py-2 rounded-full border border-[#E8D5C0] hover:border-[#2E8B7A] transition-colors focus-ring"
-            onClick={() => trackLinkInteraction({ intent: "section_navigation", placement: "nav_menu_button", destination_type: "anchor", href: "/menu", link_text: "Daily Menu", is_primary_cta: false })}
+            onClick={() => trackLinkInteraction({ intent: "section_navigation", placement: "nav_menu_button", destination_type: "internal", href: "/menu", link_text: "Daily Menu", is_primary_cta: false })}
           >
             Daily Menu
           </Link>
@@ -91,7 +91,7 @@ export function NavSection() {
         <div className="flex md:hidden items-center gap-2">
           <TrackedLink
             aria-label="Message us on WhatsApp"
-            className="flex items-center justify-center size-9 rounded-full bg-[#25D366] text-white shadow focus-ring"
+            className="flex items-center justify-center size-11 rounded-full bg-[#25D366] text-white shadow focus-ring"
             ctaText="WhatsApp"
             destinationType="whatsapp"
             href={whatsapp.cateringEnquiry}
@@ -108,7 +108,7 @@ export function NavSection() {
           <button
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            className="flex items-center justify-center size-9 rounded-md text-[#1C0A00] focus-ring cursor-pointer"
+            className="flex items-center justify-center size-11 rounded-md text-[#1C0A00] focus-ring cursor-pointer"
             onClick={() => setMobileOpen((v) => !v)}
             type="button"
           >
@@ -133,7 +133,7 @@ export function NavSection() {
                 onClick={() => {
                   setMobileOpen(false);
                   if (!active) {
-                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "anchor", href: link.href, link_text: link.label, is_primary_cta: false });
+                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "internal", href: link.href, link_text: link.label, is_primary_cta: false });
                   }
                 }}
               >

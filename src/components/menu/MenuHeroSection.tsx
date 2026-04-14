@@ -41,7 +41,7 @@ export function MenuHeroSection() {
               style={{ animationDelay: "240ms" }}
             >
               <TrackedLink
-                className="flex items-center justify-center gap-2 bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-teal-600/20 hover:-translate-y-0.5 focus-ring cursor-pointer"
+                className="flex items-center justify-center gap-2 bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-teal-600/20 hover:-translate-y-0.5 focus-ring cursor-pointer w-full sm:w-auto"
                 ctaText="Browse Today's Menu"
                 destinationType="whatsapp"
                 href={whatsapp.catalog}
@@ -58,12 +58,12 @@ export function MenuHeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-3 animate-fade-in-up" style={{ animationDelay: "320ms" }}>
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
+              <div className="flex items-center gap-1.5 text-sm font-semibold text-[#6B3A2A]">
                 <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
                 5.0 on Google
               </div>
               <span className="text-[#E8D5C0]" aria-hidden>·</span>
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
+              <div className="flex items-center gap-1.5 text-sm font-semibold text-[#6B3A2A]">
                 <Clock className="size-3.5 text-[#2E8B7A]" aria-hidden />
                 Collection in DA10 · local delivery within 2 miles
               </div>

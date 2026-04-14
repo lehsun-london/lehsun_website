@@ -2,6 +2,8 @@ import { getEffectiveAnalyticsConsent } from "@/lib/consent";
 
 export type DestinationType =
   | "anchor"
+  | "internal"
+  | "phone"
   | "whatsapp"
   | "maps"
   | "instagram"

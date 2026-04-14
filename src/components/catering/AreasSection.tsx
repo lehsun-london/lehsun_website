@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { MapPin, ExternalLink } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { contact } from "@/content/businessInfo";
 
 const areas = [
-  { name: "Ebbsfleet Valley", postcode: "DA10", note: "Our home base — fastest delivery" },
-  { name: "Dartford", postcode: "DA1 / DA2", note: "Town centre and surrounding areas" },
-  { name: "Gravesend", postcode: "DA11 / DA12", note: "Full town coverage" },
+  { name: "Ebbsfleet Valley", postcode: "DA10", note: "Our home base — fastest delivery", href: "/catering/ebbsfleet-valley" },
+  { name: "Dartford", postcode: "DA1 / DA2", note: "Town centre and surrounding areas", href: "/catering/dartford" },
+  { name: "Gravesend", postcode: "DA11 / DA12", note: "Full town coverage", href: "/catering/gravesend" },
   { name: "Northfleet", postcode: "DA11", note: "Close to Ebbsfleet — easy access" },
   { name: "Bexley", postcode: "DA5 / DA6", note: "Including Bexleyheath and Sidcup" },
   { name: "Orpington", postcode: "BR5 / BR6", note: "Including surrounding BR postcodes" },
@@ -36,11 +37,8 @@ export function AreasSection() {
 
         <ScrollReveal delay={60}>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-            {areas.map(({ name, postcode, note }) => (
-              <div
-                key={name}
-                className="bg-white border border-[#E8D5C0] rounded-xl p-5 shadow-sm"
-              >
+            {areas.map(({ name, postcode, note, href }) => {
+              const cardContent = (
                 <div className="flex items-start gap-3">
                   <MapPin className="size-4 text-[#F5821F] flex-shrink-0 mt-0.5" aria-hidden />
                   <div>
@@ -49,8 +47,24 @@ export function AreasSection() {
                     <p className="text-xs text-[#6B3A2A] mt-1 leading-relaxed">{note}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+              return href ? (
+                <Link
+                  key={name}
+                  href={href}
+                  className="block bg-white border border-[#E8D5C0] rounded-xl p-5 shadow-sm hover:border-[#D93423] hover:shadow-md transition-all group cursor-pointer"
+                >
+                  {cardContent}
+                </Link>
+              ) : (
+                <div
+                  key={name}
+                  className="bg-white border border-[#E8D5C0] rounded-xl p-5 shadow-sm"
+                >
+                  {cardContent}
+                </div>
+              );
+            })}
           </div>
         </ScrollReveal>
 

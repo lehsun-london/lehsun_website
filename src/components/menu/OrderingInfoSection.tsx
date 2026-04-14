@@ -62,7 +62,7 @@ export function OrderingInfoSection() {
 
         <ScrollReveal delay={240}>
           <div className="space-y-5">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4">
               <TrackedLink
                 className="flex items-center justify-center gap-2 bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all focus-ring cursor-pointer"
                 ctaText="Browse Menu on WhatsApp"
@@ -79,12 +79,19 @@ export function OrderingInfoSection() {
                 <MessageCircle className="size-4" aria-hidden />
                 Browse Menu on WhatsApp
               </TrackedLink>
-              <a
+              <TrackedLink
                 href={`tel:${contact.phone.replace(/\s/g, "")}`}
                 className="flex items-center justify-center gap-2 border border-[#E8D5C0] bg-white text-[#1C0A00] px-8 py-4 rounded-full font-semibold text-sm hover:border-[#2E8B7A] hover:text-[#2E8B7A] transition-colors focus-ring cursor-pointer"
+                ctaText="Call to Order"
+                destinationType="phone"
+                intent="lead"
+                isPrimaryCta={false}
+                leadType="menu_enquiry"
+                value={15}
+                placement="ordering_call"
               >
                 Call to Order
-              </a>
+              </TrackedLink>
             </div>
 
             <div className="mx-auto max-w-3xl rounded-[28px] border border-[#E8D5C0] bg-white p-6 md:p-7 shadow-sm">

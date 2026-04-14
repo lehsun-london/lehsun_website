@@ -42,7 +42,7 @@ export function ServicesSection() {
 
           {/* ── Catering card — CardHoverReveal ── */}
           <ScrollReveal delay={60}>
-            <article className="group relative rounded-2xl overflow-hidden h-[420px] md:h-[520px] cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-500 border border-[#E8D5C0]">
+            <article className="group relative rounded-2xl overflow-hidden h-[500px] md:h-[520px] cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-500 border border-[#E8D5C0]">
 
               {/* Full-bleed image */}
               <Image
@@ -53,9 +53,9 @@ export function ServicesSection() {
                 src={visualAssets.cateringImage}
               />
 
-              {/* Default overlay — always visible, shows label + title */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+              {/* Default overlay — desktop only; on mobile the content panel is always visible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none hidden md:block md:group-hover:opacity-0 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 hidden md:block md:group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] bg-[#D9381E] text-white px-3 py-1 rounded-full">
                   Event Catering
                 </span>
@@ -64,8 +64,8 @@ export function ServicesSection() {
                 </h3>
               </div>
 
-              {/* Hover content panel — slides up from bottom */}
-              <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-white p-6 border-t border-[#E8D5C0] rounded-b-2xl">
+              {/* Content panel — always visible on mobile, hover-reveal on desktop */}
+              <div className="absolute bottom-0 left-0 right-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-out bg-white p-6 border-t border-[#E8D5C0] rounded-b-2xl">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] bg-[#D9381E] text-white px-3 py-1 rounded-full">
                     Event Catering
@@ -90,7 +90,7 @@ export function ServicesSection() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-2">
                   <TrackedLink
-                    className="flex-1 text-center bg-[#D9381E] hover:bg-[#F5821F] text-white px-5 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider transition-colors focus-ring cursor-pointer"
+                    className="flex-1 text-center bg-[#D9381E] hover:bg-[#F5821F] text-white px-5 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-colors focus-ring cursor-pointer"
                     ctaText="Plan an Event"
                     destinationType="whatsapp"
                     href={whatsapp.cateringEnquiry}
@@ -106,7 +106,7 @@ export function ServicesSection() {
                   </TrackedLink>
                   <Link
                     href="/catering"
-                    className="flex-1 text-center border border-[#E8D5C0] text-[#1C0A00] px-5 py-2.5 rounded-full text-sm font-semibold hover:border-[#F5821F] hover:text-[#F5821F] transition-colors focus-ring cursor-pointer"
+                    className="flex-1 text-center border border-[#E8D5C0] text-[#1C0A00] px-5 py-3 rounded-full text-sm font-semibold hover:border-[#F5821F] hover:text-[#F5821F] transition-colors focus-ring cursor-pointer"
                   >
                     See Full Menu
                   </Link>
@@ -117,7 +117,7 @@ export function ServicesSection() {
 
           {/* ── Daily menu card — CardHoverReveal ── */}
           <ScrollReveal delay={120}>
-            <article className="group relative rounded-2xl overflow-hidden h-[420px] md:h-[520px] cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-500 border border-[#E8D5C0]">
+            <article className="group relative rounded-2xl overflow-hidden h-[500px] md:h-[520px] cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-500 border border-[#E8D5C0]">
 
               {/* Full-bleed image */}
               <Image
@@ -128,9 +128,9 @@ export function ServicesSection() {
                 src={visualAssets.dailyMenuImage}
               />
 
-              {/* Default overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+              {/* Default overlay — desktop only */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none hidden md:block md:group-hover:opacity-0 transition-opacity duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 hidden md:block md:group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                 <span className="text-[10px] font-bold uppercase tracking-[0.2em] bg-[#2E8B7A] text-white px-3 py-1 rounded-full">
                   Daily Menu
                 </span>
@@ -139,8 +139,8 @@ export function ServicesSection() {
                 </h3>
               </div>
 
-              {/* Hover content panel */}
-              <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-white p-6 border-t border-[#E8D5C0] rounded-b-2xl">
+              {/* Content panel — always visible on mobile, hover-reveal on desktop */}
+              <div className="absolute bottom-0 left-0 right-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500 ease-out bg-white p-6 border-t border-[#E8D5C0] rounded-b-2xl">
                 <div className="mb-3">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] bg-[#2E8B7A] text-white px-3 py-1 rounded-full">
                     Daily Menu
@@ -162,7 +162,7 @@ export function ServicesSection() {
                 </div>
                 <Link
                   href="/menu"
-                  className="block w-full text-center bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider transition-colors focus-ring cursor-pointer"
+                  className="block w-full text-center bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-colors focus-ring cursor-pointer"
                 >
                   View Today&apos;s Menu &rarr;
                 </Link>

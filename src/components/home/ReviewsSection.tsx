@@ -105,16 +105,18 @@ function StackedReviews({ items }: { items: readonly ReviewItem[] }) {
         </AnimatePresence>
       </div>
 
-      <div className="flex gap-2 mt-6">
+      <div className="flex gap-1 mt-6">
         {items.map((_, i) => (
           <button
             key={i}
             onClick={() => { setDirection(i > activeIndex ? 1 : -1); setActiveIndex(i); }}
-            className={`rounded-full transition-all duration-300 focus-ring cursor-pointer ${
-              i === activeIndex ? "bg-[#E8751A] w-6 h-2" : "bg-[#E2C9A8] w-2 h-2 hover:bg-[#B8780A]"
-            }`}
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center focus-ring cursor-pointer"
             aria-label={`View review ${i + 1}`}
-          />
+          >
+            <span className={`block rounded-full transition-all duration-300 ${
+              i === activeIndex ? "bg-[#E8751A] w-6 h-2" : "bg-[#E2C9A8] w-2 h-2 hover:bg-[#B8780A]"
+            }`} />
+          </button>
         ))}
       </div>
       <p className="text-[11px] text-[#6B3520]/40 mt-2 tracking-wide">tap to cycle · swipe to navigate</p>

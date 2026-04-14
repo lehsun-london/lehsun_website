@@ -4,6 +4,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { NavSection } from "@/components/home/NavSection";
 import { FooterSection } from "@/components/home/FooterSection";
 import { whatsapp, contact, cateringPricing, reviewStats, cateringReviews } from "@/content/businessInfo";
+import { cateringFaqs } from "@/content/faqs";
 
 export interface LocationConfig {
   /** City / area name, e.g. "Dartford" */
@@ -36,8 +37,22 @@ const menuHighlights = {
 };
 
 export function LocationCateringPage({ location }: { location: LocationConfig }) {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: cateringFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <NavSection />
 
       {/* Hero */}
@@ -75,7 +90,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           </p>
 
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in-up"
+            className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4 mb-8 animate-fade-in-up"
             style={{ animationDelay: "240ms" }}
           >
             <TrackedLink
@@ -95,12 +110,19 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               <MessageCircle className="size-4" aria-hidden />
               Get a Catering Quote
             </TrackedLink>
-            <a
+            <TrackedLink
               href={`tel:${contact.phone.replace(/\s/g, "")}`}
               className="flex items-center justify-center gap-2 border-2 border-[#03B6AA] text-[#03B6AA] px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-[#03B6AA]/5 transition-colors focus-ring cursor-pointer"
+              ctaText="Call Us"
+              destinationType="phone"
+              intent="lead"
+              isPrimaryCta={false}
+              leadType="catering_enquiry"
+              value={150}
+              placement="location_hero_call"
             >
               Call Us
-            </a>
+            </TrackedLink>
           </div>
 
           {/* Trust chips */}
@@ -388,7 +410,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               Message us on WhatsApp with your event date, guest count, and any dishes in mind.
               We&apos;ll come back with a tailored quote — usually the same day.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4">
               <TrackedLink
                 className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:-translate-y-0.5 transition-all shadow-lg shadow-green-500/20 focus-ring cursor-pointer"
                 ctaText="Get Catering Quote"
@@ -405,12 +427,19 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                 <MessageCircle className="size-4" aria-hidden />
                 Get Catering Quote
               </TrackedLink>
-              <a
+              <TrackedLink
                 href={`tel:${contact.phone.replace(/\s/g, "")}`}
                 className="flex items-center justify-center gap-2 border border-[#E2C9A8] bg-white text-[#1A0600] px-8 py-4 rounded-full font-semibold text-sm hover:border-[#D93423] hover:text-[#D93423] transition-colors focus-ring cursor-pointer"
+                ctaText={`Call ${contact.phone}`}
+                destinationType="phone"
+                intent="lead"
+                isPrimaryCta={false}
+                leadType="catering_enquiry"
+                value={150}
+                placement="location_cta_call"
               >
                 Call {contact.phone}
-              </a>
+              </TrackedLink>
             </div>
           </ScrollReveal>
         </div>

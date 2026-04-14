@@ -84,7 +84,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4 mb-8">
             {isMenu ? (
               <TrackedLink
                 className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-10 py-4 rounded-full font-bold uppercase tracking-wide hover:-translate-y-0.5 transition-all shadow-lg shadow-green-500/20 focus-ring text-sm cursor-pointer"
@@ -124,7 +124,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                   <TrackedLink
                     className="flex items-center justify-center gap-2 border border-[#E2C9A8] bg-white text-[#1A0600] px-10 py-4 rounded-full font-semibold text-sm hover:border-[#E8751A] hover:text-[#E8751A] transition-colors focus-ring cursor-pointer"
                     ctaText="Browse Daily Menu"
-                    destinationType="external"
+                    destinationType="internal"
                     href="/menu"
                     intent="section_navigation"
                     placement="contact_general"
@@ -169,7 +169,7 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
             {socialLinks.map((link) => (
               <TrackedLink
                 key={link.label}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-[#E2C9A8] text-sm font-semibold text-[#6B3520] hover:border-[#E8751A] hover:text-[#E8751A] transition-colors focus-ring cursor-pointer shadow-sm"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-[#E2C9A8] text-sm font-semibold text-[#6B3520] hover:border-[#E8751A] hover:text-[#E8751A] transition-colors focus-ring cursor-pointer shadow-sm"
                 ctaText={link.label}
                 destinationType={link.destinationType}
                 href={link.href}

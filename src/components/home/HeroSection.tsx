@@ -195,7 +195,7 @@ export function HeroSection() {
           style={{ color: "#5C2A10", animationDelay: "240ms" }}
         >
           Based in Ebbsfleet Valley, we create tailored North Indian catering
-          menus across Dartford, Gravesend and nearby
+          menus across Dartford, Gravesend and nearby areas.
         </p>
 
         <div

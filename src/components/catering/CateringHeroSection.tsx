@@ -40,7 +40,7 @@ export function CateringHeroSection() {
               style={{ animationDelay: "240ms" }}
             >
               <TrackedLink
-                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ea855] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-green-500/25 hover:-translate-y-0.5 focus-ring cursor-pointer"
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ea855] text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-green-500/25 hover:-translate-y-0.5 focus-ring cursor-pointer w-full sm:w-auto"
                 ctaText="Get Catering Quote"
                 destinationType="whatsapp"
                 href={whatsapp.cateringEnquiry}
