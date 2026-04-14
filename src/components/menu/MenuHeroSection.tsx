@@ -22,8 +22,9 @@ export function MenuHeroSection() {
               className="font-serif italic font-black text-[#1C0A00] text-balance leading-tight mb-5 animate-fade-in-up"
               style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)", animationDelay: "80ms" }}
             >
-              Fresh North Indian dishes,{" "}
-              <span className="text-[#2E8B7A]">posted every day</span>
+              Fresh North Indian dishes in{" "}
+              <span className="text-[#2E8B7A]">Ebbsfleet Valley,</span>
+              {" "}posted every day
             </h1>
 
             <p

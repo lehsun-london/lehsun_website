@@ -4,9 +4,9 @@ import FaqSchema from "@/components/seo/FaqSchema";
 import { cateringFaqs } from "@/content/faqs";
 
 export const metadata: Metadata = {
-  title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
+  title: "North Indian Event Catering | Ebbsfleet Valley, Dartford & Gravesend | Lehsun",
   description:
-    "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. From £11.99 per head.",
+    "Tailored North Indian catering for birthdays, housewarmings, baby showers & Diwali across Ebbsfleet Valley, Dartford & Gravesend. From £11.99/head, 15+ guests.",
   alternates: {
     canonical: "https://lehsun.co.uk/catering",
   },
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "Indian catering for events Kent",
   ],
   openGraph: {
-    title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
+    title: "North Indian Event Catering | Ebbsfleet Valley, Dartford & Gravesend | Lehsun",
     description:
-      "Proper North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent.",
+      "Tailored North Indian catering for birthdays, housewarmings, baby showers & Diwali across Ebbsfleet Valley, Dartford & Gravesend. From £11.99/head, 15+ guests.",
     url: "https://lehsun.co.uk/catering",
     type: "website",
   },

@@ -50,28 +50,117 @@ export const reviewStats = {
 } as const;
 
 export const reviews = [
+  // ── Catering events ───────────────────────────────────────────────────────────
+  {
+    author: "aparna manaswini",
+    type: "catering" as const,
+    quote:
+      "We recently ordered catering from Lehsun for my daughter's first birthday, and it was hands down the best catering experience we've ever had! Shweta took the time to understand our needs and offered such thoughtful menu suggestions — she even arranged a personalised tasting session. On the day, the food was ready on time, perfectly packed and absolutely delicious. The Shahi Tukda was honestly the best I have ever tasted! What makes it even more special is that Shweta did all of this by herself with so much care and that unmistakable touch of home-cooked goodness.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
   {
     author: "Anudeet M",
-    age: "5 months ago",
+    type: "catering" as const,
     quote:
-      "Lehsun catered our housewarming and the food was outstanding — the chole, dal makhni, dum aloo, puri and pulao were all spot on. Guests kept going back for seconds. Portions were generous and delivery was right on time.",
+      "We ordered from Lehsun for our housewarming, and it made the occasion even more special. The chole, dal makhni, dum aloo, puri, pulao, and moong dal halwa were all cooked to perfection — flavorful, homely, and truly nostalgic. Delivery was timely, portions were generous, and our guests kept complimenting the food. Highly recommend for anyone looking for authentic North Indian catering.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  // ── Daily menu orders ─────────────────────────────────────────────────────────
+  {
+    author: "surendra nivas",
+    type: "daily" as const,
+    quote:
+      "Honestly, just really good food. Hot, fresh, and made with genuine care — exactly what you want when you're hungry. The flavours were spot on, portions were generous, and everything arrived in great condition. You can tell there's real effort going into every dish — this isn't just food thrown together, it's food made with a bit of heart. No complaints, no notes. Just clean plates and a happy stomach. 10/10.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Varsha Aravindhan",
+    type: "daily" as const,
+    quote:
+      "We ordered the thali and aloo tikki chaat from Lehsun, and everything was absolutely delicious. We've also tried their chapatis and curries — being pure vegetarians, we really appreciate the authentic flavours and homemade texture. The taste is consistently brilliant, and even my kids adore the food from here. Definitely one of the best Indian food options in Ebbsfleet!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Venkatesh Mishra",
+    type: "daily" as const,
+    quote:
+      "Been ordering from Lehsun since they opened and they've been consistently excellent. The food tastes truly authentic, just like homemade Indian snacks and meals. Quality and flavour are always spot on. Highly recommended if you want genuine Indian taste!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Ami Salunke",
+    type: "daily" as const,
+    quote:
+      "Shahi thali was seriously delicious. The paneer was soft and full of flavour, and the dal makhani had that perfect creamy, slow-cooked taste. Every bite felt rich and comforting without being too heavy. Proper homestyle flavours — definitely one of the best food I've had in the area.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "krutika thakker",
+    type: "daily" as const,
+    quote:
+      "We tried a few things from Lehsun and enjoyed the food every time. The chole, aloo tari sabzi, gajar halwa were outstanding. Definitely ordering more and highly recommend Lehsun for authentic and delicious Indian food.",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
     author: "Dr Apeksha Tiwari",
-    age: "4 months ago",
+    type: "daily" as const,
     quote:
-      "The food took me straight back to memories of home. Tasty, comforting, and made with real care. We will absolutely be ordering again.",
+      "I recently ordered from Lehsun and the food brought back so many nostalgic memories. It was incredibly tasty and comforting at the same time. I can't wait to order again — highly recommended!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Sweety Mishra",
+    type: "daily" as const,
+    quote:
+      "I have ordered Lehsun's Khasta Kachori so many times and every time it takes me back home. Crispy and crunchy outer layer with flavourful filling inside. Their Naan Khatai also had that perfect crumbly texture — soft yet slightly crisp, each bite melting in my mouth with a rich, buttery flavour and a hint of cardamom. They're doing a great job serving delicious food with love and care. Highly recommended!",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
     author: "Himanshi Khurana",
-    age: "6 months ago",
+    type: "daily" as const,
     quote:
-      "Amazing food — proper flavours, everything fresh and hygienically prepared. It felt like a trip down memory lane. Absolutely perfect.",
+      "The food was absolutely amazing — a real trip down memory lane! Everything was prepared and packed hygienically, and the flavours were just perfect. Highly recommend!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "vivek singh",
+    type: "daily" as const,
+    quote:
+      "Just one word — laajawaab! The keema pav is nothing short of a culinary masterpiece. The keema was perfectly cooked, with a rich, masaledaar blend — spicy, savoury, and deeply satisfying. The pav was soft and buttery, toasted just right to soak up all that delicious keema. It's the kind of dish that makes you pause and say, 'Bas, yahi hai!' Highly recommend to anyone craving authentic flavours with a punch of nostalgia.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Ruhi singh",
+    type: "daily" as const,
+    quote:
+      "Lahsun nailed it! This trio was a perfect blend of swad, sanskaar, and yaadein. I ordered aloo ki sabzi, khasta kachori, and thandai — and honestly, it was ekdum swadisht! The whole meal felt like a nostalgic trip to the galli-nukkad stalls of India, where every bite tells a story. If you're craving something chatpata, comforting, and unapologetically desi, this is a must-try.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Stuti Kashyap",
+    type: "daily" as const,
+    quote:
+      "I can't recommend Lehsun enough! Their litti soaked in spicy Indian goat curry is an absolute flavour bomb — rich, authentic, and so tasty. And the Nankhatai is buttery, crumbly perfection that melts in your mouth. It's like a taste of home, right here in Kent. Super impressed with how hygienic they are, and their packaging is top-notch too. If you haven't tried them yet, you're seriously missing out!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Rohit Sinha",
+    type: "daily" as const,
+    quote:
+      "Lehsun absolutely nailed the Litti & Mutton at the Holi event! The litti had that perfect smoky, charred crust with a soft, flavourful sattu filling, absorbing every bit of the rich, spicy, slow-cooked mutton gravy. The balance of spices, the depth of flavour, and the quality of the ingredients made it a truly soul-satisfying experience.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Shivangi Srivastava",
+    type: "daily" as const,
+    quote:
+      "Lehsun truly brings out the authentic taste of India! I absolutely loved the nihari — it was rich, flavourful, and perfectly spiced. The litti was amazing too, with that classic smoky flavour. You can tell the food is made with care and tradition in mind. Will definitely be coming back!",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
 ] as const;
+
+export const cateringReviews = reviews.filter((r) => r.type === "catering");
+export const dailyMenuReviews = reviews.filter((r) => r.type === "daily");
 
 // ─── Pricing ──────────────────────────────────────────────────────────────────
 

@@ -3,6 +3,7 @@ import { NavSection } from "@/components/home/NavSection";
 import { FooterSection } from "@/components/home/FooterSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/home/ContactSection";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { TrustStripSection } from "@/components/home/TrustStripSection";
 import { MenuHeroSection } from "./MenuHeroSection";
 import { HowItWorksSection } from "./HowItWorksSection";
@@ -29,6 +30,7 @@ export function MenuPage() {
         <FeaturedDishesSection />
         <HowItWorksSection />
         <OrderingInfoSection />
+        <ReviewsSection variant="daily" />
         <FaqSection variant="menu" />
         <ContactSection variant="menu" />
       </main>

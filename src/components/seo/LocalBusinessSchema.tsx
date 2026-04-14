@@ -56,22 +56,31 @@ const localBusinessSchema = {
     "Family gathering catering",
     "Festive event catering",
   ],
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday",
-      ],
-      opens: "09:00",
-      closes: "20:00",
-    },
-  ],
+  hasMenu: "https://lehsun.co.uk/menu",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Lehsun Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "North Indian Catering for Events",
+          description:
+            "Tailored North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. Minimum 15 guests. From £11.99 per head.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Daily North Indian Menu",
+          description:
+            "Fresh North Indian dishes posted daily via WhatsApp. Order for collection from Ebbsfleet Valley (DA10) or local delivery within 2 miles on orders above £25.",
+        },
+      },
+    ],
+  },
   sameAs: [
     contact.instagram,
     contact.facebook,

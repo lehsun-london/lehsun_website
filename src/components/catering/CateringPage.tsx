@@ -37,7 +37,7 @@ export function CateringPage() {
         <PricingSection />
         <CateringMenuSection />
         <AreasSection />
-        <ReviewsSection />
+        <ReviewsSection variant="catering" />
         <FaqSection variant="catering" />
         <ContactSection variant="catering" />
       </main>

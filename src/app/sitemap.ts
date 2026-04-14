@@ -50,5 +50,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: "https://lehsun.co.uk/catering/ebbsfleet-valley",
+      lastModified: lastMod,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://lehsun.co.uk/catering/dartford",
+      lastModified: lastMod,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: "https://lehsun.co.uk/catering/gravesend",
+      lastModified: lastMod,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
   ];
 }

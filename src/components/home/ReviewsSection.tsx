@@ -4,7 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ExternalLink, Quote } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
-import { reviewStats, reviews } from "@/content/businessInfo";
+import { reviewStats, reviews, cateringReviews, dailyMenuReviews } from "@/content/businessInfo";
+
+type ReviewItem = { author: string; type: string; quote: string; googleUrl: string };
+type ReviewVariant = "all" | "catering" | "daily";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const googleReviewsUrl = "https://maps.app.goo.gl/C8JKao4BbBerjfQj8";
@@ -32,26 +35,25 @@ function StarRow({ count = 5, size = "size-3.5" }: { count?: number; size?: stri
 }
 
 // Mobile stacked carousel
-function StackedReviews() {
+function StackedReviews({ items }: { items: readonly ReviewItem[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState<1 | -1>(1);
 
   const next = useCallback(() => {
     setDirection(1);
-    setActiveIndex((prev) => (prev + 1) % reviews.length);
-  }, []);
+    setActiveIndex((prev) => (prev + 1) % items.length);
+  }, [items.length]);
 
   useEffect(() => {
     const timer = setInterval(next, 5500);
     return () => clearInterval(timer);
   }, [next]);
 
-  const review = reviews[activeIndex];
+  const review = items[activeIndex];
 
   return (
     <div className="relative flex flex-col items-center">
       <div className="relative w-full max-w-md mx-auto" style={{ height: "360px" }}>
-        {/* Back stack cards */}
         {[2, 1].map((offset) => (
           <div
             key={offset}
@@ -79,29 +81,24 @@ function StackedReviews() {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="absolute inset-0 flex flex-col rounded-2xl border-2 border-[#E8751A]/20 bg-white p-7 shadow-xl cursor-pointer select-none"
             style={{ zIndex: 20 }}
-            onClick={() => { setDirection(1); setActiveIndex((prev) => (prev + 1) % reviews.length); }}
+            onClick={() => { setDirection(1); setActiveIndex((prev) => (prev + 1) % items.length); }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             onDragEnd={(_, info) => {
-              if (info.offset.x < -50) { setDirection(1); setActiveIndex((p) => (p + 1) % reviews.length); }
-              else if (info.offset.x > 50) { setDirection(-1); setActiveIndex((p) => (p - 1 + reviews.length) % reviews.length); }
+              if (info.offset.x < -50) { setDirection(1); setActiveIndex((p) => (p + 1) % items.length); }
+              else if (info.offset.x > 50) { setDirection(-1); setActiveIndex((p) => (p - 1 + items.length) % items.length); }
             }}
           >
-            {/* Decorative tile corner accent */}
             <div className="absolute top-0 right-0 w-16 h-16 rounded-bl-2xl overflow-hidden opacity-20 pointer-events-none" aria-hidden>
               <div className="tile-band w-full h-full" />
             </div>
-
             <Quote className="size-8 text-[#E8751A]/25 mb-3 flex-shrink-0" aria-hidden />
             <StarRow />
             <p className="flex-1 text-[#6B3520] font-serif italic leading-relaxed text-sm my-4">
               &ldquo;{review.quote}&rdquo;
             </p>
             <div className="flex items-center justify-between pt-3 border-t border-[#E2C9A8]">
-              <div>
-                <p className="font-black text-sm text-[#1A0600]">{review.author}</p>
-                <p className="text-xs text-[#6B3520]/60 mt-0.5">{review.age}</p>
-              </div>
+              <p className="font-black text-sm text-[#1A0600]">{review.author}</p>
               <GoogleMark className="size-5" />
             </div>
           </motion.article>
@@ -109,7 +106,7 @@ function StackedReviews() {
       </div>
 
       <div className="flex gap-2 mt-6">
-        {reviews.map((_, i) => (
+        {items.map((_, i) => (
           <button
             key={i}
             onClick={() => { setDirection(i > activeIndex ? 1 : -1); setActiveIndex(i); }}
@@ -125,9 +122,16 @@ function StackedReviews() {
   );
 }
 
-export function ReviewsSection() {
-  const featured = reviews[0];
-  const rest = reviews.slice(1);
+export function ReviewsSection({ variant = "all" }: { variant?: ReviewVariant }) {
+  const displayReviews: readonly ReviewItem[] =
+    variant === "catering" ? cateringReviews :
+    variant === "daily" ? dailyMenuReviews :
+    reviews;
+
+  const heading =
+    variant === "catering" ? <>What clients say about<br className="hidden sm:block" /> our catering.</> :
+    variant === "daily" ? <>What people say about<br className="hidden sm:block" /> the daily menu.</> :
+    <>Real families. Real evenings.<br className="hidden sm:block" /> Real flavours.</>;
 
   return (
     <section className="py-12 md:py-16 px-5 lg:px-10 scroll-mt-20" id="reviews"
@@ -144,7 +148,7 @@ export function ReviewsSection() {
               className="font-serif italic font-black text-[#1A0600] text-balance mb-6"
               style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
             >
-              Real families. Real evenings.<br className="hidden sm:block" /> Real flavours.
+              {heading}
             </h2>
 
             {/* Stats row */}
@@ -160,54 +164,30 @@ export function ReviewsSection() {
 
         {/* Mobile: stacked cards */}
         <div className="md:hidden mb-6">
-          <StackedReviews />
+          <StackedReviews items={displayReviews} />
         </div>
 
-        {/* Desktop: featured large + grid */}
-        <div className="hidden md:grid grid-cols-3 gap-1 mb-8">
-
-          {/* Featured large review — spans 1 col but taller */}
-          <ScrollReveal delay={0}>
-            <article className="relative flex flex-col rounded-2xl border-2 border-[#E8751A]/30 bg-white p-8 shadow-md h-full overflow-hidden group hover:-translate-y-1 hover:shadow-xl transition-all duration-300 cursor-default">
-              {/* Tile corner accent */}
-              <div className="absolute top-0 right-0 w-20 h-20 opacity-15 pointer-events-none" aria-hidden>
-                <div className="tile-band w-full h-full rounded-bl-2xl" />
-              </div>
-              <Quote className="size-9 text-[#E8751A]/20 mb-4 flex-shrink-0" aria-hidden />
-              <StarRow size="size-4" />
-              <p className="mt-4 flex-1 text-[#6B3520] font-serif italic leading-relaxed">
-                &ldquo;{featured.quote}&rdquo;
-              </p>
-              <div className="mt-6 pt-4 border-t border-[#E2C9A8] flex items-center justify-between">
-                <div>
-                  <p className="font-black text-sm text-[#1A0600]">{featured.author}</p>
-                  <p className="text-xs text-[#6B3520]/60 mt-0.5">{featured.age}</p>
-                </div>
-                <GoogleMark className="size-5" />
-              </div>
-            </article>
-          </ScrollReveal>
-
-          {/* Remaining reviews */}
-          <div className="col-span-2 grid grid-cols-2 gap-1 ml-1">
-            {rest.map((review, i) => (
-              <ScrollReveal key={review.author} delay={(i + 1) * 80}>
-                <article className="relative flex flex-col rounded-2xl border border-[#E2C9A8] bg-white p-6 shadow-sm h-full overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-[#E8751A] transition-all duration-300 cursor-default">
-                  <StarRow />
-                  <p className="mt-3 flex-1 text-[#6B3520] font-serif italic leading-relaxed text-sm">
-                    &ldquo;{review.quote}&rdquo;
-                  </p>
-                  <div className="mt-5 pt-3 border-t border-[#E2C9A8] flex items-center justify-between">
-                    <div>
-                      <p className="font-black text-xs text-[#1A0600]">{review.author}</p>
-                      <p className="text-[10px] text-[#6B3520]/60 mt-0.5">{review.age}</p>
-                    </div>
-                    <GoogleMark className="size-4" />
+        {/* Desktop: 3-col grid */}
+        <div className="hidden md:grid grid-cols-3 gap-4 mb-8">
+          {displayReviews.map((review, i) => (
+            <ScrollReveal key={review.author} delay={i * 60}>
+              <article className="relative flex flex-col rounded-2xl border border-[#E2C9A8] bg-white p-6 shadow-sm h-full overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:border-l-4 hover:border-l-[#E8751A] transition-all duration-300 cursor-default">
+                {i === 0 && (
+                  <div className="absolute top-0 right-0 w-16 h-16 opacity-10 pointer-events-none" aria-hidden>
+                    <div className="tile-band w-full h-full rounded-bl-2xl" />
                   </div>
-                </article>
-              </ScrollReveal>
-            ))}
-          </div>
+                )}
+                <StarRow />
+                <p className="mt-3 flex-1 text-[#6B3520] font-serif italic leading-relaxed text-sm">
+                  &ldquo;{review.quote}&rdquo;
+                </p>
+                <div className="mt-5 pt-3 border-t border-[#E2C9A8] flex items-center justify-between">
+                  <p className="font-black text-xs text-[#1A0600]">{review.author}</p>
+                  <GoogleMark className="size-4" />
+                </div>
+              </article>
+            </ScrollReveal>
+          ))}
         </div>
 
         {/* CTA */}
