@@ -5,6 +5,8 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ContactSection } from "@/components/home/ContactSection";
 import { TrustStripSection } from "@/components/home/TrustStripSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { buildAbsoluteUrl } from "@/lib/seo";
 import { CateringHeroSection } from "./CateringHeroSection";
 import { CateringProcessSection } from "./CateringProcessSection";
 import { EventTypesSection } from "./EventTypesSection";
@@ -27,6 +29,12 @@ const trackedSections = [
 export function CateringPage() {
   return (
     <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: buildAbsoluteUrl("/") },
+          { name: "Catering", item: buildAbsoluteUrl("/catering") },
+        ]}
+      />
       <SectionViewTracker sections={trackedSections} />
       <NavSection />
       <main className="pt-[60px]">

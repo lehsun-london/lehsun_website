@@ -1,18 +1,11 @@
 import type { MetadataRoute } from "next";
 import { execSync } from "node:child_process";
+import { buildAbsoluteUrl } from "@/lib/seo";
 
-const contentPaths = [
-  "src/app/layout.tsx",
-  "src/components/home",
-  "src/components/catering",
-  "src/components/menu",
-  "src/components/seo",
-];
-
-function getLastModifiedDate(): Date {
+function getLastModifiedDate(paths: readonly string[]): Date {
   try {
     const output = execSync(
-      `git log -1 --format=%cI -- ${contentPaths.join(" ")}`,
+      `git log -1 --format=%cI -- ${paths.join(" ")}`,
       {
         encoding: "utf8",
         stdio: ["ignore", "pipe", "ignore"],
@@ -30,41 +23,79 @@ function getLastModifiedDate(): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastMod = getLastModifiedDate();
   return [
     {
-      url: "https://lehsun.co.uk/",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/page.tsx",
+        "src/components/home",
+        "src/components/seo",
+        "src/content/faqs.ts",
+      ]),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://lehsun.co.uk/catering",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/catering"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/catering/page.tsx",
+        "src/components/catering",
+        "src/components/seo",
+        "src/content/faqs.ts",
+        "src/content/businessInfo.ts",
+      ]),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "https://lehsun.co.uk/menu",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/menu"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/menu/page.tsx",
+        "src/components/menu",
+        "src/components/home/FaqSection.tsx",
+        "src/components/seo",
+        "src/content/faqs.ts",
+        "src/content/businessInfo.ts",
+      ]),
       changeFrequency: "daily",
       priority: 0.8,
     },
     {
-      url: "https://lehsun.co.uk/catering/ebbsfleet-valley",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/catering/ebbsfleet-valley"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/catering/ebbsfleet-valley/page.tsx",
+        "src/components/catering/LocationCateringPage.tsx",
+        "src/components/seo",
+        "src/content/businessInfo.ts",
+      ]),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://lehsun.co.uk/catering/dartford",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/catering/dartford"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/catering/dartford/page.tsx",
+        "src/components/catering/LocationCateringPage.tsx",
+        "src/components/seo",
+        "src/content/businessInfo.ts",
+      ]),
       changeFrequency: "monthly",
       priority: 0.75,
     },
     {
-      url: "https://lehsun.co.uk/catering/gravesend",
-      lastModified: lastMod,
+      url: buildAbsoluteUrl("/catering/gravesend"),
+      lastModified: getLastModifiedDate([
+        "src/app/layout.tsx",
+        "src/app/catering/gravesend/page.tsx",
+        "src/components/catering/LocationCateringPage.tsx",
+        "src/components/seo",
+        "src/content/businessInfo.ts",
+      ]),
       changeFrequency: "monthly",
       priority: 0.75,
     },

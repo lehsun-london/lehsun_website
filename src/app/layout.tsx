@@ -5,6 +5,7 @@ import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
 import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { COOKIE_CONSENT_KEY } from "@/lib/consent";
+import { DEFAULT_OG_IMAGE, DEFAULT_OG_IMAGE_ALT, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const karla = Karla({
@@ -19,16 +20,23 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lehsun.co.uk/"),
+  metadataBase: new URL(`${SITE_URL}/`),
   title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
   description:
     "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers and festive events across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. Daily menu available for local DA10 collection and nearby delivery.",
   alternates: {
-    canonical: "https://lehsun.co.uk/",
+    canonical: `${SITE_URL}/`,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   keywords: [
     "North Indian catering Ebbsfleet",
@@ -45,8 +53,25 @@ export const metadata: Metadata = {
     title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
     description:
       "Proper North Indian catering for birthdays, housewarmings, baby showers and festive events across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent.",
-    url: "https://lehsun.co.uk/",
+    url: `${SITE_URL}/`,
     type: "website",
+    siteName: "Lehsun",
+    locale: "en_GB",
+    images: [
+      {
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: DEFAULT_OG_IMAGE_ALT,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
+    description:
+      "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers and festive events across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent.",
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 

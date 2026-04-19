@@ -1,10 +1,11 @@
 import { MessageCircle, Star, ShieldCheck, MapPin, Users, ChefHat, Calendar } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { NavSection } from "@/components/home/NavSection";
 import { FooterSection } from "@/components/home/FooterSection";
 import { whatsapp, contact, cateringPricing, reviewStats, cateringReviews } from "@/content/businessInfo";
-import { cateringFaqs } from "@/content/faqs";
+import { buildAbsoluteUrl } from "@/lib/seo";
 
 export interface LocationConfig {
   /** City / area name, e.g. "Dartford" */
@@ -17,6 +18,13 @@ export interface LocationConfig {
   proximityNote: string;
   /** Nearby places to mention for long-tail coverage */
   nearbyAreas: string[];
+  /** 3-4 sentences unique to this location, shown in the location context section */
+  locationIntro: string;
+  /** 2 FAQs specific to this location, shown on-page and emitted in FAQ schema */
+  locationFaqs: ReadonlyArray<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 const eventTypes = [
@@ -40,7 +48,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: cateringFaqs.map((faq) => ({
+    mainEntity: location.locationFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -49,6 +57,16 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: buildAbsoluteUrl("/") },
+          { name: "Catering", item: buildAbsoluteUrl("/catering") },
+          {
+            name: location.displayName,
+            item: buildAbsoluteUrl(`/catering/${location.name.toLowerCase().replace(/\s+/g, "-")}` as `/${string}`),
+          },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -381,17 +399,27 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               North Indian catering for {location.displayName}
             </h2>
             <p className="text-[#6B3A2A] leading-relaxed mb-3">
-              Lehsun is based in Ebbsfleet Valley (DA10) and regularly caters events across{" "}
-              {location.displayName} and surrounding areas including{" "}
-              {location.nearbyAreas.join(", ")}. Whether you&apos;re planning a birthday party,
-              housewarming, baby shower or Diwali gathering, we&apos;ll bring the same care and
-              flavour to your venue.
+              {location.locationIntro}
             </p>
             <p className="text-[#6B3A2A] leading-relaxed">
-              Every menu is cooked fresh and tailored to your guest list. We maintain separate
-              veg and non-veg kitchens and hold a 5-star food hygiene rating.
+              We also cover {location.nearbyAreas.join(", ")} and surrounding areas. Every menu
+              is cooked fresh and tailored to your guest list. We maintain separate veg and
+              non-veg kitchens and hold a 5-star food hygiene rating.
             </p>
           </ScrollReveal>
+
+          {location.locationFaqs.length > 0 && (
+            <ScrollReveal delay={80}>
+              <div className="mt-8 pt-8 border-t border-[#E8D5C0] space-y-6">
+                {location.locationFaqs.map((faq) => (
+                  <div key={faq.question}>
+                    <p className="font-bold text-[#1C0A00] mb-2">{faq.question}</p>
+                    <p className="text-[#6B3A2A] leading-relaxed text-sm">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          )}
         </div>
       </section>
 

@@ -5,6 +5,8 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/home/ContactSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { TrustStripSection } from "@/components/home/TrustStripSection";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import { buildAbsoluteUrl } from "@/lib/seo";
 import { MenuHeroSection } from "./MenuHeroSection";
 import { HowItWorksSection } from "./HowItWorksSection";
 import { FeaturedDishesSection } from "./FeaturedDishesSection";
@@ -22,6 +24,12 @@ const trackedSections = [
 export function MenuPage() {
   return (
     <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden">
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", item: buildAbsoluteUrl("/") },
+          { name: "Daily Menu", item: buildAbsoluteUrl("/menu") },
+        ]}
+      />
       <SectionViewTracker sections={trackedSections} />
       <NavSection />
       <main className="pt-[60px]">
