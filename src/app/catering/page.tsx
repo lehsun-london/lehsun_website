@@ -5,9 +5,9 @@ import { cateringFaqs } from "@/content/faqs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "North Indian Event Catering | Ebbsfleet Valley, Dartford & Gravesend | Lehsun",
+  title: "Indian Catering in Kent | 5★ Google Reviews | Lehsun",
   description:
-    "Tailored North Indian catering for birthdays, housewarmings, baby showers & Diwali across Ebbsfleet Valley, Dartford & Gravesend. From £11.99/head, 15+ guests.",
+    "North Indian catering for Dartford, Gravesend, Ebbsfleet and nearby Kent. 50+ Google reviews, from £11.99/head, 15+ guests. WhatsApp for a quote.",
   path: "/catering",
   keywords: [
     "North Indian catering Ebbsfleet",

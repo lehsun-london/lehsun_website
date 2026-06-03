@@ -79,7 +79,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D93423]/20 bg-[#D93423]/5 px-5 py-2 mb-6 animate-fade-in-up">
             <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423]">
-              {reviewStats.average} · {reviewStats.count} Google Reviews
+              5★ · {reviewStats.count}+ Google Reviews
             </span>
           </div>
 
@@ -146,7 +146,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           {/* Trust chips */}
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
             {[
-              { icon: Star, text: "5.0 Google Reviews", color: "#E69B39" },
+              { icon: Star, text: "5★ Google Reviews", color: "#E69B39" },
               { icon: ShieldCheck, text: "5-Star Hygiene Rating", color: "#03B6AA" },
               { icon: MapPin, text: `Serving ${location.name} & nearby`, color: "#D93423" },
             ].map(({ icon: Icon, text, color }) => (
@@ -352,7 +352,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                 ))}
               </div>
               <p className="text-sm font-semibold text-[#6B3A2A]">
-                {reviewStats.average} · {reviewStats.count}+ reviews on Google
+                5★ · {reviewStats.count}+ reviews on Google
               </p>
             </div>
           </ScrollReveal>

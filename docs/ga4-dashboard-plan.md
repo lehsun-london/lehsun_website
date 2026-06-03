@@ -10,7 +10,7 @@ The main business questions are:
 - Which traffic sources bring people who actually enquire, not just browse?
 - How many users move from homepage or location page visits into menu views, FAQ opens, and lead actions?
 
-## 1. GA4 Property Setup
+## 1. GA4 Property Setup.
 
 Use one GA4 property for `lehsun.co.uk` with one web data stream.
 

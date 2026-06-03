@@ -14,7 +14,7 @@ export function CateringHeroSection() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#E8D5C0] bg-[#FFF5E4] px-4 py-1.5 mb-6 animate-fade-in-up">
               <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
               <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#6B3A2A]">
-                {reviewStats.average} · {reviewStats.count} Google Reviews
+                5★ · {reviewStats.count}+ Google Reviews
               </span>
             </div>
 
@@ -59,7 +59,7 @@ export function CateringHeroSection() {
             <div className="flex flex-wrap gap-3 animate-fade-in-up" style={{ animationDelay: "320ms" }}>
               <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">
                 <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
-                5.0 Google Reviews
+                5★ Google Reviews
               </div>
               <span className="text-[#E8D5C0]" aria-hidden>·</span>
               <div className="flex items-center gap-1.5 text-xs font-semibold text-[#6B3A2A]">

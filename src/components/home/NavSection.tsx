@@ -51,7 +51,16 @@ export function NavSection() {
                 style={{ color: active ? "#D93423" : "#5C2A10" }}
                 onClick={() => {
                   if (!active) {
-                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "internal", href: link.href, link_text: link.label, is_primary_cta: false });
+                    trackLinkInteraction({
+                      intent: link.href === "/menu" ? "menu" : "section_navigation",
+                      placement,
+                      destination_type: "internal",
+                      href: link.href,
+                      link_text: link.label,
+                      is_primary_cta: false,
+                      leadType: link.href === "/menu" ? "menu_enquiry" : undefined,
+                      value: link.href === "/menu" ? 15 : undefined,
+                    });
                   }
                 }}
               >
@@ -66,7 +75,18 @@ export function NavSection() {
           <Link
             href="/menu"
             className="text-sm font-semibold text-[#6B3A2A] hover:text-[#2E8B7A] px-4 py-2 rounded-full border border-[#E8D5C0] hover:border-[#2E8B7A] transition-colors focus-ring"
-            onClick={() => trackLinkInteraction({ intent: "section_navigation", placement: "nav_menu_button", destination_type: "internal", href: "/menu", link_text: "Daily Menu", is_primary_cta: false })}
+            onClick={() =>
+              trackLinkInteraction({
+                intent: "menu",
+                placement: "nav_menu_button",
+                destination_type: "internal",
+                href: "/menu",
+                link_text: "Daily Menu",
+                is_primary_cta: false,
+                leadType: "menu_enquiry",
+                value: 15,
+              })
+            }
           >
             Daily Menu
           </Link>
@@ -133,7 +153,16 @@ export function NavSection() {
                 onClick={() => {
                   setMobileOpen(false);
                   if (!active) {
-                    trackLinkInteraction({ intent: "section_navigation", placement, destination_type: "internal", href: link.href, link_text: link.label, is_primary_cta: false });
+                    trackLinkInteraction({
+                      intent: link.href === "/menu" ? "menu" : "section_navigation",
+                      placement,
+                      destination_type: "internal",
+                      href: link.href,
+                      link_text: link.label,
+                      is_primary_cta: false,
+                      leadType: link.href === "/menu" ? "menu_enquiry" : undefined,
+                      value: link.href === "/menu" ? 15 : undefined,
+                    });
                   }
                 }}
               >

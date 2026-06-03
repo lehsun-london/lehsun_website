@@ -126,7 +126,9 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                     ctaText="Browse Daily Menu"
                     destinationType="internal"
                     href="/menu"
-                    intent="section_navigation"
+                    intent="menu"
+                    leadType="menu_enquiry"
+                    value={15}
                     placement="contact_general"
                   >
                     Browse Daily Menu

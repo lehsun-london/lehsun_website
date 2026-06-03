@@ -23,14 +23,14 @@ const pillars = [
     icon: BadgeCheck,
     color: "text-[#D9381E]",
     title: "Trusted to host with",
-    body: "5-star food hygiene rated, 5.0 on Google. The kind of reassurance you need before a big occasion.",
+    body: "5-star food hygiene rated, 5★ on Google. The kind of reassurance you need before a big occasion.",
   },
 ];
 
 const stats = [
-  { value: 50, suffix: "+", label: "Events catered" },
-  { value: 5.0, decimals: 1, suffix: "", label: "Google rating" },
-  { value: 2, suffix: " mi", label: "Delivery radius" },
+  { value: 50, decimals: 0, suffix: "+", label: "Events catered" },
+  { value: 5, decimals: 0, suffix: "★", label: "Google rating" },
+  { value: 2, decimals: 0, suffix: " mi", label: "Delivery radius" },
 ];
 
 function useCountUp(target: number, decimals = 0, duration = 1500, trigger: boolean) {
@@ -205,9 +205,9 @@ export function AboutSection() {
                     ))}
                   </div>
                   {/* Big rating number */}
-                  <p className="text-4xl font-black text-[#1A0600] leading-none">{reviewStats.average}</p>
+                  <p className="text-4xl font-black text-[#1A0600] leading-none">5★</p>
                   <p className="text-[11px] font-bold text-[#5C2A10]/70 mt-1.5">
-                    {reviewStats.count} verified reviews
+                    {reviewStats.count}+ verified reviews
                   </p>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Star, ShieldCheck, MapPin } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
 import { whatsapp, reviewStats } from "@/content/businessInfo";
@@ -161,7 +160,7 @@ export function HeroSection() {
         >
           <Star className="size-4 fill-[#E69B39] text-[#E69B39]" aria-hidden />
           <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423]">
-            {reviewStats.average} · {reviewStats.count} Google Reviews · Kent
+            5★ · {reviewStats.count}+ Google Reviews · Kent
           </span>
         </div>
 
@@ -240,13 +239,20 @@ export function HeroSection() {
           >
             Plan Your Event &rarr;
           </TrackedLink>
-          <Link
+          <TrackedLink
             href="/menu"
             className="flex items-center justify-center gap-2 border-2 px-8 py-4 md:py-5 rounded-full font-bold text-sm md:text-base uppercase tracking-wider transition-all hover:-translate-y-1 hover:bg-[#03B6AA]/5 focus-ring cursor-pointer w-full sm:w-auto bg-white/50 backdrop-blur-sm"
             style={{ borderColor: "#03B6AA", color: "#03B6AA" }}
+            ctaText="View Daily Menu"
+            destinationType="internal"
+            intent="menu"
+            isPrimaryCta={false}
+            leadType="menu_enquiry"
+            value={15}
+            placement="hero_daily_menu"
           >
             View Daily Menu
-          </Link>
+          </TrackedLink>
         </div>
 
         {/* Trust chips */}
@@ -262,7 +268,7 @@ export function HeroSection() {
               className="size-5 fill-[#E69B39] text-[#E69B39]"
               aria-hidden
             />
-            5.0 Google Reviews
+            5★ Google Reviews
           </div>
           <div
             className="flex items-center gap-2 text-sm md:text-base font-bold tracking-tight"

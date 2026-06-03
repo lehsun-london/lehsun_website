@@ -60,7 +60,7 @@ export function MenuHeroSection() {
             <div className="flex flex-wrap gap-3 animate-fade-in-up" style={{ animationDelay: "320ms" }}>
               <div className="flex items-center gap-1.5 text-sm font-semibold text-[#6B3A2A]">
                 <Star className="size-3.5 text-[#C8881A] fill-[#C8881A]" aria-hidden />
-                5.0 on Google
+                5★ on Google
               </div>
               <span className="text-[#E8D5C0]" aria-hidden>·</span>
               <div className="flex items-center gap-1.5 text-sm font-semibold text-[#6B3A2A]">

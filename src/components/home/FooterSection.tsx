@@ -98,15 +98,31 @@ export function FooterSection() {
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-3 font-bold">Pages</p>
             <nav className="flex flex-col gap-2 mb-6" aria-label="Footer navigation">
-              {pageLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-white/60 hover:text-[#F5821F] transition-colors font-medium cursor-pointer"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {pageLinks.map((link) =>
+                link.href === "/menu" ? (
+                  <TrackedLink
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-white/60 hover:text-[#F5821F] transition-colors font-medium cursor-pointer"
+                    ctaText={link.label}
+                    destinationType="internal"
+                    intent="menu"
+                    leadType="menu_enquiry"
+                    placement="footer_page_menu"
+                    value={15}
+                  >
+                    {link.label}
+                  </TrackedLink>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm text-white/60 hover:text-[#F5821F] transition-colors font-medium cursor-pointer"
+                  >
+                    {link.label}
+                  </Link>
+                ),
+              )}
             </nav>
             <p className="text-xs uppercase tracking-[0.2em] text-white/40 mb-2 font-bold">Areas served</p>
             <nav className="flex flex-col gap-1.5 mb-3" aria-label="Location pages">
@@ -130,10 +146,12 @@ export function FooterSection() {
                   ctaText={link.label}
                   destinationType={link.destinationType}
                   href={link.href}
-                  intent="social"
+                  intent={link.label === "WhatsApp" ? "menu" : "social"}
+                  leadType={link.label === "WhatsApp" ? "menu_enquiry" : undefined}
                   placement="footer_social"
                   rel="noopener noreferrer"
                   target="_blank"
+                  value={link.label === "WhatsApp" ? 15 : undefined}
                 >
                   <SocialIcon label={link.label} />
                   {link.label}

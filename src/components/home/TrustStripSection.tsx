@@ -50,7 +50,7 @@ export function TrustStripSection({
         <div className="flex items-center gap-2">
           <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
           <span className="text-[11px] font-bold tracking-wide text-[#F1E1AA]">
-            {reviewStats.average} — {reviewStats.count} Google reviews
+            5★ — {reviewStats.count}+ Google reviews
           </span>
         </div>
         <span className="hidden sm:block text-[#F1E1AA]/30" aria-hidden>·</span>

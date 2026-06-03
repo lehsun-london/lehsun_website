@@ -3,9 +3,9 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "North Indian Catering in Ebbsfleet Valley | DA10 | Lehsun",
+  title: "Indian Catering in Ebbsfleet Valley | 5★ Rated | Lehsun",
   description:
-    "Lehsun is based in Ebbsfleet Valley (DA10) and provides North Indian catering for birthdays, housewarmings, baby showers & events locally. From £11.99/head, minimum 15 guests.",
+    "Local North Indian catering in Ebbsfleet Valley, DA10. 50+ Google reviews, fresh event menus, from £11.99/head, minimum 15 guests. WhatsApp for a quote.",
   path: "/catering/ebbsfleet-valley",
   keywords: [
     "North Indian catering Ebbsfleet Valley",

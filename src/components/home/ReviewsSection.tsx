@@ -156,9 +156,9 @@ export function ReviewsSection({ variant = "all" }: { variant?: ReviewVariant })
             {/* Stats row */}
             <div className="inline-flex items-center gap-3 bg-white border border-[#E2C9A8] rounded-full px-6 py-2.5 shadow-sm">
               <StarRow count={5} size="size-4" />
-              <span className="font-black text-xl text-[#1A0600]">{reviewStats.average}</span>
+              <span className="font-black text-xl text-[#1A0600]">5★</span>
               <span className="text-[#E2C9A8]">·</span>
-              <span className="text-sm font-semibold text-[#6B3520]">{reviewStats.count} verified reviews</span>
+              <span className="text-sm font-semibold text-[#6B3520]">{reviewStats.count}+ verified reviews</span>
               <GoogleMark className="size-4" />
             </div>
           </div>
@@ -206,7 +206,7 @@ export function ReviewsSection({ variant = "all" }: { variant?: ReviewVariant })
               target="_blank"
             >
               <GoogleMark className="size-5" />
-              Read all {reviewStats.count} reviews on Google
+              Read all {reviewStats.count}+ reviews on Google
               <ExternalLink className="size-3.5" aria-hidden />
             </TrackedLink>
           </div>

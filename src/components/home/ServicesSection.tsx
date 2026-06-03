@@ -160,16 +160,57 @@ export function ServicesSection() {
                     </div>
                   ))}
                 </div>
-                <Link
+                <TrackedLink
                   href="/menu"
                   className="block w-full text-center bg-[#2E8B7A] hover:bg-[#2E8B7A]/80 text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-colors focus-ring cursor-pointer"
+                  ctaText="View Today's Menu"
+                  destinationType="internal"
+                  intent="menu"
+                  isPrimaryCta
+                  leadType="menu_enquiry"
+                  value={15}
+                  placement="services_daily_menu_card"
                 >
                   View Today&apos;s Menu &rarr;
-                </Link>
+                </TrackedLink>
               </div>
             </article>
           </ScrollReveal>
         </div>
+
+        <ScrollReveal delay={180}>
+          <p className="mt-7 text-center text-sm text-[#6B3A2A]">
+            Looking for local event food? See{" "}
+            <Link
+              href="/catering/dartford"
+              className="font-semibold text-[#D9381E] underline underline-offset-2 hover:opacity-70"
+            >
+              Indian catering in Dartford
+            </Link>
+            ,{" "}
+            <Link
+              href="/catering/gravesend"
+              className="font-semibold text-[#D9381E] underline underline-offset-2 hover:opacity-70"
+            >
+              Indian catering in Gravesend
+            </Link>
+            ,{" "}
+            <Link
+              href="/catering/ebbsfleet-valley"
+              className="font-semibold text-[#D9381E] underline underline-offset-2 hover:opacity-70"
+            >
+              Indian catering in Ebbsfleet Valley
+            </Link>
+            , or our{" "}
+            <Link
+              href="/catering"
+              className="font-semibold text-[#D9381E] underline underline-offset-2 hover:opacity-70"
+            >
+              Indian catering in Kent
+            </Link>
+            .
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

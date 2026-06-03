@@ -3,9 +3,9 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "North Indian Catering in Dartford | Birthdays & Events | Lehsun",
+  title: "Indian Catering in Dartford | 5★ Google Reviews | Lehsun",
   description:
-    "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers & Diwali in Dartford (DA1, DA2). From £11.99/head, minimum 15 guests. Same-day quotes.",
+    "5★ North Indian catering for birthdays, housewarmings, baby showers and Diwali events in Dartford. 50+ Google reviews, from £11.99/head, 15+ guests.",
   path: "/catering/dartford",
   keywords: [
     "North Indian catering Dartford",

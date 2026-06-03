@@ -3,9 +3,9 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "North Indian Catering in Gravesend | Birthdays & Events | Lehsun",
+  title: "Indian Catering in Gravesend | 5★ Google Reviews | Lehsun",
   description:
-    "Lehsun provides North Indian catering for birthdays, housewarmings, baby showers & Diwali in Gravesend (DA11, DA12). From £11.99/head, minimum 15 guests. Same-day quotes.",
+    "North Indian catering for Gravesend events, family parties and Diwali gatherings. 5★ Google reviews, from £11.99/head, 15+ guests. WhatsApp for a quote.",
   path: "/catering/gravesend",
   keywords: [
     "North Indian catering Gravesend",
