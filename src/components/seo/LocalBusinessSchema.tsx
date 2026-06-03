@@ -35,7 +35,7 @@ const localBusinessSchema = {
   hasMap: contact.googleMaps,
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: reviewStats.average,
+    ratingValue: 5,
     reviewCount: reviewStats.count,
   },
   areaServed: serviceAreas.map((area) => ({
@@ -48,7 +48,7 @@ const localBusinessSchema = {
     name: area,
   })),
   serviceType: [
-    "North Indian catering",
+    "North Indian Catering",
     "Party catering",
     "Private event catering",
     "Birthday catering",
@@ -67,7 +67,7 @@ const localBusinessSchema = {
           "@type": "Service",
           name: "North Indian Catering for Events",
           description:
-            "Tailored North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. Minimum 15 guests. From £11.99 per head.",
+            "Tailored North Indian catering for birthdays, housewarmings, baby showers, Diwali and family gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. From £11.99 per head.",
         },
       },
       {
@@ -81,11 +81,7 @@ const localBusinessSchema = {
       },
     ],
   },
-  sameAs: [
-    contact.instagram,
-    contact.facebook,
-    contact.googleMaps,
-  ],
+  sameAs: [contact.instagram, contact.facebook, contact.googleMaps],
 };
 
 export default function LocalBusinessSchema() {

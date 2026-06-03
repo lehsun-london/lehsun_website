@@ -4,7 +4,7 @@ import { FooterSection } from "@/components/home/FooterSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/home/ContactSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
-import { TrustStripSection } from "@/components/home/TrustStripSection";
+import { TrustProofBlock } from "@/components/home/TrustProofBlock";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { buildAbsoluteUrl } from "@/lib/seo";
 import { MenuHeroSection } from "./MenuHeroSection";
@@ -34,7 +34,21 @@ export function MenuPage() {
       <NavSection />
       <main className="pt-[60px]">
         <MenuHeroSection />
-        <TrustStripSection variant="menu" />
+        <TrustProofBlock
+          items={[
+            "Freshly prepared",
+            "Limited daily quantities",
+            "Collection from Ebbsfleet",
+          ]}
+          links={[
+            {
+              href: "/catering/ebbsfleet-valley",
+              label: "Indian Catering in Ebbsfleet Valley",
+            },
+            { href: "/catering/dartford", label: "Indian Catering in Dartford" },
+            { href: "/catering/gravesend", label: "Indian Catering in Gravesend" },
+          ]}
+        />
         <FeaturedDishesSection />
         <HowItWorksSection />
         <OrderingInfoSection />

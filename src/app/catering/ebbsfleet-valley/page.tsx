@@ -3,9 +3,10 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Indian Catering in Ebbsfleet Valley | 5★ Rated | Lehsun",
+  title:
+    "5★ Indian Catering in Ebbsfleet Valley | Birthdays & Family Events | Lehsun",
   description:
-    "Local North Indian catering in Ebbsfleet Valley, DA10. 50+ Google reviews, fresh event menus, from £11.99/head, minimum 15 guests. WhatsApp for a quote.",
+    "Based in Ebbsfleet Valley, Lehsun brings real North Indian catering for birthdays, housewarmings, baby showers and family celebrations.",
   path: "/catering/ebbsfleet-valley",
   keywords: [
     "North Indian catering Ebbsfleet Valley",
@@ -28,7 +29,27 @@ export default function Page() {
         postcodes: "DA10",
         proximityNote:
           "We are based right here in Ebbsfleet Valley — local catering for local events, with fresh food cooked from our home kitchen.",
-        nearbyAreas: ["Swanscombe", "Northfleet", "Gravesend", "Dartford", "Stone"],
+        nearbyAreas: [
+          "Swanscombe",
+          "Northfleet",
+          "Gravesend",
+          "Dartford",
+          "Stone",
+        ],
+        heroTitle:
+          "Indian Catering in Ebbsfleet Valley for Birthdays & Family Events",
+        trustItems: ["★★★★★ Trusted in Ebbsfleet", "5★ Food Hygiene Rated"],
+        reviewHighlight:
+          "Local customers come back for food that keeps getting better.",
+        relatedLinks: [
+          { href: "/catering/dartford", label: "Indian Catering in Dartford" },
+          {
+            href: "/catering/gravesend",
+            label: "Indian Catering in Gravesend",
+          },
+        ],
+        localContent:
+          "Because we are based in Ebbsfleet Valley, catering for Castle Hill, Ashmere and Alkerden events is straightforward. We can plan around local homes, gardens and community venues, with food prepared close by and packed for the occasion.",
         locationIntro:
           "Ebbsfleet Valley is our home. We cook from here, we deliver from here, and most of the events we have catered were just around the corner. The estate has grown fast — lots of young families, first housewarmings, children's birthdays — and there is something satisfying about feeding your own neighbourhood. When you order from us in DA10, the food comes from a kitchen less than a mile away.",
         locationFaqs: [

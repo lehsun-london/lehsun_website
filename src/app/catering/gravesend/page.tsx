@@ -3,9 +3,10 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Indian Catering in Gravesend | 5★ Google Reviews | Lehsun",
+  title:
+    "5★ Indian Catering in Gravesend | Parties & Family Celebrations | Lehsun",
   description:
-    "North Indian catering for Gravesend events, family parties and Diwali gatherings. 5★ Google reviews, from £11.99/head, 15+ guests. WhatsApp for a quote.",
+    "Planning a birthday, housewarming or family gathering in Gravesend? Lehsun brings real North Indian flavours, generous portions and stress-free catering.",
   path: "/catering/gravesend",
   keywords: [
     "North Indian catering Gravesend",
@@ -29,12 +30,37 @@ export default function Page() {
         postcodes: "DA11, DA12",
         proximityNote:
           "Based in Ebbsfleet Valley — just 4 miles from Gravesend town centre. We regularly cater events across DA11, DA12 and surrounding Northfleet area.",
-        nearbyAreas: ["Northfleet", "Singlewell", "Istead Rise", "Meopham", "Higham"],
+        nearbyAreas: [
+          "Northfleet",
+          "Singlewell",
+          "Istead Rise",
+          "Meopham",
+          "Higham",
+        ],
+        heroTitle:
+          "Indian Catering in Gravesend for Parties & Family Celebrations",
+        trustItems: [
+          "★★★★★ Loved by local families",
+          "5★ Food Hygiene Rated",
+          "Freshly prepared for every event",
+        ],
+        reviewHighlight:
+          "Customers often mention consistency, generous portions and food their guests love.",
+        relatedLinks: [
+          { href: "/catering/dartford", label: "Indian Catering in Dartford" },
+          {
+            href: "/catering/ebbsfleet-valley",
+            label: "Indian Catering in Ebbsfleet Valley",
+          },
+        ],
+        localContent:
+          "For Gravesend events, we regularly plan menus for family gatherings around Northfleet, Riverview Park and Singlewell. Food is cooked fresh in Ebbsfleet Valley, packed carefully, and brought over while the dishes are still event-ready.",
         locationIntro:
           "Gravesend has one of the largest South Asian communities in Kent. That means when you serve food at a Gravesend event, your guests know what good North Indian cooking should taste like. We find that motivating. We have catered Diwali parties, housewarmings, and birthday celebrations in DA11 and DA12 where the crowd were serious about the food — and we have always enjoyed that feedback. It is about 4 miles from our kitchen in Ebbsfleet Valley.",
         locationFaqs: [
           {
-            question: "Do you cater Diwali and cultural celebrations in Gravesend?",
+            question:
+              "Do you cater Diwali and cultural celebrations in Gravesend?",
             answer:
               "Yes — Diwali gatherings, Holi parties, and family puja events are events we know well. Gravesend has a strong South Asian community, and we maintain separate veg and non-veg kitchens, which matters for many events in the area.",
           },

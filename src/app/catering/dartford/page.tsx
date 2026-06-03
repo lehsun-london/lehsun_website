@@ -3,9 +3,9 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Indian Catering in Dartford | 5★ Google Reviews | Lehsun",
+  title: "5★ Indian Catering in Dartford | Birthdays & Parties | Lehsun",
   description:
-    "5★ North Indian catering for birthdays, housewarmings, baby showers and Diwali events in Dartford. 50+ Google reviews, from £11.99/head, 15+ guests.",
+    "5★ rated North Indian catering for birthdays, baby showers and family celebrations in Dartford. Real flavours, generous portions and stress-free service",
   path: "/catering/dartford",
   keywords: [
     "North Indian catering Dartford",
@@ -29,7 +29,28 @@ export default function Page() {
         postcodes: "DA1, DA2",
         proximityNote:
           "Based in Ebbsfleet Valley — just 5 miles from Dartford town centre. We regularly cater events across DA1, DA2 and surrounding areas.",
-        nearbyAreas: ["Stone", "Swanscombe", "Greenhithe", "Crayford", "Longfield"],
+        nearbyAreas: [
+          "Stone",
+          "Swanscombe",
+          "Greenhithe",
+          "Crayford",
+          "Longfield",
+        ],
+        heroTitle:
+          "Indian Catering in Dartford for Birthdays, Baby Showers & Family Events",
+        trustItems: ["★★★★★ 5★ Google Reviews", "5★ Food Hygiene Rated"],
+        reviewHighlight:
+          "First-birthday catering guests praised the food, portions and care.",
+        relatedLinks: [
+          {
+            href: "/catering/gravesend",
+            label: "Indian Catering in Gravesend",
+          },
+          {
+            href: "/catering/ebbsfleet-valley",
+            label: "Indian Catering in Ebbsfleet Valley",
+          },
+        ],
         locationIntro:
           "Dartford sits at the edge of London and the edge of Kent, which means the people who live there have come from everywhere. We have catered birthday parties in Dartford where half the room were Londoners and the other half were Kent families — and the food gave both sides something to talk about. It is about 5 miles from our kitchen in Ebbsfleet Valley, so we are in quickly, and the food arrives at the right temperature.",
         locationFaqs: [

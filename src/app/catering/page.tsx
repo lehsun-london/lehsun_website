@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Indian Catering in Kent | 5★ Google Reviews | Lehsun",
   description:
-    "North Indian catering for Dartford, Gravesend, Ebbsfleet and nearby Kent. 50+ Google reviews, from £11.99/head, 15+ guests. WhatsApp for a quote.",
+    "North Indian catering for Dartford, Gravesend, Ebbsfleet and nearby Kent. 50+ Google reviews, from £11.99/head. WhatsApp for a quote.",
   path: "/catering",
   keywords: [
     "North Indian catering Ebbsfleet",

@@ -1,10 +1,25 @@
-import { MessageCircle, Star, ShieldCheck, MapPin, Users, ChefHat, Calendar } from "lucide-react";
+import {
+  MessageCircle,
+  Star,
+  ShieldCheck,
+  MapPin,
+  Users,
+  ChefHat,
+  Calendar,
+} from "lucide-react";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { NavSection } from "@/components/home/NavSection";
 import { FooterSection } from "@/components/home/FooterSection";
-import { whatsapp, contact, cateringPricing, reviewStats, cateringReviews } from "@/content/businessInfo";
+import { TrustProofBlock } from "@/components/home/TrustProofBlock";
+import {
+  whatsapp,
+  contact,
+  cateringPricing,
+  reviewStats,
+  cateringReviews,
+} from "@/content/businessInfo";
 import { buildAbsoluteUrl } from "@/lib/seo";
 
 export interface LocationConfig {
@@ -16,6 +31,14 @@ export interface LocationConfig {
   postcodes: string;
   /** Short prose about proximity to base, shown below hero */
   proximityNote: string;
+  heroTitle?: string;
+  trustItems?: readonly string[];
+  reviewHighlight?: string;
+  relatedLinks?: ReadonlyArray<{
+    href: string;
+    label: string;
+  }>;
+  localContent?: string;
   /** Nearby places to mention for long-tail coverage */
   nearbyAreas: string[];
   /** 3-4 sentences unique to this location, shown in the location context section */
@@ -39,12 +62,32 @@ const eventTypes = [
 ];
 
 const menuHighlights = {
-  veg: ["Dal Makhani", "Paneer Butter Masala", "Delhi's Pindi Chole", "Dum Aloo", "Samosa Chole Chaat"],
-  nonVeg: ["Delhi's Butter Chicken", "Kashmiri Rogan Josh", "Chicken Tikka", "Shahi Patiala Chicken"],
-  extras: ["Butter Naan / Poori", "Veg & Non-Veg Pulao", "Shahi Tukda", "Fresh Raita"],
+  veg: [
+    "Dal Makhani",
+    "Paneer Butter Masala",
+    "Delhi's Pindi Chole",
+    "Dum Aloo",
+    "Samosa Chole Chaat",
+  ],
+  nonVeg: [
+    "Delhi's Butter Chicken",
+    "Kashmiri Rogan Josh",
+    "Chicken Tikka",
+    "Shahi Patiala Chicken",
+  ],
+  extras: [
+    "Butter Naan / Poori",
+    "Veg & Non-Veg Pulao",
+    "Shahi Tukda",
+    "Fresh Raita",
+  ],
 };
 
-export function LocationCateringPage({ location }: { location: LocationConfig }) {
+export function LocationCateringPage({
+  location,
+}: {
+  location: LocationConfig;
+}) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -63,7 +106,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           { name: "Catering", item: buildAbsoluteUrl("/catering") },
           {
             name: location.displayName,
-            item: buildAbsoluteUrl(`/catering/${location.name.toLowerCase().replace(/\s+/g, "-")}` as `/${string}`),
+            item: buildAbsoluteUrl(
+              `/catering/${location.name.toLowerCase().replace(/\s+/g, "-")}` as `/${string}`,
+            ),
           },
         ]}
       />
@@ -77,7 +122,10 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
       <section className="bg-[#FDF8F0] pt-24 pb-12 px-5 lg:px-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D93423]/20 bg-[#D93423]/5 px-5 py-2 mb-6 animate-fade-in-up">
-            <Star className="size-3.5 fill-[#E69B39] text-[#E69B39]" aria-hidden />
+            <Star
+              className="size-3.5 fill-[#E69B39] text-[#E69B39]"
+              aria-hidden
+            />
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423]">
               5★ · {reviewStats.count}+ Google Reviews
             </span>
@@ -85,19 +133,26 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
 
           <h1
             className="font-serif italic font-black text-[#1A0600] text-balance leading-tight mb-5 animate-fade-in-up"
-            style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)", animationDelay: "80ms" }}
+            style={{
+              fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
+              animationDelay: "80ms",
+            }}
           >
-            North Indian Catering in{" "}
-            <span style={{ color: "#D93423" }}>{location.name}</span>
+            {location.heroTitle ?? (
+              <>
+                North Indian Catering in{" "}
+                <span style={{ color: "#D93423" }}>{location.name}</span>
+              </>
+            )}
           </h1>
 
           <p
             className="text-lg md:text-xl text-[#5C2A10] mb-4 max-w-[48ch] mx-auto leading-relaxed animate-fade-in-up"
             style={{ animationDelay: "160ms" }}
           >
-            Proper flavours for birthdays, housewarmings, baby showers and family
-            events in {location.displayName}. From{" "}
-            <strong>{cateringPricing.shortPrice}</strong>, minimum 15 guests.
+            Proper flavours for birthdays, housewarmings, baby showers and
+            family events in {location.displayName}. From{" "}
+            <strong>{cateringPricing.shortPrice}</strong>.
           </p>
 
           <p
@@ -113,7 +168,10 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           >
             <TrackedLink
               className="flex items-center justify-center gap-2 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:-translate-y-0.5 focus-ring cursor-pointer"
-              style={{ backgroundColor: "#D93423", boxShadow: "0 8px 24px rgba(217,52,35,0.35)" }}
+              style={{
+                backgroundColor: "#D93423",
+                boxShadow: "0 8px 24px rgba(217,52,35,0.35)",
+              }}
               ctaText="Get a Catering Quote"
               destinationType="whatsapp"
               href={whatsapp.cateringEnquiry}
@@ -144,13 +202,27 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           </div>
 
           {/* Trust chips */}
-          <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "300ms" }}>
+          <div
+            className="flex flex-wrap justify-center gap-4 animate-fade-in-up"
+            style={{ animationDelay: "300ms" }}
+          >
             {[
               { icon: Star, text: "5★ Google Reviews", color: "#E69B39" },
-              { icon: ShieldCheck, text: "5-Star Hygiene Rating", color: "#03B6AA" },
-              { icon: MapPin, text: `Serving ${location.name} & nearby`, color: "#D93423" },
+              {
+                icon: ShieldCheck,
+                text: "5-Star Hygiene Rating",
+                color: "#03B6AA",
+              },
+              {
+                icon: MapPin,
+                text: `Serving ${location.name} & nearby`,
+                color: "#D93423",
+              },
             ].map(({ icon: Icon, text, color }) => (
-              <div key={text} className="flex items-center gap-2 text-sm font-semibold text-[#5C2A10]">
+              <div
+                key={text}
+                className="flex items-center gap-2 text-sm font-semibold text-[#5C2A10]"
+              >
                 <Icon className="size-4" style={{ color }} aria-hidden />
                 {text}
               </div>
@@ -158,6 +230,17 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
           </div>
         </div>
       </section>
+
+      <TrustProofBlock
+        items={
+          location.trustItems ?? [
+            "★★★★★ 5★ Google Reviews",
+            "5★ Food Hygiene Rated",
+          ]
+        }
+        reviewHighlight={location.reviewHighlight}
+        links={location.relatedLinks}
+      />
 
       {/* What We Offer */}
       <section className="bg-white border-t border-[#E8D5C0] py-12 px-5 lg:px-10">
@@ -188,7 +271,7 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                 icon: Users,
                 color: "#03B6AA",
                 title: "From 15 guests",
-                body: `We cater for events of 15 to 200+ guests in ${location.name} and nearby ${location.postcodes} postcodes. The more guests, the better the per-head value.`,
+                body: `We cater for events in ${location.name} and nearby ${location.postcodes} postcodes. The more guests, the better the per-head value.`,
               },
               {
                 icon: Calendar,
@@ -206,7 +289,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                     <Icon className="size-5" style={{ color }} aria-hidden />
                   </div>
                   <h3 className="font-black text-[#1C0A00] mb-2">{title}</h3>
-                  <p className="text-sm text-[#6B3A2A] leading-relaxed">{body}</p>
+                  <p className="text-sm text-[#6B3A2A] leading-relaxed">
+                    {body}
+                  </p>
                 </div>
               </ScrollReveal>
             ))}
@@ -219,7 +304,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">Events we cater</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">
+                Events we cater
+              </p>
               <h2
                 className="font-serif italic font-black text-[#1C0A00]"
                 style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
@@ -249,7 +336,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">What we cook</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">
+                What we cook
+              </p>
               <h2
                 className="font-serif italic font-black text-[#1C0A00] text-balance"
                 style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
@@ -261,9 +350,21 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
 
           <div className="grid sm:grid-cols-3 gap-5">
             {[
-              { title: "Vegetarian mains & starters", items: menuHighlights.veg, color: "#03B6AA" },
-              { title: "Non-vegetarian mains", items: menuHighlights.nonVeg, color: "#D93423" },
-              { title: "Breads, rice & desserts", items: menuHighlights.extras, color: "#E69B39" },
+              {
+                title: "Vegetarian mains & starters",
+                items: menuHighlights.veg,
+                color: "#03B6AA",
+              },
+              {
+                title: "Non-vegetarian mains",
+                items: menuHighlights.nonVeg,
+                color: "#D93423",
+              },
+              {
+                title: "Breads, rice & desserts",
+                items: menuHighlights.extras,
+                color: "#E69B39",
+              },
             ].map(({ title, items, color }, i) => (
               <ScrollReveal key={title} delay={i * 70}>
                 <div className="bg-[#FFF5E4] border border-[#E8D5C0] rounded-2xl p-6 h-full">
@@ -275,8 +376,15 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                   </div>
                   <ul className="space-y-2">
                     {items.map((dish) => (
-                      <li key={dish} className="flex items-start gap-2 text-sm text-[#6B3A2A]">
-                        <span className="mt-1.5 size-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} aria-hidden />
+                      <li
+                        key={dish}
+                        className="flex items-start gap-2 text-sm text-[#6B3A2A]"
+                      >
+                        <span
+                          className="mt-1.5 size-1.5 rounded-full flex-shrink-0"
+                          style={{ backgroundColor: color }}
+                          aria-hidden
+                        />
                         {dish}
                       </li>
                     ))}
@@ -309,7 +417,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
       <section className="bg-[#FFF5E4] border-t border-[#E8D5C0] py-12 px-5 lg:px-10">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">Pricing</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">
+              Pricing
+            </p>
             <h2
               className="font-serif italic font-black text-[#1C0A00] mb-4"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.2rem)" }}
@@ -317,8 +427,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               {cateringPricing.startingPrice} for {location.name} events
             </h2>
             <p className="text-[#6B3A2A] text-base leading-relaxed mb-6 max-w-[40ch] mx-auto">
-              Price depends on menu choice and guest count. WhatsApp us with the details and
-              we&apos;ll send you a tailored quote — usually the same day.
+              Price depends on menu choice and guest count. WhatsApp us with the
+              details and we&apos;ll send you a tailored quote — usually the
+              same day.
             </p>
             <TrackedLink
               className="inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-bold text-sm uppercase tracking-wider transition-all shadow-lg hover:-translate-y-0.5 focus-ring cursor-pointer"
@@ -345,10 +456,16 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
             <div className="text-center mb-8">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">What clients say</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">
+                What clients say
+              </p>
               <div className="flex items-center justify-center gap-1 mb-2">
                 {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="size-4 fill-[#E69B39] text-[#E69B39]" aria-hidden />
+                  <Star
+                    key={j}
+                    className="size-4 fill-[#E69B39] text-[#E69B39]"
+                    aria-hidden
+                  />
                 ))}
               </div>
               <p className="text-sm font-semibold text-[#6B3A2A]">
@@ -363,7 +480,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                   <p className="text-sm text-[#6B3A2A] leading-relaxed flex-1 italic mb-4">
                     &ldquo;{review.quote}&rdquo;
                   </p>
-                  <footer className="text-sm font-bold text-[#1C0A00]">— {review.author}</footer>
+                  <footer className="text-sm font-bold text-[#1C0A00]">
+                    — {review.author}
+                  </footer>
                 </blockquote>
               </ScrollReveal>
             ))}
@@ -380,7 +499,10 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Star className="size-3 fill-[#D93423] text-[#D93423]" aria-hidden />
+                <Star
+                  className="size-3 fill-[#D93423] text-[#D93423]"
+                  aria-hidden
+                />
                 Read all {reviewStats.count}+ reviews on Google
               </TrackedLink>
             </div>
@@ -401,10 +523,16 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
             <p className="text-[#6B3A2A] leading-relaxed mb-3">
               {location.locationIntro}
             </p>
+            {location.localContent ? (
+              <p className="text-[#6B3A2A] leading-relaxed mb-3">
+                {location.localContent}
+              </p>
+            ) : null}
             <p className="text-[#6B3A2A] leading-relaxed">
-              We also cover {location.nearbyAreas.join(", ")} and surrounding areas. Every menu
-              is cooked fresh and tailored to your guest list. We maintain separate veg and
-              non-veg kitchens and hold a 5-star food hygiene rating.
+              We also cover {location.nearbyAreas.join(", ")} and surrounding
+              areas. Every menu is cooked fresh and tailored to your guest list.
+              We maintain separate veg and non-veg kitchens and hold a 5-star
+              food hygiene rating.
             </p>
           </ScrollReveal>
 
@@ -413,8 +541,12 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               <div className="mt-8 pt-8 border-t border-[#E8D5C0] space-y-6">
                 {location.locationFaqs.map((faq) => (
                   <div key={faq.question}>
-                    <p className="font-bold text-[#1C0A00] mb-2">{faq.question}</p>
-                    <p className="text-[#6B3A2A] leading-relaxed text-sm">{faq.answer}</p>
+                    <p className="font-bold text-[#1C0A00] mb-2">
+                      {faq.question}
+                    </p>
+                    <p className="text-[#6B3A2A] leading-relaxed text-sm">
+                      {faq.answer}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -427,7 +559,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
       <section className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] border-t border-[#E8D5C0] py-12 px-5 lg:px-10">
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">Get in touch</p>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D93423] mb-3">
+              Get in touch
+            </p>
             <h2
               className="font-serif italic font-black text-[#1A0600] mb-4"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.4rem)" }}
@@ -435,8 +569,9 @@ export function LocationCateringPage({ location }: { location: LocationConfig })
               Ready to plan your {location.name} event?
             </h2>
             <p className="text-[#6B3520] mb-6 leading-relaxed">
-              Message us on WhatsApp with your event date, guest count, and any dishes in mind.
-              We&apos;ll come back with a tailored quote — usually the same day.
+              Message us on WhatsApp with your event date, guest count, and any
+              dishes in mind. We&apos;ll come back with a tailored quote —
+              usually the same day.
             </p>
             <div className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4">
               <TrackedLink

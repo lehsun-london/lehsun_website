@@ -5,9 +5,9 @@ import { cateringFaqs } from "@/content/faqs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "North Indian Catering in Ebbsfleet, Dartford & Gravesend | Lehsun",
+  title: "5★ North Indian Catering in Gravesend, Dartford & Ebbsfleet | Lehsun",
   description:
-    "5★ North Indian catering for birthdays, housewarmings, baby showers and family events across Ebbsfleet, Dartford and Gravesend. WhatsApp for a quote.",
+    "5★ rated North Indian catering for birthdays, baby showers, housewarmings and family celebrations across Gravesend, Dartford, Ebbsfleet and nearby Kent.",
   path: "/",
 });
 

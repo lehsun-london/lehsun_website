@@ -9,7 +9,7 @@ import { NavSection } from "./NavSection";
 import { ReviewsSection } from "./ReviewsSection";
 import { InstagramReelsSection } from "./InstagramReelsSection";
 import { ServicesSection } from "./ServicesSection";
-import { TrustStripSection } from "./TrustStripSection";
+import { TrustProofBlock } from "./TrustProofBlock";
 import { JaliWaveDivider } from "@/components/ui/JaliWaveDivider";
 
 const trackedSections = [
@@ -30,7 +30,23 @@ export function HomePage() {
       <NavSection />
       <main className="pt-[60px]">
         <HeroSection />
-        <TrustStripSection variant="general" />
+        <TrustProofBlock
+          items={[
+            "★★★★★ Loved by local families",
+            "5★ Food Hygiene Rated",
+            "Trusted for birthdays, housewarmings & celebrations",
+          ]}
+          reviewHighlight="Dartford birthday catering guests kept asking where the food was from."
+          links={[
+            { href: "/catering/dartford", label: "Indian Catering in Dartford" },
+            { href: "/catering/gravesend", label: "Indian Catering in Gravesend" },
+            {
+              href: "/catering/ebbsfleet-valley",
+              label: "Indian Catering in Ebbsfleet Valley",
+            },
+            { href: "/menu", label: "Daily Menu" },
+          ]}
+        />
         <JaliWaveDivider height={52} />
         <ServicesSection />
         <JaliWaveDivider height={52} />

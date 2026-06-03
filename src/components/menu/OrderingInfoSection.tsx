@@ -32,7 +32,10 @@ const infoCards = [
 
 export function OrderingInfoSection() {
   return (
-    <section className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10" id="ordering-info">
+    <section
+      className="bg-[#FFF5E4] py-12 md:py-16 px-5 lg:px-10"
+      id="ordering-info"
+    >
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-8">
@@ -53,7 +56,9 @@ export function OrderingInfoSection() {
             <ScrollReveal key={title} delay={i * 60}>
               <div className="bg-white border border-[#E8D5C0] rounded-2xl p-7 shadow-sm h-full">
                 <Icon className={`size-6 ${color} mb-4`} aria-hidden />
-                <h3 className="font-black text-sm text-[#1C0A00] mb-2">{title}</h3>
+                <h3 className="font-black text-sm text-[#1C0A00] mb-2">
+                  {title}
+                </h3>
                 <p className="text-sm text-[#6B3A2A] leading-relaxed">{body}</p>
               </div>
             </ScrollReveal>
@@ -96,15 +101,16 @@ export function OrderingInfoSection() {
 
             <div className="mx-auto max-w-3xl rounded-[28px] border border-[#E8D5C0] bg-white p-6 md:p-7 shadow-sm">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D9381E] mb-3">
-                Planning for 15+ guests?
+                Planning for your guests?
               </p>
               <h3 className="font-serif italic font-black text-[#1C0A00] text-2xl md:text-[2rem] leading-tight mb-3">
                 Catering is the better fit for larger family orders and events
               </h3>
               <p className="text-sm md:text-base text-[#6B3A2A] leading-relaxed mb-5">
-                If you are ordering for birthdays, housewarmings, baby showers or festive gatherings
-                across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent, talk to us about a
-                tailored catering menu instead of the daily drop.
+                If you are ordering for birthdays, housewarmings, baby showers
+                or festive gatherings across Ebbsfleet Valley, Dartford,
+                Gravesend and nearby Kent, talk to us about a tailored catering
+                menu instead of the daily drop.
               </p>
               <div className="flex justify-center">
                 <TrackedLink

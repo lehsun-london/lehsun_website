@@ -5,9 +5,9 @@ import { menuFaqs } from "@/content/faqs";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Daily Indian Food in Ebbsfleet Valley | 5★ Rated | Lehsun",
+  title: "Fresh North Indian Daily Menu in Ebbsfleet | Lehsun",
   description:
-    "Fresh North Indian dishes posted daily. Order via WhatsApp for collection in Ebbsfleet Valley or local delivery within 2 miles on £25+ orders.",
+    "Changing daily North Indian menu in Ebbsfleet with fresh homemade dishes, street food favourites and flavours like back home.",
   path: "/menu",
   keywords: [
     "daily Indian food Ebbsfleet Valley",

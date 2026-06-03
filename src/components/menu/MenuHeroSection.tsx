@@ -14,7 +14,7 @@ export function MenuHeroSection() {
             <div className="inline-flex items-center gap-2 rounded-full border border-[#E8D5C0] bg-[#FFF5E4] px-4 py-1.5 mb-6 animate-fade-in-up">
               <Clock className="size-3.5 text-[#2E8B7A]" aria-hidden />
               <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#6B3A2A]">
-                Posted fresh every day
+                Updated weekly
               </span>
             </div>
 
@@ -22,9 +22,7 @@ export function MenuHeroSection() {
               className="font-serif italic font-black text-[#1C0A00] text-balance leading-tight mb-5 animate-fade-in-up"
               style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)", animationDelay: "80ms" }}
             >
-              Fresh North Indian dishes in{" "}
-              <span className="text-[#2E8B7A]">Ebbsfleet Valley,</span>
-              {" "}posted every day
+              Fresh North Indian Daily Menu
             </h1>
 
             <p

@@ -1,5 +1,12 @@
 import { type DestinationType } from "@/lib/analytics";
-import { MessageCircle, Calendar, Users, MapPin, UtensilsCrossed, Info } from "lucide-react";
+import {
+  MessageCircle,
+  Calendar,
+  Users,
+  MapPin,
+  UtensilsCrossed,
+  Info,
+} from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
 import { contact, whatsapp } from "@/content/businessInfo";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -8,7 +15,6 @@ export type ContactVariant = "general" | "catering" | "menu";
 
 const enquiryTips = [
   { icon: Calendar, label: "Your event date" },
-  { icon: Users, label: "Number of guests (15+)" },
   { icon: MapPin, label: "Your area" },
   { icon: UtensilsCrossed, label: "Any dishes in mind" },
 ];
@@ -17,8 +23,22 @@ function SocialIcon({ type }: { type: "instagram" | "facebook" | "google" }) {
   if (type === "instagram") {
     return (
       <svg aria-hidden className="size-4" fill="none" viewBox="0 0 24 24">
-        <rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" strokeWidth="1.8" />
-        <circle cx="12" cy="12" r="3.6" stroke="currentColor" strokeWidth="1.8" />
+        <rect
+          x="4"
+          y="4"
+          width="16"
+          height="16"
+          rx="5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="3.6"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
         <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
       </svg>
     );
@@ -27,24 +47,51 @@ function SocialIcon({ type }: { type: "instagram" | "facebook" | "google" }) {
     return (
       <svg aria-hidden className="size-4" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" fill="#1877F2" />
-        <path d="M13.3 19v-6.1h2l.3-2.3h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.2v1.8H9v2.3h2V19h2.3Z" fill="#fff" />
+        <path
+          d="M13.3 19v-6.1h2l.3-2.3h-2.3V9.1c0-.7.2-1.2 1.2-1.2h1.2V5.8c-.2 0-.9-.1-1.8-.1-1.8 0-3.1 1.1-3.1 3.2v1.8H9v2.3h2V19h2.3Z"
+          fill="#fff"
+        />
       </svg>
     );
   }
   return (
     <svg aria-hidden className="size-4" viewBox="0 0 24 24">
-      <path d="M12 2c3.7 0 6.8 3 6.8 6.8 0 4.8-6.8 13.3-6.8 13.3S5.2 13.6 5.2 8.8C5.2 5 8.3 2 12 2Z" fill="#EA4335" />
+      <path
+        d="M12 2c3.7 0 6.8 3 6.8 6.8 0 4.8-6.8 13.3-6.8 13.3S5.2 13.6 5.2 8.8C5.2 5 8.3 2 12 2Z"
+        fill="#EA4335"
+      />
       <circle cx="12" cy="8.8" r="2.8" fill="#FBBC05" />
-      <path d="M12 2a6.8 6.8 0 0 1 5.2 2.4l-2.4 1.9A3.7 3.7 0 0 0 12 5.1V2Z" fill="#4285F4" />
-      <path d="M6.8 4.4A6.8 6.8 0 0 1 12 2v3.1a3.7 3.7 0 0 0-2.8 1.2L6.8 4.4Z" fill="#34A853" />
+      <path
+        d="M12 2a6.8 6.8 0 0 1 5.2 2.4l-2.4 1.9A3.7 3.7 0 0 0 12 5.1V2Z"
+        fill="#4285F4"
+      />
+      <path
+        d="M6.8 4.4A6.8 6.8 0 0 1 12 2v3.1a3.7 3.7 0 0 0-2.8 1.2L6.8 4.4Z"
+        fill="#34A853"
+      />
     </svg>
   );
 }
 
 const socialLinks = [
-  { href: contact.instagram, icon: "instagram" as const, label: "Instagram", destinationType: "instagram" as DestinationType },
-  { href: contact.facebook, icon: "facebook" as const, label: "Facebook", destinationType: "facebook" as DestinationType },
-  { href: contact.googleMaps, icon: "google" as const, label: "Google", destinationType: "maps" as DestinationType },
+  {
+    href: contact.instagram,
+    icon: "instagram" as const,
+    label: "Instagram",
+    destinationType: "instagram" as DestinationType,
+  },
+  {
+    href: contact.facebook,
+    icon: "facebook" as const,
+    label: "Facebook",
+    destinationType: "facebook" as DestinationType,
+  },
+  {
+    href: contact.googleMaps,
+    icon: "google" as const,
+    label: "Google",
+    destinationType: "maps" as DestinationType,
+  },
 ];
 
 interface ContactSectionProps {
@@ -64,7 +111,10 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
     : "Message us on WhatsApp with a few details and we\u2019ll come back with a tailored quote — usually the same day.";
 
   return (
-    <section className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] py-12 md:py-16 px-5 lg:px-10 scroll-mt-20" id="contact">
+    <section
+      className="bg-gradient-to-b from-[#FFF0D4] to-[#FFE8B8] py-12 md:py-16 px-5 lg:px-10 scroll-mt-20"
+      id="contact"
+    >
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-6">
@@ -154,8 +204,14 @@ export function ContactSection({ variant = "general" }: ContactSectionProps) {
                 </p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {enquiryTips.map(({ icon: Icon, label }) => (
-                    <div key={label} className="flex items-center gap-2 text-sm text-[#6B3520]">
-                      <Icon className="size-3.5 text-[#E8751A] flex-shrink-0" aria-hidden />
+                    <div
+                      key={label}
+                      className="flex items-center gap-2 text-sm text-[#6B3520]"
+                    >
+                      <Icon
+                        className="size-3.5 text-[#E8751A] flex-shrink-0"
+                        aria-hidden
+                      />
                       {label}
                     </div>
                   ))}
