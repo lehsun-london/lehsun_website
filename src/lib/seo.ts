@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://lehsun.co.uk";
+export const SITE_NAME = "Lehsun - Nostalgic North Indian Catering";
+export const SITE_ALTERNATE_NAMES = [
+  "Lehsun",
+  "Lehsun London",
+  "Lehsun - Nostalgic Indian Cuisine",
+  "lehsun.co.uk",
+] as const;
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/stitch/lehsun-branded-final/hero-bg.png`;
 export const DEFAULT_OG_IMAGE_ALT = "Lehsun North Indian catering and daily menu";
 
@@ -35,7 +42,7 @@ export function createPageMetadata({
       description,
       url: canonical,
       type: "website",
-      siteName: "Lehsun",
+      siteName: SITE_NAME,
       locale: "en_GB",
       images: [
         {

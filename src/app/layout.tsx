@@ -5,7 +5,13 @@ import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema";
 import { CookieConsentBanner } from "@/components/privacy/CookieConsentBanner";
 import { PageViewTracker } from "@/components/analytics/PageViewTracker";
 import { COOKIE_CONSENT_KEY } from "@/lib/consent";
-import { DEFAULT_OG_IMAGE, DEFAULT_OG_IMAGE_ALT, SITE_URL } from "@/lib/seo";
+import {
+  DEFAULT_OG_IMAGE,
+  DEFAULT_OG_IMAGE_ALT,
+  SITE_ALTERNATE_NAMES,
+  SITE_NAME,
+  SITE_URL,
+} from "@/lib/seo";
 import "./globals.css";
 
 const karla = Karla({
@@ -55,7 +61,7 @@ export const metadata: Metadata = {
       "Proper North Indian catering for birthdays, housewarmings, baby showers and festive events across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent.",
     url: `${SITE_URL}/`,
     type: "website",
-    siteName: "Lehsun",
+    siteName: SITE_NAME,
     locale: "en_GB",
     images: [
       {
@@ -80,7 +86,8 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": "https://lehsun.co.uk/#website",
   url: "https://lehsun.co.uk/",
-  name: "Lehsun",
+  name: SITE_NAME,
+  alternateName: SITE_ALTERNATE_NAMES,
   description:
     "Based in Ebbsfleet Valley, Lehsun provides North Indian catering across Ebbsfleet, Dartford, Gravesend, Northfleet and nearby Kent, with real flavours like back home.",
   inLanguage: "en-GB",

@@ -1,10 +1,12 @@
 import { reviewStats, serviceAreas, contact } from "@/content/businessInfo";
+import { SITE_ALTERNATE_NAMES, SITE_NAME } from "@/lib/seo";
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "CateringService"],
   "@id": "https://lehsun.co.uk/#localbusiness",
-  name: "Lehsun - Nostalgic North Indian Catering",
+  name: SITE_NAME,
+  alternateName: SITE_ALTERNATE_NAMES,
   description:
     "Based in Ebbsfleet Valley, Lehsun provides North Indian catering for birthdays, housewarmings, baby showers, family gatherings and festive events across Dartford, Gravesend, Northfleet, Bexley, Orpington and nearby Kent, with real flavours like back home.",
   url: "https://lehsun.co.uk/",
