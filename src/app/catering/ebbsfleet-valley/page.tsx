@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title:
-    "5★ Indian Catering in Ebbsfleet Valley | Birthdays & Family Events | Lehsun",
+    "5-Star Rated ★ North Indian Catering in Ebbsfleet Valley | Birthdays & Family Events | Lehsun",
   description:
     "Based in Ebbsfleet Valley, Lehsun brings real North Indian catering for birthdays, housewarmings, baby showers and family celebrations.",
   path: "/catering/ebbsfleet-valley",
@@ -38,7 +38,10 @@ export default function Page() {
         ],
         heroTitle:
           "Indian Catering in Ebbsfleet Valley for Birthdays & Family Events",
-        trustItems: ["★★★★★ Trusted in Ebbsfleet", "5★ Food Hygiene Rated"],
+        trustItems: [
+          "5-Star Rated ★ Trusted in Ebbsfleet",
+          "5-Star ★ Food Hygiene Rated",
+        ],
         reviewHighlight:
           "Local customers come back for food that keeps getting better.",
         relatedLinks: [

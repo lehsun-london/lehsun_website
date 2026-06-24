@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title:
-    "5★ Indian Catering in Gravesend | Parties & Family Celebrations | Lehsun",
+    "5-Star Rated ★ Indian Catering in Gravesend | Parties & Family Celebrations | Lehsun",
   description:
     "Planning a birthday, housewarming or family gathering in Gravesend? Lehsun brings real North Indian flavours, generous portions and stress-free catering.",
   path: "/catering/gravesend",
@@ -40,8 +40,8 @@ export default function Page() {
         heroTitle:
           "Indian Catering in Gravesend for Parties & Family Celebrations",
         trustItems: [
-          "★★★★★ Loved by local families",
-          "5★ Food Hygiene Rated",
+          "5-Star Rated ★ Google Reviews",
+          "5-Star ★ Food Hygiene Rated",
           "Freshly prepared for every event",
         ],
         reviewHighlight:

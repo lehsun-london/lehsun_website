@@ -3,9 +3,10 @@ import { LocationCateringPage } from "@/components/catering/LocationCateringPage
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "5★ Indian Catering in Dartford | Birthdays & Parties | Lehsun",
+  title:
+    "5-Star Rated ★ Indian Catering in Dartford | Birthdays & Parties | Lehsun",
   description:
-    "5★ rated North Indian catering for birthdays, baby showers and family celebrations in Dartford. Real flavours, generous portions and stress-free service",
+    "5.0 ★ rated North Indian catering for birthdays, baby showers and family celebrations in Dartford. Real flavours, generous portions and stress-free service",
   path: "/catering/dartford",
   keywords: [
     "North Indian catering Dartford",
@@ -38,7 +39,10 @@ export default function Page() {
         ],
         heroTitle:
           "Indian Catering in Dartford for Birthdays, Baby Showers & Family Events",
-        trustItems: ["★★★★★ 5★ Google Reviews", "5★ Food Hygiene Rated"],
+        trustItems: [
+          "5-Star Rated ★ Google Reviews",
+          "5-Star ★ Food Hygiene Rated",
+        ],
         reviewHighlight:
           "First-birthday catering guests praised the food, portions and care.",
         relatedLinks: [

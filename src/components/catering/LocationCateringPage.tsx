@@ -18,7 +18,7 @@ import {
   contact,
   cateringPricing,
   reviewStats,
-  cateringReviews,
+  getLocationCateringReviews,
 } from "@/content/businessInfo";
 import { buildAbsoluteUrl } from "@/lib/seo";
 
@@ -88,6 +88,8 @@ export function LocationCateringPage({
 }: {
   location: LocationConfig;
 }) {
+  const locationReviews = getLocationCateringReviews(location.name);
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -127,7 +129,7 @@ export function LocationCateringPage({
               aria-hidden
             />
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423]">
-              5★ · {reviewStats.count}+ Google Reviews
+              5-Star Rated ★ {reviewStats.count}+ Google Reviews
             </span>
           </div>
 
@@ -234,8 +236,8 @@ export function LocationCateringPage({
       <TrustProofBlock
         items={
           location.trustItems ?? [
-            "★★★★★ 5★ Google Reviews",
-            "5★ Food Hygiene Rated",
+            "5-Star Rated ★ Google Reviews",
+            "5-Star ★ Food Hygiene Rated",
           ]
         }
         reviewHighlight={location.reviewHighlight}
@@ -451,7 +453,7 @@ export function LocationCateringPage({
         </div>
       </section>
 
-      {/* Reviews — all catering reviews */}
+      {/* Reviews — strongest local or service-matched proof */}
       <section className="bg-white border-t border-[#E8D5C0] py-12 px-5 lg:px-10">
         <div className="max-w-5xl mx-auto">
           <ScrollReveal>
@@ -474,7 +476,7 @@ export function LocationCateringPage({
             </div>
           </ScrollReveal>
           <div className="grid md:grid-cols-2 gap-5 mb-6">
-            {cateringReviews.map((review, i) => (
+            {locationReviews.map((review, i) => (
               <ScrollReveal key={review.author} delay={i * 80}>
                 <blockquote className="bg-[#FFF5E4] border border-[#E8D5C0] rounded-2xl p-7 h-full flex flex-col">
                   <p className="text-sm text-[#6B3A2A] leading-relaxed flex-1 italic mb-4">

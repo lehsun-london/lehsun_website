@@ -4,7 +4,12 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ExternalLink, Quote } from "lucide-react";
 import { TrackedLink } from "../analytics/TrackedLink";
-import { reviewStats, reviews, cateringReviews, dailyMenuReviews } from "@/content/businessInfo";
+import {
+  cateringPageReviews,
+  homepageReviews,
+  menuPageReviews,
+  reviewStats,
+} from "@/content/businessInfo";
 
 type ReviewItem = { author: string; type: string; quote: string; googleUrl: string };
 type ReviewVariant = "all" | "catering" | "daily";
@@ -126,9 +131,9 @@ function StackedReviews({ items }: { items: readonly ReviewItem[] }) {
 
 export function ReviewsSection({ variant = "all" }: { variant?: ReviewVariant }) {
   const displayReviews: readonly ReviewItem[] =
-    variant === "catering" ? cateringReviews :
-    variant === "daily" ? dailyMenuReviews :
-    reviews;
+    variant === "catering" ? cateringPageReviews :
+    variant === "daily" ? menuPageReviews :
+    homepageReviews;
 
   const heading =
     variant === "catering" ? <>What clients say about<br className="hidden sm:block" /> our catering.</> :
@@ -156,7 +161,7 @@ export function ReviewsSection({ variant = "all" }: { variant?: ReviewVariant })
             {/* Stats row */}
             <div className="inline-flex items-center gap-3 bg-white border border-[#E2C9A8] rounded-full px-6 py-2.5 shadow-sm">
               <StarRow count={5} size="size-4" />
-              <span className="font-black text-xl text-[#1A0600]">5★</span>
+              <span className="font-black text-xl text-[#1A0600]">5.0 ★</span>
               <span className="text-[#E2C9A8]">·</span>
               <span className="text-sm font-semibold text-[#6B3520]">{reviewStats.count}+ verified reviews</span>
               <GoogleMark className="size-4" />

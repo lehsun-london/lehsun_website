@@ -59,10 +59,38 @@ export const reviews = [
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
+    author: "Ashwini Dabhade",
+    type: "catering" as const,
+    quote:
+      "We had our baby's first birthday party in Dartford and food plays the main role in such parties. The food was absolutely delicious — every single dish was perfect. All our guests kept asking where we had ordered from and everyone described the food as finger-licking good. The quantity was generous as well. Thank you for making our party so memorable through your amazing food.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Sneha Shyamsunder",
+    type: "catering" as const,
+    quote:
+      "We recently used Lehsun Catering for our sons' birthday party at Weldon Heart Community Center, Ebbsfleet and were absolutely delighted with the food and service. Every dish was beautifully prepared and full of flavour. Throughout the evening, several guests asked us who the caterer was because they enjoyed the food so much.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Tarun Kumar",
+    type: "catering" as const,
+    quote:
+      "We recently had our event catered by Lehsun and the experience was fantastic from start to finish. The food was absolutely amazing and every single guest loved it. The portion sizes were generous and everything from the starters to the mains exceeded our expectations. Delivery was perfectly on time, which made the whole experience smooth and stress free.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
     author: "Anudeet M",
     type: "catering" as const,
     quote:
       "We ordered from Lehsun for our housewarming, and it made the occasion even more special. The chole, dal makhni, dum aloo, puri, pulao, and moong dal halwa were all cooked to perfection — flavorful, homely, and truly nostalgic. Delivery was timely, portions were generous, and our guests kept complimenting the food. Highly recommend for anyone looking for authentic North Indian catering.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Ishani Sharma",
+    type: "catering" as const,
+    quote:
+      "Had Lehsun cater for our housewarming / Satyanarayan Katha event and they prepared delicious food without onion and garlic. Everything was brilliant. Both the food and service were amazing. Highly recommend!",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   // ── Daily menu orders ─────────────────────────────────────────────────────────
@@ -71,6 +99,13 @@ export const reviews = [
     type: "daily" as const,
     quote:
       "Honestly, just really good food. Hot, fresh, and made with genuine care — exactly what you want when you're hungry. The flavours were spot on, portions were generous, and everything arrived in great condition. You can tell there's real effort going into every dish — this isn't just food thrown together, it's food made with a bit of heart. No complaints, no notes. Just clean plates and a happy stomach. 10/10.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Janaki Bollisetti",
+    type: "daily" as const,
+    quote:
+      "Our very first experience with Lehsun was so incredible that it is something we will always remember, and they have been our go-to ever since. The quality is always absolutely premium. We have been ordering from them for a year now, and I am amazed at how they maintain the exact same wonderful flavour every single time.",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
@@ -88,6 +123,13 @@ export const reviews = [
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
+    author: "Sangeetha Sathyanarayanan",
+    type: "daily" as const,
+    quote:
+      "Absolutely amazing food at Lehsun! The pav bhaji is the best I've had since moving to the UK, packed with authentic flavour and perfectly cooked. We also tried the nan khatai, Badam Milk, and mango lassi, and everything was excellent. Easily one of the best places in Ebbsfleet.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
     author: "Ami Salunke",
     type: "daily" as const,
     quote:
@@ -99,6 +141,20 @@ export const reviews = [
     type: "daily" as const,
     quote:
       "We tried a few things from Lehsun and enjoyed the food every time. The chole, aloo tari sabzi, gajar halwa were outstanding. Definitely ordering more and highly recommend Lehsun for authentic and delicious Indian food.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Pradeep Yadanala",
+    type: "daily" as const,
+    quote:
+      "I've ordered from Lehsun Food a few times now, and it never disappoints. The food is full of authentic homemade flavour, fresh, and always beautifully prepared. Their homemade drinks are absolutely amazing and really make the meal feel special. Easily one of my favourite places to order from in Ebbsfleet.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Bhavika Jain",
+    type: "daily" as const,
+    quote:
+      "I ordered thali a couple of times and the food is really good. Quantity is nice and filling. The taste is great and very home-like.",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
@@ -161,6 +217,45 @@ export const reviews = [
 
 export const cateringReviews = reviews.filter((r) => r.type === "catering");
 export const dailyMenuReviews = reviews.filter((r) => r.type === "daily");
+
+function pickReviews(authors: readonly string[]) {
+  return authors
+    .map((author) => reviews.find((review) => review.author === author))
+    .filter((review): review is (typeof reviews)[number] => Boolean(review));
+}
+
+export const homepageReviews = pickReviews([
+  "aparna manaswini",
+  "Janaki Bollisetti",
+  "Varsha Aravindhan",
+]);
+
+export const menuPageReviews = pickReviews([
+  "Varsha Aravindhan",
+  "surendra nivas",
+  "Sangeetha Sathyanarayanan",
+  "Venkatesh Mishra",
+]);
+
+export const cateringPageReviews = pickReviews([
+  "aparna manaswini",
+  "Tarun Kumar",
+  "Sneha Shyamsunder",
+  "Anudeet M",
+]);
+
+export function getLocationCateringReviews(locationName: string) {
+  switch (locationName.toLowerCase()) {
+    case "dartford":
+      return pickReviews(["Ashwini Dabhade", "aparna manaswini"]);
+    case "ebbsfleet valley":
+      return pickReviews(["Sneha Shyamsunder", "Pradeep Yadanala"]);
+    case "gravesend":
+      return pickReviews(["Tarun Kumar", "Anudeet M"]);
+    default:
+      return cateringPageReviews;
+  }
+}
 
 // ─── Pricing ──────────────────────────────────────────────────────────────────
 
