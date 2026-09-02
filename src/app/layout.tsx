@@ -170,6 +170,12 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="text/markdown"
+          href="/pricing.md"
+          title="Pricing Data"
+        />
+        <link
+          rel="alternate"
+          type="text/markdown"
           href="/catering-pricing.md"
           title="Catering Pricing Data"
         />

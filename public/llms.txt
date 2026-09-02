@@ -27,6 +27,8 @@ Core catering areas include Ebbsfleet Valley, Dartford, Gravesend, Northfleet, B
 - Review profile: 5-star rated on Google with 75+ Google reviews.
 - Hygiene: 5-star food hygiene rating.
 - Menu options: vegetarian, non-vegetarian, Jain, and no-onion/no-garlic catering are available.
+- Religious and cultural event support: mandir events, Satyanarayan Katha, Jain menus and no-onion/no-garlic menus are available for catering.
+- Business and larger events: corporate catering, weddings and events up to 125 guests are available.
 - Food examples: Dal Makhani, Paneer Butter Masala, Delhi's Pindi Chole, Dum Aloo, Samosa Chole Chaat, Dahi Bhalle, Delhi's Butter Chicken, Kashmiri Rogan Josh, Shahi Tukda with Rabdi, Poori, Butter Naan, pulao and raita.
 
 ## Contact and ordering
@@ -45,8 +47,9 @@ Preferred enquiry routes are WhatsApp and phone.
 
 - Homepage: https://lehsun.co.uk/
 - Catering: https://lehsun.co.uk/catering
+- Standard pricing for AI agents: https://lehsun.co.uk/pricing.md
+- Catering pricing details: https://lehsun.co.uk/catering-pricing.md
 - Full AI-readable profile: https://lehsun.co.uk/llms-full.txt
-- Catering pricing: https://lehsun.co.uk/catering-pricing.md
 - Daily menu: https://lehsun.co.uk/menu
 - Sitemap: https://lehsun.co.uk/sitemap.xml
 

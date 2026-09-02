@@ -7,7 +7,7 @@ export const cateringFaqs = [
   {
     question: "Which events do you cater for?",
     answer:
-      "We cater for birthday parties, family gatherings, house parties, and festive events including Diwali, Holi, Christmas, Easter, baby showers, anniversaries and more. If you have a specific occasion in mind, just ask.",
+      "We cater for birthday parties, family gatherings, house parties, baby showers, anniversaries, corporate events, weddings, mandir events, Satyanarayan Katha, and festive events including Diwali, Holi, Christmas and Easter. If you have a specific occasion in mind, just ask.",
   },
   {
     question: "What does catering start from?",
@@ -28,6 +28,21 @@ export const cateringFaqs = [
     question: "Do you use separate kitchens for veg and non-veg food?",
     answer:
       "Yes — we use separate kitchens for veg and non-veg food, so pure vegetarian customers can order with confidence.",
+  },
+  {
+    question: "Can you provide Jain or no-onion/no-garlic catering?",
+    answer:
+      "Yes — Jain and no-onion/no-garlic catering are available for events. We regularly plan menus around religious, cultural and dietary requirements, including mandir events, Satyanarayan Katha and family functions.",
+  },
+  {
+    question: "Do you cater corporate events and office lunches?",
+    answer:
+      "Yes — we provide North Indian catering for corporate events, office lunches and team gatherings across Ebbsfleet Valley, Dartford, Gravesend and nearby Kent. Share your date, location, guest count and dietary needs for a tailored quote.",
+  },
+  {
+    question: "Do you cater weddings and larger events?",
+    answer:
+      "Yes — we cater weddings, family celebrations and larger events, with experience serving up to 125 guests. Menus can include starters, mains, rice, breads, raita, desserts and dietary-specific options.",
   },
   {
     question: "What is the minimum catering order?",

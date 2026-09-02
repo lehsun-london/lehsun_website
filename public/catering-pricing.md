@@ -23,9 +23,11 @@ Catering menus can include:
 - Desserts
 - Condiments and salads
 
-## Dietary and cultural menus
+## Dietary, cultural and business menus
 
 Lehsun can prepare vegetarian, non-vegetarian, Jain and no-onion/no-garlic catering menus. These options are available for family events, religious events, mandir events, Satyanarayan Katha, housewarmings, birthdays, baby showers, corporate events and weddings.
+
+Lehsun has catered events of up to 125 guests. Corporate catering, wedding catering and larger family celebrations are quoted based on guest count, location, menu choices and dietary requirements.
 
 ## Example dishes
 
@@ -55,4 +57,3 @@ For a tailored catering quote, send the event date, guest count, event location,
 - Phone: +44 7768 892652
 - Email: lehsun.london@gmail.com
 - Website: https://lehsun.co.uk/catering
-

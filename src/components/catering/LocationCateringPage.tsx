@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { TrackedLink } from "@/components/analytics/TrackedLink";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import LocationServiceSchema from "@/components/seo/LocationServiceSchema";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { NavSection } from "@/components/home/NavSection";
 import { FooterSection } from "@/components/home/FooterSection";
@@ -58,9 +59,11 @@ const eventTypes = [
   { icon: "👶", label: "Baby showers" },
   { icon: "🪔", label: "Diwali gatherings" },
   { icon: "🎉", label: "Anniversaries" },
+  { icon: "💼", label: "Corporate events" },
+  { icon: "💍", label: "Weddings" },
+  { icon: "🙏", label: "Mandir events" },
   { icon: "👨‍👩‍👧‍👦", label: "Family get-togethers" },
   { icon: "🌸", label: "Holi celebrations" },
-  { icon: "🎄", label: "Christmas parties" },
 ];
 
 const menuHighlights = {
@@ -115,6 +118,13 @@ export function LocationCateringPage({
             ),
           },
         ]}
+      />
+      <LocationServiceSchema
+        locationName={location.name}
+        displayName={location.displayName}
+        postcodes={location.postcodes}
+        nearbyAreas={location.nearbyAreas}
+        description={location.answerBlock}
       />
       <script
         type="application/ld+json"
@@ -175,6 +185,9 @@ export function LocationCateringPage({
             </p>
             <p className="text-sm md:text-base leading-relaxed text-[#5C2A10]">
               {location.answerBlock}
+            </p>
+            <p className="mt-3 text-xs font-semibold text-[#6B3A2A]/70">
+              Last updated: September 2026
             </p>
           </div>
 

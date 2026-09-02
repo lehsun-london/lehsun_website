@@ -1,4 +1,9 @@
-import { reviewStats, serviceAreas, contact } from "@/content/businessInfo";
+import {
+  reviewStats,
+  serviceAreas,
+  contact,
+  structuredDataReviews,
+} from "@/content/businessInfo";
 import { SITE_ALTERNATE_NAMES, SITE_NAME } from "@/lib/seo";
 
 const localBusinessSchema = {
@@ -19,8 +24,30 @@ const localBusinessSchema = {
   email: contact.email,
   telephone: contact.phone,
   priceRange: "££",
+  currenciesAccepted: "GBP",
+  paymentAccepted: "Cash, Bank Transfer, Debit Card, Credit Card",
+  award: "5-Star Food Hygiene Rating (Food Standards Agency)",
   servesCuisine: ["North Indian", "Indian"],
   slogan: "Flavours like you remember.",
+  knowsAbout: [
+    "North Indian cuisine",
+    "Punjabi cuisine",
+    "Delhi street food",
+    "Pure vegetarian catering",
+    "Jain catering",
+    "No-onion/no-garlic catering",
+    "Event catering",
+    "Birthday party catering",
+    "Housewarming catering",
+    "Baby shower catering",
+    "Diwali catering",
+    "Corporate lunch catering",
+    "Wedding catering",
+    "Mandir and religious puja catering",
+    "Ebbsfleet Valley DA10",
+    "Dartford DA1 DA2",
+    "Gravesend DA11 DA12",
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "28 Portbridge Gardens",
@@ -41,32 +68,14 @@ const localBusinessSchema = {
     ratingValue: 5,
     reviewCount: reviewStats.count,
   },
-  review: [
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Priya Sharma" },
-      datePublished: "2026-08-15",
-      reviewBody:
-        "Lehsun catered our birthday party in Dartford and everyone kept asking where the food was from! Dal Makhani and Butter Chicken were authentic like home.",
-      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Amit Patel" },
-      datePublished: "2026-07-20",
-      reviewBody:
-        "Fantastic housewarming catering in Ebbsfleet. Separate veg kitchen gave us full confidence for our Jain family members.",
-      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
-    },
-    {
-      "@type": "Review",
-      author: { "@type": "Person", name: "Sarah Jenkins" },
-      datePublished: "2026-06-10",
-      reviewBody:
-        "The best Indian catering in Kent! Fresh, non-greasy, and generous portions for our family gathering in Gravesend.",
-      reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
-    },
-  ],
+  review: structuredDataReviews.map((review) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: review.author },
+    reviewBody: review.quote,
+    reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+    publisher: { "@type": "Organization", name: "Google" },
+    url: review.googleUrl,
+  })),
   areaServed: serviceAreas.map((area) => ({
     "@type":
       area === "Nearby Kent"
@@ -82,6 +91,11 @@ const localBusinessSchema = {
     "Private event catering",
     "Birthday catering",
     "Diwali catering",
+    "Corporate catering",
+    "Wedding catering",
+    "Mandir event catering",
+    "Jain catering",
+    "No-onion/no-garlic catering",
     "Family gathering catering",
     "Festive event catering",
   ],

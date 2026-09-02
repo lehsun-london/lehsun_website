@@ -54,6 +54,9 @@ export function CateringPage() {
               for 12+ guests, with vegetarian, non-vegetarian, Jain and
               no-onion/no-garlic menus available.
             </p>
+            <p className="mt-3 text-xs font-semibold text-[#6B3A2A]/70">
+              Last updated: September 2026
+            </p>
           </div>
         </section>
         <EventTypesSection />

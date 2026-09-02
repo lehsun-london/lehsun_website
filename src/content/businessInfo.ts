@@ -93,6 +93,62 @@ export const reviews = [
       "Had Lehsun cater for our housewarming / Satyanarayan Katha event and they prepared delicious food without onion and garlic. Everything was brilliant. Both the food and service were amazing. Highly recommend!",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
+  {
+    author: "Deepa B",
+    type: "catering" as const,
+    quote:
+      "Ordered food for a special occasion from Lehsun. Requested the food to be without onion and garlic which they accommodated and everything was so perfect and delicious and delivered on time. Will definitely recommend them and use them in the future.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Rochak Agarwal",
+    type: "catering" as const,
+    quote:
+      "We ordered catering from Lehsun North Indian Catering Service for our son's 2nd birthday celebration. The food was absolutely delicious, and every single guest loved it. From the presentation and quality of the food to the impeccable service and generous portions, everything was flawless.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Bhavik Motasha",
+    type: "catering" as const,
+    quote:
+      "We had ordered catering for my son's 4th birthday party in Sandwich, Kent. The food was beautifully packed, delivered on time, and everything was absolutely amazing and delicious. All our guests loved the food and everyone had wonderful things to say about it.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Piyush Kumar",
+    type: "catering" as const,
+    quote:
+      "Absolutely loved the food! Everything was fresh, full of flavour, and beautifully prepared. The food was delicious, the flavours were spot on, and everyone thoroughly enjoyed it. I would happily recommend them to anyone looking for great-tasting, quality catering.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Shobha Kumari",
+    type: "catering" as const,
+    quote:
+      "Amazing catering service, authentic veg food, delicious vada paos, Shahi Tukda is an amazing sweet dish, perfectly spiced, and by far the best catering service I have ever got.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Parv Sharma",
+    type: "catering" as const,
+    quote:
+      "We recently did a bulk order and I must say absolutely amazing food! The taste was so authentic, proper Indian flavours. Everything was fresh, perfectly cooked, and full of flavour. Everyone loved it and kept asking where it was from.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "M Pat",
+    type: "catering" as const,
+    quote:
+      "Great food. We ordered for my daughter's birthday. Arrived in time and they gave heating equipment. Would order again.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Ruchita Pokhriyal",
+    type: "catering" as const,
+    quote:
+      "Food was absolutely amazing! Everything was so delicious and you could really taste the love and care put into the cooking. Thank you so much for the wonderful food and amazing catering service. Everyone really enjoyed it!",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
   // ── Daily menu orders ─────────────────────────────────────────────────────────
   {
     author: "surendra nivas",
@@ -127,6 +183,34 @@ export const reviews = [
     type: "daily" as const,
     quote:
       "Absolutely amazing food at Lehsun! The pav bhaji is the best I've had since moving to the UK, packed with authentic flavour and perfectly cooked. We also tried the nan khatai, Badam Milk, and mango lassi, and everything was excellent. Easily one of the best places in Ebbsfleet.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "DINESH RAJWANI",
+    type: "daily" as const,
+    quote:
+      "Had a great experience at Lehsun! I ordered the Samosa Chaat, and it was absolutely delicious, fresh, flavorful, and perfectly balanced with the chutneys and spices. One of the best places for Indian food in and around Ebbsfleet.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Shanmukhi Bhavani",
+    type: "daily" as const,
+    quote:
+      "Ordered kachori and nankathai from Lehsun and loved both of them. The nankathai are literally melting in the mouth, kachori are crispy and perfect on spice level too, a perfect combination with potato curry.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Sowmya Sundar",
+    type: "daily" as const,
+    quote:
+      "The food is amazing and great customer service. This is our go to place for comfort food, my absolute favourite being Pav Bhaji and Vada Pav.",
+    googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
+  },
+  {
+    author: "Nick Brown",
+    type: "daily" as const,
+    quote:
+      "Amazing authentic food. Different to anything we've had before and the flavours are incredible. Lovely lady too. Great value, what an experience.",
     googleUrl: "https://maps.app.goo.gl/C8JKao4BbBerjfQj8",
   },
   {
@@ -227,7 +311,7 @@ function pickReviews(authors: readonly string[]) {
 export const homepageReviews = pickReviews([
   "aparna manaswini",
   "Janaki Bollisetti",
-  "Varsha Aravindhan",
+  "Ruchita Pokhriyal",
 ]);
 
 export const menuPageReviews = pickReviews([
@@ -235,6 +319,10 @@ export const menuPageReviews = pickReviews([
   "surendra nivas",
   "Sangeetha Sathyanarayanan",
   "Venkatesh Mishra",
+  "DINESH RAJWANI",
+  "Shanmukhi Bhavani",
+  "Sowmya Sundar",
+  "Nick Brown",
 ]);
 
 export const cateringPageReviews = pickReviews([
@@ -242,16 +330,36 @@ export const cateringPageReviews = pickReviews([
   "Tarun Kumar",
   "Sneha Shyamsunder",
   "Anudeet M",
+  "Ishani Sharma",
+  "Rochak Agarwal",
+  "Bhavik Motasha",
+  "Piyush Kumar",
+  "Shobha Kumari",
+  "Parv Sharma",
+  "M Pat",
+  "Ruchita Pokhriyal",
+]);
+
+export const structuredDataReviews = pickReviews([
+  "Ashwini Dabhade",
+  "Sneha Shyamsunder",
+  "Ishani Sharma",
+  "Tarun Kumar",
+  "Deepa B",
+  "Rochak Agarwal",
+  "Bhavik Motasha",
+  "Shobha Kumari",
+  "Ruchita Pokhriyal",
 ]);
 
 export function getLocationCateringReviews(locationName: string) {
   switch (locationName.toLowerCase()) {
     case "dartford":
-      return pickReviews(["Ashwini Dabhade", "aparna manaswini"]);
+      return pickReviews(["Ashwini Dabhade", "aparna manaswini", "M Pat"]);
     case "ebbsfleet valley":
-      return pickReviews(["Sneha Shyamsunder", "Pradeep Yadanala"]);
+      return pickReviews(["Sneha Shyamsunder", "Parv Sharma", "Shobha Kumari"]);
     case "gravesend":
-      return pickReviews(["Tarun Kumar", "Anudeet M"]);
+      return pickReviews(["Tarun Kumar", "Anudeet M", "Piyush Kumar"]);
     default:
       return cateringPageReviews;
   }
@@ -378,7 +486,8 @@ export const cateringMenu = {
 export const dailyMenuInfo = {
   availability: "Available every day",
   posting: "Posted fresh daily",
-  orderChannels: "Pre-order via WhatsApp catalogue, direct message, or a quick call.",
+  orderChannels:
+    "Pre-order via WhatsApp catalogue, direct message, or a quick call.",
   fulfilment:
     "Collection is available from Ebbsfleet Valley, and local delivery is available within 2 miles for orders above £25.",
   format:
@@ -427,6 +536,7 @@ export const visualAssets = {
   aboutImage: "/assets/food/litti-chokha-1400.jpg",
   cateringImage: "/assets/food/butter-chicken-1400.png",
   dailyMenuImage: "/assets/food/lehsuns-royal-thaali.jpg",
-  hygieneRating: "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/food-hygiene-Rating%205_a_preview.jpeg?itok=ao2_ogm4",
+  hygieneRating:
+    "https://www.food.gov.uk/sites/default/files/styles/promo_large/public/media/image/food-hygiene-Rating%205_a_preview.jpeg?itok=ao2_ogm4",
   logo: "/assets/stitch/lehsun-branded-final/logo.png",
 } as const;

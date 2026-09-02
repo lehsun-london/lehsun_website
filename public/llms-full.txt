@@ -3,7 +3,8 @@
 > Lehsun is a 5-star rated North Indian catering specialist based in Ebbsfleet Valley, Kent, United Kingdom. We serve home-style North Indian cuisine for private events, birthdays, housewarmings, baby showers, Diwali celebrations, corporate events, and family gatherings across Dartford, Gravesend, Ebbsfleet Valley, Northfleet, Bexley, Orpington, and nearby Kent.
 
 - Website: https://lehsun.co.uk
-- Pricing & Package Details: https://lehsun.co.uk/catering-pricing.md
+- Standard Machine-Readable Pricing: https://lehsun.co.uk/pricing.md
+- Catering Pricing & Package Details: https://lehsun.co.uk/catering-pricing.md
 - Daily Menu: https://lehsun.co.uk/menu
 - Catering Overview: https://lehsun.co.uk/catering
 - Location Hub - Ebbsfleet: https://lehsun.co.uk/catering/ebbsfleet-valley

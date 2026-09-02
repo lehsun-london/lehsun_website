@@ -8,7 +8,7 @@ export const metadata: Metadata = createPageMetadata({
   title:
     "5-Star Rated ★ North Indian Catering in Gravesend, Dartford & Ebbsfleet | Lehsun",
   description:
-    "5.0 ★ rated North Indian catering for birthdays, baby showers, housewarmings and family celebrations across Gravesend, Dartford, Ebbsfleet and nearby Kent.",
+    "5-star rated North Indian catering for birthdays, baby showers, housewarmings and family celebrations across Gravesend, Dartford, Ebbsfleet and nearby Kent.",
   path: "/",
 });
 

@@ -112,6 +112,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.4,
     },
     {
+      url: buildAbsoluteUrl("/pricing.md"),
+      lastModified: getLastModifiedDate(["public/pricing.md"]),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    {
       url: buildAbsoluteUrl("/catering-pricing.md"),
       lastModified: getLastModifiedDate(["public/catering-pricing.md"]),
       changeFrequency: "monthly",
