@@ -55,6 +55,8 @@ export default function Page() {
           "Because we are based in Ebbsfleet Valley, catering for Castle Hill, Ashmere and Alkerden events is straightforward. We can plan around local homes, gardens and community venues, with food prepared close by and packed for the occasion.",
         locationIntro:
           "Ebbsfleet Valley is our home. We cook from here, we deliver from here, and most of the events we have catered were just around the corner. The estate has grown fast — lots of young families, first housewarmings, children's birthdays — and there is something satisfying about feeding your own neighbourhood. When you order from us in DA10, the food comes from a kitchen less than a mile away.",
+        answerBlock:
+          "Lehsun is a 5-star rated North Indian caterer based in Ebbsfleet Valley, serving local events across DA10 and nearby Kent. We cater birthdays, baby showers, housewarmings, corporate events, weddings, mandir events and family gatherings, with fresh vegetarian, non-vegetarian, Jain and no-onion/no-garlic menus from £11.99 per head for 12+ guests.",
         locationFaqs: [
           {
             question: "Do you cater at homes and venues in Ebbsfleet Valley?",

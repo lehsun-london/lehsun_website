@@ -12,7 +12,7 @@ export const cateringFaqs = [
   {
     question: "What does catering start from?",
     answer:
-      "Catering starts from £11.99 per head with a minimum of 15 guests. The final price depends on the menu combination and event size — get in touch on WhatsApp for a tailored quote.",
+      "Catering starts from £11.99 per head with a minimum of 12 guests. The final price depends on the menu combination and event size — get in touch on WhatsApp for a tailored quote.",
   },
   {
     question: "Can I request a bespoke menu?",
@@ -32,7 +32,7 @@ export const cateringFaqs = [
   {
     question: "What is the minimum catering order?",
     answer:
-      "Our catering is designed for 15 or more guests. For smaller gatherings, the daily menu may be a better fit.",
+      "Our catering is designed for 12 or more guests. For smaller gatherings, the daily menu may be a better fit.",
   },
 ] as const;
 

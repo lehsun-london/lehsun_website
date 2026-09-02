@@ -40,6 +40,22 @@ export function CateringPage() {
       <main className="pt-[60px]">
         <CateringHeroSection />
         <TrustStripSection variant="catering" />
+        <section className="bg-[#FDF8F0] border-t border-[#E8D5C0] py-8 px-5 lg:px-10">
+          <div className="max-w-4xl mx-auto rounded-xl border border-[#E8D5C0] bg-white px-5 py-5 shadow-sm">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423] mb-2">
+              Catering at a glance
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-[#5C2A10]">
+              Lehsun provides 5-star rated North Indian catering from Ebbsfleet
+              Valley for birthdays, housewarmings, baby showers, corporate
+              events, weddings, mandir events, Satyanarayan Katha and family
+              gatherings across Dartford, Gravesend, Northfleet, Bexley,
+              Orpington and nearby Kent. Catering starts from £11.99 per head
+              for 12+ guests, with vegetarian, non-vegetarian, Jain and
+              no-onion/no-garlic menus available.
+            </p>
+          </div>
+        </section>
         <EventTypesSection />
         <CateringProcessSection />
         <PricingSection />

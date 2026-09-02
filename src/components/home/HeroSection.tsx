@@ -204,7 +204,7 @@ export function HeroSection() {
           {[
             "Tailored quotes, usually same day",
             "Separate veg & non-veg kitchens",
-            "Minimum 15 guests for catering",
+            "Minimum 12 guests for catering",
           ].map((point) => (
             <span
               key={point}

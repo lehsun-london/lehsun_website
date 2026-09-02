@@ -45,7 +45,7 @@ export const primaryCateringAreas = [
 
 export const reviewStats = {
   average: "5.0",
-  count: 50,
+  count: 75,
   sourceLabel: "Google reviews",
 } as const;
 
@@ -262,8 +262,8 @@ export function getLocationCateringReviews(locationName: string) {
 export const cateringPricing = {
   startingPrice: "From £11.99 per head",
   shortPrice: "£11.99 per head",
-  minimumGuests: 15,
-  minimumGuestsLabel: "Minimum 15 guests",
+  minimumGuests: 12,
+  minimumGuestsLabel: "Minimum 12 guests",
 } as const;
 
 // ─── Event types ──────────────────────────────────────────────────────────────

@@ -57,6 +57,8 @@ export default function Page() {
           "For Gravesend events, we regularly plan menus for family gatherings around Northfleet, Riverview Park and Singlewell. Food is cooked fresh in Ebbsfleet Valley, packed carefully, and brought over while the dishes are still event-ready.",
         locationIntro:
           "Gravesend has one of the largest South Asian communities in Kent. That means when you serve food at a Gravesend event, your guests know what good North Indian cooking should taste like. We find that motivating. We have catered Diwali parties, housewarmings, and birthday celebrations in DA11 and DA12 where the crowd were serious about the food — and we have always enjoyed that feedback. It is about 4 miles from our kitchen in Ebbsfleet Valley.",
+        answerBlock:
+          "Lehsun provides 5-star rated North Indian catering in Gravesend and nearby Kent from Ebbsfleet Valley. We prepare fresh, home-style menus for birthdays, housewarmings, baby showers, corporate events, weddings, mandir events and family celebrations, with vegetarian, non-vegetarian, Jain and no-onion/no-garlic options from £11.99 per head for 12+ guests.",
         locationFaqs: [
           {
             question:

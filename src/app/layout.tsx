@@ -161,6 +161,18 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="LLM Context"
+        />
+        <link
+          rel="alternate"
+          type="text/markdown"
+          href="/catering-pricing.md"
+          title="Catering Pricing Data"
+        />
         <LocalBusinessSchema />
         <script
           type="application/ld+json"

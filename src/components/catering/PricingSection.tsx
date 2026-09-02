@@ -92,6 +92,12 @@ export function PricingSection() {
                   Request Full Brochure
                 </TrackedLink>
               </div>
+
+              <div className="mt-6 text-center">
+                <span className="inline-block text-xs font-semibold text-[#6B3A2A]/80 bg-[#FFF5E4] px-3 py-1 rounded-full border border-[#E8D5C0]">
+                  Last updated: September 2026 · Tailored quotes available
+                </span>
+              </div>
             </div>
           </div>
         </ScrollReveal>

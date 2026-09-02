@@ -43,6 +43,8 @@ export interface LocationConfig {
   nearbyAreas: string[];
   /** 3-4 sentences unique to this location, shown in the location context section */
   locationIntro: string;
+  /** Direct answer block for AI search and quick human scanning */
+  answerBlock: string;
   /** 2 FAQs specific to this location, shown on-page and emitted in FAQ schema */
   locationFaqs: ReadonlyArray<{
     question: string;
@@ -165,6 +167,18 @@ export function LocationCateringPage({
           </p>
 
           <div
+            className="max-w-3xl mx-auto mb-8 rounded-xl border border-[#E8D5C0] bg-white/80 px-5 py-4 text-left shadow-sm animate-fade-in-up"
+            style={{ animationDelay: "220ms" }}
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#D93423] mb-2">
+              Catering at a glance
+            </p>
+            <p className="text-sm md:text-base leading-relaxed text-[#5C2A10]">
+              {location.answerBlock}
+            </p>
+          </div>
+
+          <div
             className="flex flex-col items-stretch sm:flex-row sm:items-center sm:justify-center gap-4 mb-8 animate-fade-in-up"
             style={{ animationDelay: "240ms" }}
           >
@@ -272,7 +286,7 @@ export function LocationCateringPage({
               {
                 icon: Users,
                 color: "#03B6AA",
-                title: "From 15 guests",
+                title: "From 12 guests",
                 body: `We cater for events in ${location.name} and nearby ${location.postcodes} postcodes. The more guests, the better the per-head value.`,
               },
               {

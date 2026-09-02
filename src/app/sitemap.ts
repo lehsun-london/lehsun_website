@@ -99,5 +99,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.75,
     },
+    {
+      url: buildAbsoluteUrl("/llms.txt"),
+      lastModified: getLastModifiedDate(["public/llms.txt"]),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    {
+      url: buildAbsoluteUrl("/llms-full.txt"),
+      lastModified: getLastModifiedDate(["public/llms-full.txt"]),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    {
+      url: buildAbsoluteUrl("/catering-pricing.md"),
+      lastModified: getLastModifiedDate(["public/catering-pricing.md"]),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
   ];
 }

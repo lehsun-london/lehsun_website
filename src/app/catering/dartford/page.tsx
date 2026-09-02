@@ -57,6 +57,8 @@ export default function Page() {
         ],
         locationIntro:
           "Dartford sits at the edge of London and the edge of Kent, which means the people who live there have come from everywhere. We have catered birthday parties in Dartford where half the room were Londoners and the other half were Kent families — and the food gave both sides something to talk about. It is about 5 miles from our kitchen in Ebbsfleet Valley, so we are in quickly, and the food arrives at the right temperature.",
+        answerBlock:
+          "Lehsun offers 5.0 ★ rated North Indian catering in Dartford from its kitchen in nearby Ebbsfleet Valley, around 5 miles from Dartford town centre. We cater birthdays, baby showers, housewarmings, corporate events, weddings, mandir events and family gatherings across DA1, DA2 and nearby areas, with menus from £11.99 per head for 12+ guests.",
         locationFaqs: [
           {
             question: "Do you cover Stone, Crayford, and Longfield?",
