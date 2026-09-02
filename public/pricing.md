@@ -13,9 +13,9 @@ Contact: +44 7768 892652 | lehsun.london@gmail.com | WhatsApp: https://wa.me/447
 | Service | Starting Price | Minimum Order | Capacity / Limits | Fulfilment |
 | :--- | :--- | :--- | :--- | :--- |
 | **Event Catering (Birthdays, Parties, Celebrations)** | **£11.99 / guest** | 12 guests | Up to 125 guests | Delivered fresh to venue / home in Kent |
-| **Weddings & Large Functions** | Custom tailored quote | 25 guests | Up to 125 guests | Multi-course hot buffet setup & delivery |
-| **Mandir & Cultural Events (Jain / No-Onion-No-Garlic)** | Custom tailored quote | 15 guests | Up to 125 guests | Prepared in dedicated vegetarian kitchen |
-| **Corporate Events & Office Lunches** | Custom tailored quote | 15 guests | Up to 125 guests | Timed delivery to business venues |
+| **Weddings & Large Functions** | Custom tailored quote | 12 guests | Up to 125 guests | Tailored event catering |
+| **Mandir & Cultural Events (Jain / No-Onion-No-Garlic)** | Custom tailored quote | 12 guests | Up to 125 guests | Prepared with vegetarian requirements in mind |
+| **Corporate Events & Office Lunches** | Custom tailored quote | 12 guests | Up to 125 guests | Timed catering for business venues |
 | **Daily Food Menu (Local DA10)** | Dish-by-dish (£5–£12) or Royal Thaali | No minimum | Local DA10 radius | Collection (DA10) or delivery within 2 mi on £25+ |
 
 ---
@@ -24,12 +24,12 @@ Contact: +44 7768 892652 | lehsun.london@gmail.com | WhatsApp: https://wa.me/447
 
 All event catering packages starting from **£11.99 per head** include:
 
-* **Starters**: Freshly prepared vegetarian or non-vegetarian starters (e.g. Samosa Chole Chaat, Paneer Tikka, Chicken Tikka, Honey Chilli Potatoes).
-* **Mains**: Rich authentic North Indian curries (e.g. Dal Makhani, Delhi's Butter Chicken, Paneer Butter Masala, Kashmiri Rogan Josh, Pindi Chole).
-* **Breads**: Tandoori Butter Naan, Fresh Poori, or Tandoori Roti.
-* **Rice**: Fragrant Jeera Rice, Vegetable Dum Biryani, or Peas Pulao.
-* **Accompaniments**: Fresh Raita (Boondi or Cucumber Mint), spiced salad, mint and tamarind chutneys, and mixed pickles.
-* **Dessert**: Authentic Indian sweet (e.g. Shahi Tukda with Rabdi, Gulab Jamun, Firni, Gajar Halwa).
+* **Starters**: Freshly prepared vegetarian or non-vegetarian starters, including Samosa Chole Chaat, Dahi Papdi Chaat, Dahi Bhalle, Aloo Tikki Chaat, Mini Kachori with Spicy Aloo, Chilly Paneer, Veg Manchurian, Honey Chilli Potatoes, Hara Bhara Kebab, Delhi's Ram Ladoo, Mumbai Vada Pav, Butter Pav Bhaji and selected non-vegetarian starters.
+* **Mains**: Rich authentic North Indian curries, including Dal Makhani, Paneer Butter Masala, Paneer Makhani, Lahsuni Palak Paneer, Kadhai Paneer, Matar Paneer, Malai Kofta, Methi Malai Matar, Amritsari Pindi Chole, Punjabi Rajama, Dum Aloo, Delhi's Butter Chicken and Kashmiri Rogan Josh.
+* **Breads**: Plain Naan, Butter Naan or Poori.
+* **Rice**: Plain Rice, Jira Rice, Kaju Paneer Pulao or Vegetable Pulao.
+* **Accompaniments**: Plain Raita, Boondi Raita, Mix Veg Raita, Pineapple Raita, Masala Peanuts, Papad, Green Salad and Sprouts Salad.
+* **Dessert**: Shahi Tukda with Rabdi, Firni / Phirni, Rice Kheer, Sooji Halwa, Gajar Halwa, Fruit Custard or Fruit Cream.
 
 ---
 
@@ -37,7 +37,7 @@ All event catering packages starting from **£11.99 per head** include:
 
 * **Separate Kitchens**: Lehsun operates separate kitchen facilities for vegetarian and non-vegetarian preparation. Pure vegetarian and Jain guests can dine with complete confidence.
 * **Specialist Diets**: Full Jain (no root vegetables) and strict No-Onion / No-Garlic menus are available upon request for religious pujas, Satyanarayan Katha, and mandir functions.
-* **Food Hygiene**: 5-Star Food Hygiene Rating awarded by local authorities (Food Standards Agency).
+* **Food Hygiene**: 5-Star Food Hygiene Rating.
 
 ---
 

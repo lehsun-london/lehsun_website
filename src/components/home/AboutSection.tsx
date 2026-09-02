@@ -171,7 +171,7 @@ export function AboutSection() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={visualAssets.hygieneRating}
-                    alt="Food Hygiene Rating 5 — awarded by the Food Standards Agency"
+                    alt="Food Hygiene Rating 5"
                     className="h-24 w-auto object-contain"
                     loading="lazy"
                   />

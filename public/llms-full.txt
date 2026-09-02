@@ -49,7 +49,7 @@
 ## 3. Catering Menu Items & Signature Dishes
 
 ### Starters (Vegetarian & Non-Vegetarian)
-- **Samosa Chole Chaat**: Crispy spiced potato samosas topped with tangy Delhi-style Pindi Chole, yogurt, and mint-tamarind chutneys.
+- **Samosa Chole Chaat**: Crispy spiced potato samosas topped with chole, yogurt, and mint-tamarind chutneys.
 - **Dahi Bhalle**: Soft lentil dumplings soaked in sweetened yogurt, topped with roasted cumin and tangy chutneys.
 - **Paneer Tikka**: Marinated cottage cheese cubes grilled with bell peppers and onions.
 - **Honey Chilli Potatoes**: Crispy fried potato fingers tossed in a sweet-spicy garlic sauce.
@@ -60,7 +60,7 @@
 ### Main Courses (Vegetarian)
 - **Dal Makhani**: Slow-cooked black lentils simmered overnight with cream, butter, and aromatics.
 - **Paneer Butter Masala**: Soft cottage cheese cubes cooked in a rich tomato, butter, and cashew gravy.
-- **Delhi's Pindi Chole**: Authentic dark, tangy chickpeas simmered with whole tea leaves and roasted spices.
+- **Amritsari Pindi Chole**: North Indian chickpeas cooked with roasted spices and Amritsari flavour.
 - **Dum Aloo**: Slow-cooked baby potatoes in a spiced yogurt-based gravy.
 - **Shahi Paneer**: Rich royal curry cooked with paneer in a creamy saffron-infused gravy.
 

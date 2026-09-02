@@ -31,11 +31,11 @@ Lehsun has catered events of up to 125 guests. Corporate catering, wedding cater
 
 ## Example dishes
 
-Popular vegetarian dishes include Dal Makhani, Paneer Butter Masala, Delhi's Pindi Chole, Dum Aloo, Samosa Chole Chaat, Dahi Bhalle, Aloo Kachori, Honey Chilli Potatoes, Butter Pav Bhaji and Vada Pav.
+Popular vegetarian dishes include Dal Makhani, Paneer Butter Masala, Paneer Makhani, Lahsuni Palak Paneer, Amritsari Pindi Chole, Dum Aloo, Samosa Chole Chaat, Dahi Bhalle, Aloo Kachori, Honey Chilli Potatoes, Butter Pav Bhaji and Vada Pav.
 
 Popular non-vegetarian dishes include Delhi's Butter Chicken, Kashmiri Rogan Josh, Chicken Tikka, Shahi Patiala Chicken, Old Delhi's Nihari and Dhaba Mutton Curry.
 
-Popular sides and desserts include Butter Naan, Poori, vegetable pulao, raita, Shahi Tukda with Rabdi, Firni, Rice Kheer, Gajar Halwa and Fruit Cream.
+Popular sides and desserts include Butter Naan, Poori, vegetable pulao, raita, Shahi Tukda with Rabdi, Firni, Rice Kheer, Sooji Halwa, Gajar Halwa, Fruit Custard and Fruit Cream.
 
 ## Areas served
 

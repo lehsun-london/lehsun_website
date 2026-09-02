@@ -70,7 +70,7 @@ const menuHighlights = {
   veg: [
     "Dal Makhani",
     "Paneer Butter Masala",
-    "Delhi's Pindi Chole",
+    "Amritsari Pindi Chole",
     "Dum Aloo",
     "Samosa Chole Chaat",
   ],
@@ -83,7 +83,7 @@ const menuHighlights = {
   extras: [
     "Butter Naan / Poori",
     "Veg & Non-Veg Pulao",
-    "Shahi Tukda",
+    "Shahi Tukda with Rabdi",
     "Fresh Raita",
   ],
 };

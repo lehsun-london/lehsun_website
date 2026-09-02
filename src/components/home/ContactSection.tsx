@@ -2,7 +2,6 @@ import { type DestinationType } from "@/lib/analytics";
 import {
   MessageCircle,
   Calendar,
-  Users,
   MapPin,
   UtensilsCrossed,
   Info,

@@ -26,7 +26,7 @@ const localBusinessSchema = {
   priceRange: "££",
   currenciesAccepted: "GBP",
   paymentAccepted: "Cash, Bank Transfer, Debit Card, Credit Card",
-  award: "5-Star Food Hygiene Rating (Food Standards Agency)",
+  award: "5-Star Food Hygiene Rating",
   servesCuisine: ["North Indian", "Indian"],
   slogan: "Flavours like you remember.",
   knowsAbout: [
@@ -112,7 +112,7 @@ const localBusinessSchema = {
             "@type": "MenuItem",
             name: "Samosa Chole Chaat",
             description:
-              "Crispy potato samosa topped with Delhi Pindi Chole, yogurt, and chutneys.",
+              "Crispy potato samosa topped with spiced chole (chickpeas), yogurt, and chutneys.",
             suitableForDiet: "https://schema.org/VegetarianDiet",
           },
           {
@@ -150,9 +150,9 @@ const localBusinessSchema = {
           },
           {
             "@type": "MenuItem",
-            name: "Delhi's Pindi Chole",
+            name: "Amritsari Pindi Chole",
             description:
-              "Authentic dark, tangy chickpeas cooked with tea leaf infusion and roasted spices.",
+              "North Indian chickpeas cooked with roasted spices and Amritsari flavour.",
             suitableForDiet: "https://schema.org/VegetarianDiet",
           },
           {
